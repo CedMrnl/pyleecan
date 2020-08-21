@@ -25,4 +25,4 @@ install:
   - python -m pip install . --user
 # 'python' points to Python 2.7 on macOS but points to Python 3.8 on Linux and Windows
 # 'python3' is a 'command not found' error on Windows but 'py' works on Windows only
-script: python -m pytest Tests -m "not GMSH" --continue-on-collection-errors
+script: python -m pytest Tests -m "not GMSH or not FEMM" -v --continue-on-collection-errors
