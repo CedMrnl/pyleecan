@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""File generated according to Generator/ClassesRef/Output/OutGeoLam.csv
-WARNING! All changes made in this file will be lost!
+# File generated according to Generator/ClassesRef/Output/OutGeoLam.csv
+# WARNING! All changes made in this file will be lost!
+"""Method code available at https://github.com/Eomys/pyleecan/tree/master/pyleecan/Methods/Output/OutGeoLam
 """
 
 from os import linesep
@@ -21,6 +22,12 @@ class OutGeoLam(FrozenClass):
 
     # save method is available in all object
     save = save
+
+    # generic copy method
+    def copy(self):
+        """Return a copy of the class
+        """
+        return type(self)(init_dict=self.as_dict())
 
     # get_logger method is available in all object
     get_logger = get_logger
@@ -85,6 +92,8 @@ class OutGeoLam(FrozenClass):
                 is_asym_wind = init_dict["is_asym_wind"]
         # Initialisation by argument
         self.parent = None
+        if name_phase == -1:
+            name_phase = []
         self.name_phase = name_phase
         # BH_curve can be None, a ndarray or a list
         set_array(self, "BH_curve", BH_curve)
@@ -191,12 +200,13 @@ class OutGeoLam(FrozenClass):
         check_var("name_phase", value, "list")
         self._name_phase = value
 
-    # Name of the phases of the winding (if any)
-    # Type : list
     name_phase = property(
         fget=_get_name_phase,
         fset=_set_name_phase,
-        doc=u"""Name of the phases of the winding (if any)""",
+        doc=u"""Name of the phases of the winding (if any)
+
+        :Type: list
+        """,
     )
 
     def _get_BH_curve(self):
@@ -205,7 +215,9 @@ class OutGeoLam(FrozenClass):
 
     def _set_BH_curve(self, value):
         """setter of BH_curve"""
-        if type(value) is list:
+        if value is None:
+            value = array([])
+        elif type(value) is list:
             try:
                 value = array(value)
             except:
@@ -213,12 +225,13 @@ class OutGeoLam(FrozenClass):
         check_var("BH_curve", value, "ndarray")
         self._BH_curve = value
 
-    # B(H) curve (two columns matrix, H and B(H))
-    # Type : ndarray
     BH_curve = property(
         fget=_get_BH_curve,
         fset=_set_BH_curve,
-        doc=u"""B(H) curve (two columns matrix, H and B(H))""",
+        doc=u"""B(H) curve (two columns matrix, H and B(H))
+
+        :Type: ndarray
+        """,
     )
 
     def _get_Ksfill(self):
@@ -230,9 +243,14 @@ class OutGeoLam(FrozenClass):
         check_var("Ksfill", value, "float")
         self._Ksfill = value
 
-    # Slot fill factor
-    # Type : float
-    Ksfill = property(fget=_get_Ksfill, fset=_set_Ksfill, doc=u"""Slot fill factor""")
+    Ksfill = property(
+        fget=_get_Ksfill,
+        fset=_set_Ksfill,
+        doc=u"""Slot fill factor
+
+        :Type: float
+        """,
+    )
 
     def _get_S_slot(self):
         """getter of S_slot"""
@@ -243,9 +261,14 @@ class OutGeoLam(FrozenClass):
         check_var("S_slot", value, "float")
         self._S_slot = value
 
-    # Slot surface
-    # Type : float
-    S_slot = property(fget=_get_S_slot, fset=_set_S_slot, doc=u"""Slot surface""")
+    S_slot = property(
+        fget=_get_S_slot,
+        fset=_set_S_slot,
+        doc=u"""Slot surface
+
+        :Type: float
+        """,
+    )
 
     def _get_S_slot_wind(self):
         """getter of S_slot_wind"""
@@ -256,10 +279,13 @@ class OutGeoLam(FrozenClass):
         check_var("S_slot_wind", value, "float")
         self._S_slot_wind = value
 
-    # Slot winding surface
-    # Type : float
     S_slot_wind = property(
-        fget=_get_S_slot_wind, fset=_set_S_slot_wind, doc=u"""Slot winding surface"""
+        fget=_get_S_slot_wind,
+        fset=_set_S_slot_wind,
+        doc=u"""Slot winding surface
+
+        :Type: float
+        """,
     )
 
     def _get_S_wind_act(self):
@@ -271,10 +297,13 @@ class OutGeoLam(FrozenClass):
         check_var("S_wind_act", value, "float")
         self._S_wind_act = value
 
-    # Conductor active surface
-    # Type : float
     S_wind_act = property(
-        fget=_get_S_wind_act, fset=_set_S_wind_act, doc=u"""Conductor active surface"""
+        fget=_get_S_wind_act,
+        fset=_set_S_wind_act,
+        doc=u"""Conductor active surface
+
+        :Type: float
+        """,
     )
 
     def _get_sym(self):
@@ -286,12 +315,13 @@ class OutGeoLam(FrozenClass):
         check_var("sym", value, "int")
         self._sym = value
 
-    # Symmetry factor of the lamination (1=full machine; 2 = half;...)
-    # Type : int
     sym = property(
         fget=_get_sym,
         fset=_set_sym,
-        doc=u"""Symmetry factor of the lamination (1=full machine; 2 = half;...)""",
+        doc=u"""Symmetry factor of the lamination (1=full machine; 2 = half;...)
+
+        :Type: int
+        """,
     )
 
     def _get_is_asym_wind(self):
@@ -303,10 +333,11 @@ class OutGeoLam(FrozenClass):
         check_var("is_asym_wind", value, "bool")
         self._is_asym_wind = value
 
-    # True if the winding has a asymmetry
-    # Type : bool
     is_asym_wind = property(
         fget=_get_is_asym_wind,
         fset=_set_is_asym_wind,
-        doc=u"""True if the winding has a asymmetry""",
+        doc=u"""True if the winding has a asymmetry
+
+        :Type: bool
+        """,
     )

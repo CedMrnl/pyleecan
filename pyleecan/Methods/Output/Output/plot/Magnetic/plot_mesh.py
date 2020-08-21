@@ -3,18 +3,8 @@ import matplotlib.pyplot as plt
 import matplotlib.collections
 import numpy as np
 
-from ......Methods.Machine import (
-    STATOR_COLOR,
-    ROTOR_COLOR,
-    SHAFT_COLOR,
-    ROTOR_COLOR,
-    FRAME_COLOR,
-    MAGNET_COLOR,
-    BAR_COLOR,
-    SCR_COLOR,
-    VENT_COLOR,
-    VENT_EDGE,
-)
+from ......definitions import config_dict
+
 from ......Functions.FEMM import (
     GROUP_SC,
     GROUP_AG,
@@ -33,6 +23,17 @@ from ......Functions.FEMM import (
     GROUP_SH,
     GROUP_RH,
 )
+
+STATOR_COLOR = config_dict["PLOT"]["COLOR_DICT"]["STATOR_COLOR"]
+ROTOR_COLOR = config_dict["PLOT"]["COLOR_DICT"]["ROTOR_COLOR"]
+SHAFT_COLOR = config_dict["PLOT"]["COLOR_DICT"]["SHAFT_COLOR"]
+ROTOR_COLOR = config_dict["PLOT"]["COLOR_DICT"]["ROTOR_COLOR"]
+FRAME_COLOR = config_dict["PLOT"]["COLOR_DICT"]["FRAME_COLOR"]
+MAGNET_COLOR = config_dict["PLOT"]["COLOR_DICT"]["MAGNET_COLOR"]
+BAR_COLOR = config_dict["PLOT"]["COLOR_DICT"]["BAR_COLOR"]
+SCR_COLOR = config_dict["PLOT"]["COLOR_DICT"]["SCR_COLOR"]
+VENT_COLOR = config_dict["PLOT"]["COLOR_DICT"]["VENT_COLOR"]
+VENT_EDGE = config_dict["PLOT"]["COLOR_DICT"]["VENT_EDGE"]
 
 
 def plot_mesh(

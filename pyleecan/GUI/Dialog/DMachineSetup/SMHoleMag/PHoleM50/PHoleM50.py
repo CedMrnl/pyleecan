@@ -54,22 +54,26 @@ class PHoleM50(Gen_PHoleM50, QWidget):
         self.lf_H4.unit = "m"
 
         # Set default materials
-        self.w_mat_0.setText("magnet_0:")
-        self.w_mat_0.def_mat = "Magnet1"
-        self.w_mat_1.setText("magnet_1:")
+        self.w_mat_0.setText("mat_void:")
+        self.w_mat_0.def_mat = "Air"
+        self.w_mat_1.setText("magnet_0:")
         self.w_mat_1.def_mat = "Magnet1"
+        self.w_mat_2.setText("magnet_1:")
+        self.w_mat_2.def_mat = "Magnet1"
 
         # Adapt GUI with/without magnet
         if hole.magnet_0 is None:  # SyRM
             self.img_slot.setPixmap(
                 QPixmap(":/images/images/MachineSetup/WSlot/Slot_50_no_mag.PNG")
             )
-            self.w_mat_0.hide()
+            self.w_mat_0.update(self.hole, "mat_void", self.matlib)
             self.w_mat_1.hide()
+            self.w_mat_2.hide()
         else:
             # Set current material
-            self.w_mat_0.update(self.hole.magnet_0, "mat_type", self.matlib)
-            self.w_mat_1.update(self.hole.magnet_1, "mat_type", self.matlib)
+            self.w_mat_0.update(self.hole, "mat_void", self.matlib)
+            self.w_mat_1.update(self.hole.magnet_0, "mat_type", self.matlib)
+            self.w_mat_2.update(self.hole.magnet_1, "mat_type", self.matlib)
 
         # Set unit name (m ou mm)
         self.u = gui_option.unit
@@ -116,6 +120,7 @@ class PHoleM50(Gen_PHoleM50, QWidget):
         self.lf_H4.editingFinished.connect(self.set_H4)
         self.w_mat_0.saveNeeded.connect(self.emit_save)
         self.w_mat_1.saveNeeded.connect(self.emit_save)
+        self.w_mat_2.saveNeeded.connect(self.emit_save)
 
     def set_W0(self):
         """Signal to update the value of W0 according to the line edit
@@ -304,29 +309,7 @@ class PHoleM50(Gen_PHoleM50, QWidget):
             Error message (return None if no error)
         """
 
-        # Check that everything is set
-        if self.hole.W0 is None:
-            return self.tr("You must set W0 !")
-        elif self.hole.W1 is None:
-            return self.tr("You must set W1 !")
-        elif self.hole.W2 is None:
-            return self.tr("You must set W2 !")
-        elif self.hole.W3 is None:
-            return self.tr("You must set W3 !")
-        elif self.hole.W4 is None:
-            return self.tr("You must set W4 !")
-        elif self.hole.H0 is None:
-            return self.tr("You must set H0 !")
-        elif self.hole.H1 is None:
-            return self.tr("You must set H1 !")
-        elif self.hole.H2 is None:
-            return self.tr("You must set H2 !")
-        elif self.hole.H3 is None:
-            return self.tr("You must set H3 !")
-        elif self.hole.H4 is None:
-            return self.tr("You must set H4 !")
-
-        # Constraints
+        # Constraints and None
         try:
             self.hole.check()
         except SlotCheckError as error:

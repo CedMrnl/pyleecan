@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""File generated according to Generator/ClassesRef/Machine/Lamination.csv
-WARNING! All changes made in this file will be lost!
+# File generated according to Generator/ClassesRef/Machine/Lamination.csv
+# WARNING! All changes made in this file will be lost!
+"""Method code available at https://github.com/Eomys/pyleecan/tree/master/pyleecan/Methods/Machine/Lamination
 """
 
 from os import linesep
@@ -108,6 +109,11 @@ try:
     from ..Methods.Machine.Lamination.comp_angle_q_axis import comp_angle_q_axis
 except ImportError as error:
     comp_angle_q_axis = error
+
+try:
+    from ..Methods.Machine.Lamination.comp_radius_mid_yoke import comp_radius_mid_yoke
+except ImportError as error:
+    comp_radius_mid_yoke = error
 
 
 from ._check import InitUnKnowClassError
@@ -328,8 +334,26 @@ class Lamination(FrozenClass):
         )
     else:
         comp_angle_q_axis = comp_angle_q_axis
+    # cf Methods.Machine.Lamination.comp_radius_mid_yoke
+    if isinstance(comp_radius_mid_yoke, ImportError):
+        comp_radius_mid_yoke = property(
+            fget=lambda x: raise_(
+                ImportError(
+                    "Can't use Lamination method comp_radius_mid_yoke: "
+                    + str(comp_radius_mid_yoke)
+                )
+            )
+        )
+    else:
+        comp_radius_mid_yoke = comp_radius_mid_yoke
     # save method is available in all object
     save = save
+
+    # generic copy method
+    def copy(self):
+        """Return a copy of the class
+        """
+        return type(self)(init_dict=self.as_dict())
 
     # get_logger method is available in all object
     get_logger = get_logger
@@ -614,12 +638,15 @@ class Lamination(FrozenClass):
         check_var("L1", value, "float", Vmin=0, Vmax=100)
         self._L1 = value
 
-    # Lamination stack active length [m] without radial ventilation airducts but including insulation layers between lamination sheets
-    # Type : float, min = 0, max = 100
     L1 = property(
         fget=_get_L1,
         fset=_set_L1,
-        doc=u"""Lamination stack active length [m] without radial ventilation airducts but including insulation layers between lamination sheets""",
+        doc=u"""Lamination stack active length [m] without radial ventilation airducts but including insulation layers between lamination sheets
+
+        :Type: float
+        :min: 0
+        :max: 100
+        """,
     )
 
     def _get_mat_type(self):
@@ -634,10 +661,13 @@ class Lamination(FrozenClass):
         if self._mat_type is not None:
             self._mat_type.parent = self
 
-    # Lamination's material
-    # Type : Material
     mat_type = property(
-        fget=_get_mat_type, fset=_set_mat_type, doc=u"""Lamination's material"""
+        fget=_get_mat_type,
+        fset=_set_mat_type,
+        doc=u"""Lamination's material
+
+        :Type: Material
+        """,
     )
 
     def _get_Nrvd(self):
@@ -649,12 +679,14 @@ class Lamination(FrozenClass):
         check_var("Nrvd", value, "int", Vmin=0)
         self._Nrvd = value
 
-    # number of radial air ventilation ducts in lamination
-    # Type : int, min = 0
     Nrvd = property(
         fget=_get_Nrvd,
         fset=_set_Nrvd,
-        doc=u"""number of radial air ventilation ducts in lamination""",
+        doc=u"""number of radial air ventilation ducts in lamination
+
+        :Type: int
+        :min: 0
+        """,
     )
 
     def _get_Wrvd(self):
@@ -666,12 +698,14 @@ class Lamination(FrozenClass):
         check_var("Wrvd", value, "float", Vmin=0)
         self._Wrvd = value
 
-    # axial width of ventilation ducts in lamination
-    # Type : float, min = 0
     Wrvd = property(
         fget=_get_Wrvd,
         fset=_set_Wrvd,
-        doc=u"""axial width of ventilation ducts in lamination""",
+        doc=u"""axial width of ventilation ducts in lamination
+
+        :Type: float
+        :min: 0
+        """,
     )
 
     def _get_Kf1(self):
@@ -683,10 +717,15 @@ class Lamination(FrozenClass):
         check_var("Kf1", value, "float", Vmin=0, Vmax=1)
         self._Kf1 = value
 
-    # lamination stacking / packing factor
-    # Type : float, min = 0, max = 1
     Kf1 = property(
-        fget=_get_Kf1, fset=_set_Kf1, doc=u"""lamination stacking / packing factor"""
+        fget=_get_Kf1,
+        fset=_set_Kf1,
+        doc=u"""lamination stacking / packing factor
+
+        :Type: float
+        :min: 0
+        :max: 1
+        """,
     )
 
     def _get_is_internal(self):
@@ -698,12 +737,13 @@ class Lamination(FrozenClass):
         check_var("is_internal", value, "bool")
         self._is_internal = value
 
-    # 1 for internal lamination topology, 0 for external lamination
-    # Type : bool
     is_internal = property(
         fget=_get_is_internal,
         fset=_set_is_internal,
-        doc=u"""1 for internal lamination topology, 0 for external lamination""",
+        doc=u"""1 for internal lamination topology, 0 for external lamination
+
+        :Type: bool
+        """,
     )
 
     def _get_Rint(self):
@@ -715,9 +755,15 @@ class Lamination(FrozenClass):
         check_var("Rint", value, "float", Vmin=0)
         self._Rint = value
 
-    # To fill
-    # Type : float, min = 0
-    Rint = property(fget=_get_Rint, fset=_set_Rint, doc=u"""To fill""")
+    Rint = property(
+        fget=_get_Rint,
+        fset=_set_Rint,
+        doc=u"""To fill
+
+        :Type: float
+        :min: 0
+        """,
+    )
 
     def _get_Rext(self):
         """getter of Rext"""
@@ -728,9 +774,15 @@ class Lamination(FrozenClass):
         check_var("Rext", value, "float", Vmin=0)
         self._Rext = value
 
-    # To fill
-    # Type : float, min = 0
-    Rext = property(fget=_get_Rext, fset=_set_Rext, doc=u"""To fill""")
+    Rext = property(
+        fget=_get_Rext,
+        fset=_set_Rext,
+        doc=u"""To fill
+
+        :Type: float
+        :min: 0
+        """,
+    )
 
     def _get_is_stator(self):
         """getter of is_stator"""
@@ -741,9 +793,14 @@ class Lamination(FrozenClass):
         check_var("is_stator", value, "bool")
         self._is_stator = value
 
-    # To fill
-    # Type : bool
-    is_stator = property(fget=_get_is_stator, fset=_set_is_stator, doc=u"""To fill""")
+    is_stator = property(
+        fget=_get_is_stator,
+        fset=_set_is_stator,
+        doc=u"""To fill
+
+        :Type: bool
+        """,
+    )
 
     def _get_axial_vent(self):
         """getter of axial_vent"""
@@ -761,10 +818,13 @@ class Lamination(FrozenClass):
             if obj is not None:
                 obj.parent = self
 
-    # Axial ventilation ducts
-    # Type : [Hole]
     axial_vent = property(
-        fget=_get_axial_vent, fset=_set_axial_vent, doc=u"""Axial ventilation ducts"""
+        fget=_get_axial_vent,
+        fset=_set_axial_vent,
+        doc=u"""Axial ventilation ducts
+
+        :Type: [Hole]
+        """,
     )
 
     def _get_notch(self):
@@ -783,8 +843,11 @@ class Lamination(FrozenClass):
             if obj is not None:
                 obj.parent = self
 
-    # Lamination bore notches
-    # Type : [Notch]
     notch = property(
-        fget=_get_notch, fset=_set_notch, doc=u"""Lamination bore notches"""
+        fget=_get_notch,
+        fset=_set_notch,
+        doc=u"""Lamination bore notches
+
+        :Type: [Notch]
+        """,
     )

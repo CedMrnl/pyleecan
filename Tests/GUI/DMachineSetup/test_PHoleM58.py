@@ -34,12 +34,11 @@ class test_PHoleM58(TestCase):
         self.test_obj.hole[0].magnet_0.mat_type.name = "Magnet3"
 
         self.matlib = MatLib()
-        self.matlib.list_mat = [
+        self.matlib.dict_mat["RefMatLib"] = [
             Material(name="Magnet1"),
             Material(name="Magnet2"),
             Material(name="Magnet3"),
         ]
-        self.matlib.index_first_mat_mach = 3
 
         self.widget = PHoleM58(self.test_obj.hole[0], self.matlib)
 
@@ -66,9 +65,9 @@ class test_PHoleM58(TestCase):
         self.assertEqual(self.widget.lf_W3.value(), 0.17)
         self.assertEqual(self.widget.lf_R0.value(), 0.19)
         # Check material
-        self.assertFalse(self.widget.w_mat_0.isHidden())
-        self.assertEqual(self.widget.w_mat_0.c_mat_type.currentText(), "Magnet3")
-        self.assertEqual(self.widget.w_mat_0.c_mat_type.currentIndex(), 2)
+        self.assertFalse(self.widget.w_mat_1.isHidden())
+        self.assertEqual(self.widget.w_mat_1.c_mat_type.currentText(), "Magnet3")
+        self.assertEqual(self.widget.w_mat_1.c_mat_type.currentIndex(), 2)
 
         self.test_obj.hole[0] = HoleM58(
             H0=0.20, H1=0.21, H2=0.22, W0=0.23, W1=0.24, W2=0.25, W3=0.27, R0=0.29
@@ -157,8 +156,15 @@ class test_PHoleM58(TestCase):
         self.assertEqual(self.test_obj.hole[0].H2, 0.36)
 
     def test_set_material_0(self):
-        """Check that you can change the material of magnet_0"""
+        """Check that you can change the material of mat_void"""
         self.widget.w_mat_0.c_mat_type.setCurrentIndex(0)
 
         self.assertEqual(self.widget.w_mat_0.c_mat_type.currentText(), "Magnet1")
+        self.assertEqual(self.test_obj.hole[0].mat_void.name, "Magnet1")
+
+    def test_set_material_1(self):
+        """Check that you can change the material of magnet_0"""
+        self.widget.w_mat_1.c_mat_type.setCurrentIndex(0)
+
+        self.assertEqual(self.widget.w_mat_1.c_mat_type.currentText(), "Magnet1")
         self.assertEqual(self.test_obj.hole[0].magnet_0.mat_type.name, "Magnet1")

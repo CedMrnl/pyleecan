@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""File generated according to Generator/ClassesRef/Machine/CondType22.csv
-WARNING! All changes made in this file will be lost!
+# File generated according to Generator/ClassesRef/Machine/CondType22.csv
+# WARNING! All changes made in this file will be lost!
+"""Method code available at https://github.com/Eomys/pyleecan/tree/master/pyleecan/Methods/Machine/CondType22
 """
 
 from os import linesep
@@ -58,6 +59,12 @@ class CondType22(Conductor):
         comp_surface = comp_surface
     # save method is available in all object
     save = save
+
+    # generic copy method
+    def copy(self):
+        """Return a copy of the class
+        """
+        return type(self)(init_dict=self.as_dict())
 
     # get_logger method is available in all object
     get_logger = get_logger
@@ -156,6 +163,12 @@ class CondType22(Conductor):
         check_var("Sbar", value, "float", Vmin=0)
         self._Sbar = value
 
-    # Surface of the Slot
-    # Type : float, min = 0
-    Sbar = property(fget=_get_Sbar, fset=_set_Sbar, doc=u"""Surface of the Slot""")
+    Sbar = property(
+        fget=_get_Sbar,
+        fset=_set_Sbar,
+        doc=u"""Surface of the Slot
+
+        :Type: float
+        :min: 0
+        """,
+    )

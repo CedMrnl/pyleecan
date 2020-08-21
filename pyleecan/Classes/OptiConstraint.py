@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""File generated according to Generator/ClassesRef/Optimization/OptiConstraint.csv
-WARNING! All changes made in this file will be lost!
+# File generated according to Generator/ClassesRef/Optimization/OptiConstraint.csv
+# WARNING! All changes made in this file will be lost!
+"""Method code available at https://github.com/Eomys/pyleecan/tree/master/pyleecan/Methods/Optimization/OptiConstraint
 """
 
 from os import linesep
@@ -23,6 +24,12 @@ class OptiConstraint(FrozenClass):
 
     # save method is available in all object
     save = save
+
+    # generic copy method
+    def copy(self):
+        """Return a copy of the class
+        """
+        return type(self)(init_dict=self.as_dict())
 
     # get_logger method is available in all object
     get_logger = get_logger
@@ -155,10 +162,13 @@ class OptiConstraint(FrozenClass):
         check_var("name", value, "str")
         self._name = value
 
-    # name of the design variable
-    # Type : str
     name = property(
-        fget=_get_name, fset=_set_name, doc=u"""name of the design variable"""
+        fget=_get_name,
+        fset=_set_name,
+        doc=u"""name of the design variable
+
+        :Type: str
+        """,
     )
 
     def _get_type_const(self):
@@ -170,12 +180,13 @@ class OptiConstraint(FrozenClass):
         check_var("type_const", value, "str")
         self._type_const = value
 
-    # Type of comparison ( "==", "<=", ">=", "<",">")
-    # Type : str
     type_const = property(
         fget=_get_type_const,
         fset=_set_type_const,
-        doc=u"""Type of comparison ( "==", "<=", ">=", "<",">")""",
+        doc=u"""Type of comparison ( "==", "<=", ">=", "<",">")
+
+        :Type: str
+        """,
     )
 
     def _get_value(self):
@@ -187,9 +198,14 @@ class OptiConstraint(FrozenClass):
         check_var("value", value, "float")
         self._value = value
 
-    # Value to compare
-    # Type : float
-    value = property(fget=_get_value, fset=_set_value, doc=u"""Value to compare""")
+    value = property(
+        fget=_get_value,
+        fset=_set_value,
+        doc=u"""Value to compare
+
+        :Type: float
+        """,
+    )
 
     def _get_get_variable(self):
         """getter of get_variable"""
@@ -212,10 +228,11 @@ class OptiConstraint(FrozenClass):
                 "Expected function or list from a saved file, got: " + str(type(value))
             )
 
-    # Function to get the variable to compare
-    # Type : function
     get_variable = property(
         fget=_get_get_variable,
         fset=_set_get_variable,
-        doc=u"""Function to get the variable to compare""",
+        doc=u"""Function to get the variable to compare
+
+        :Type: function
+        """,
     )

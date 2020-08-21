@@ -1,78 +1,56 @@
 # -*- coding: utf-8 -*-
-import sys
-from os.path import dirname, abspath, normpath, join, realpath, isdir, isfile
 import os
 import platform
 import shutil
+import sys
+from json import load
 from logging import getLogger
-from json import dump, load
+from os.path import abspath, dirname, isdir, isfile, join, normpath, realpath
+from matplotlib.colors import ListedColormap
+from matplotlib.cm import get_cmap, register_cmap
+from numpy import load as np_load
+from matplotlib import font_manager
 
 ROOT_DIR = normpath(abspath(join(dirname(__file__), ".."))).replace("\\", "/")
+# Further import
+try:
+    from .Functions.init_environment import get_config_dict, init_user_dir
+except ImportError:
+    # Add root dir to python path
+    sys.path.insert(0, ROOT_DIR)
+    exec(
+        "from pyleecan.Functions.init_environment import get_config_dict, init_user_dir"
+    )
+
 MAIN_DIR = dirname(realpath(__file__)).replace("\\", "/")
 
 PACKAGE_NAME = MAIN_DIR[len(ROOT_DIR) + 1 :]  # To allow to change pyleecan directory
-
 GEN_DIR = join(MAIN_DIR, "Generator").replace("\\", "/")
-DOC_DIR = join(GEN_DIR, "ClassesRef").replace(
-    "\\", "/"
-)  # Absolute path to classes reference dir
-INT_DIR = join(GEN_DIR, "Internal").replace(
-    "\\", "/"
-)  # Absolute path to  internal classes ref. dir
+DOC_DIR = join(GEN_DIR, "ClassesRef").replace("\\", "/")
+DATA_DIR = join(MAIN_DIR, "Data").replace("\\", "/")
+# Absolute path to  internal classes ref. dir
+INT_DIR = join(GEN_DIR, "Internal").replace("\\", "/")
 
 GUI_DIR = join(MAIN_DIR, "GUI").replace("\\", "/")
 RES_PATH = join(GUI_DIR, "Resources").replace("\\", "/")  # Default Resouces folder name
 RES_NAME = "pyleecan.qrc"  # Default Resouces file name
 
-TEST_DIR = join(MAIN_DIR, "../Tests")
+TEST_DIR = join(ROOT_DIR, "Tests").replace("\\", "/")
 
-# Pyleecan user folder
+# User folder (to store machine/materials/config)
 if platform.system() == "Windows":
-    PYLEECAN_USER_DIR = os.environ["APPDATA"] + "/Pyleecan"
-    PYLEECAN_USER_DIR = PYLEECAN_USER_DIR.replace("\\", "/")
+    USER_DIR = join(os.environ["APPDATA"], PACKAGE_NAME)
+    USER_DIR = USER_DIR.replace("\\", "/")
 else:
-    PYLEECAN_USER_DIR = os.environ["HOME"] + "/.local/share/Pyleecan"
+    USER_DIR = os.environ["HOME"] + "/.local/share/" + PACKAGE_NAME
+CONF_PATH = join(USER_DIR, "main_config_dict.json")
+if not isdir(USER_DIR):
+    init_user_dir()
 
+# Load the config file (create one if it doesn't exist)
+config_dict = get_config_dict()
+# Update config_dict content
+config_dict["MAIN"]["MACHINE_DIR"] = join(USER_DIR, "Machine")
+config_dict["MAIN"]["MATLIB_DIR"] = join(USER_DIR, "Material")
 
-if isfile(PYLEECAN_USER_DIR + "/config.json"):  # Load the config file if it exist
-    with open(PYLEECAN_USER_DIR + "/config.json", "r") as config_file:
-        config_dict = load(config_file)
-else:  # Default values
-    config_dict = dict(
-        DATA_DIR=PYLEECAN_USER_DIR + "/Data",
-        MATLIB_DIR=PYLEECAN_USER_DIR + "/Data/Material",  # Material library directory
-        UNIT_M=1,  # length unit: 0 for m, 1 for mm
-        UNIT_M2=1,  # Surface unit: 0 for m^2, 1 for mm^2
-    )
-
-
-DATA_DIR = config_dict["DATA_DIR"]
-MATLIB_DIR = config_dict["MATLIB_DIR"]
-
-
-def create_folder():
-    """
-    Create Pyleecan folder to copy Data into it.
-    
-    Windows: %APPDATA%/Pyleecan
-    Linux and MacOS: $HOME/.local/share/Pyleecan
-    """
-    logger = getLogger("Pyleecan")
-
-    if not isdir(PYLEECAN_USER_DIR):
-        # Create Pyleecan folder and copy Data folder
-        logger.debug("Copying Data folder in " + PYLEECAN_USER_DIR + "/Data")
-        shutil.copytree(
-            __file__[: max(__file__.rfind("/"), __file__.rfind("\\"))] + "/Data",
-            PYLEECAN_USER_DIR + "/Data",
-        )
-
-    with open(PYLEECAN_USER_DIR + "/config.json", "w") as config_file:
-        dump(config_dict, config_file, sort_keys=True, indent=4, separators=(",", ": "))
-
-
-def edit_config_dict(key, value):
-    config_dict[key] = value
-
-    with open(PYLEECAN_USER_DIR + "/config.json", "w") as config_file:
-        dump(config_dict, config_file, sort_keys=True, indent=4, separators=(",", ": "))
+config_dict["GUI"]["CSS_PATH"] = join(USER_DIR, "GUI", config_dict["GUI"]["CSS_NAME"])

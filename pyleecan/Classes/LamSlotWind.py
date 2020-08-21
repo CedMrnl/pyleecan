@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""File generated according to Generator/ClassesRef/Machine/LamSlotWind.csv
-WARNING! All changes made in this file will be lost!
+# File generated according to Generator/ClassesRef/Machine/LamSlotWind.csv
+# WARNING! All changes made in this file will be lost!
+"""Method code available at https://github.com/Eomys/pyleecan/tree/master/pyleecan/Methods/Machine/LamSlotWind
 """
 
 from os import linesep
@@ -101,6 +102,21 @@ try:
     from ..Methods.Machine.LamSlotWind.comp_rot_dir import comp_rot_dir
 except ImportError as error:
     comp_rot_dir = error
+
+try:
+    from ..Methods.Machine.LamSlotWind.comp_lengths_winding import comp_lengths_winding
+except ImportError as error:
+    comp_lengths_winding = error
+
+try:
+    from ..Methods.Machine.LamSlotWind.comp_number_phase_eq import comp_number_phase_eq
+except ImportError as error:
+    comp_number_phase_eq = error
+
+try:
+    from ..Methods.Machine.LamSlotWind.comp_sym import comp_sym
+except ImportError as error:
+    comp_sym = error
 
 
 from ._check import InitUnKnowClassError
@@ -319,8 +335,47 @@ class LamSlotWind(LamSlot):
         )
     else:
         comp_rot_dir = comp_rot_dir
+    # cf Methods.Machine.LamSlotWind.comp_lengths_winding
+    if isinstance(comp_lengths_winding, ImportError):
+        comp_lengths_winding = property(
+            fget=lambda x: raise_(
+                ImportError(
+                    "Can't use LamSlotWind method comp_lengths_winding: "
+                    + str(comp_lengths_winding)
+                )
+            )
+        )
+    else:
+        comp_lengths_winding = comp_lengths_winding
+    # cf Methods.Machine.LamSlotWind.comp_number_phase_eq
+    if isinstance(comp_number_phase_eq, ImportError):
+        comp_number_phase_eq = property(
+            fget=lambda x: raise_(
+                ImportError(
+                    "Can't use LamSlotWind method comp_number_phase_eq: "
+                    + str(comp_number_phase_eq)
+                )
+            )
+        )
+    else:
+        comp_number_phase_eq = comp_number_phase_eq
+    # cf Methods.Machine.LamSlotWind.comp_sym
+    if isinstance(comp_sym, ImportError):
+        comp_sym = property(
+            fget=lambda x: raise_(
+                ImportError("Can't use LamSlotWind method comp_sym: " + str(comp_sym))
+            )
+        )
+    else:
+        comp_sym = comp_sym
     # save method is available in all object
     save = save
+
+    # generic copy method
+    def copy(self):
+        """Return a copy of the class
+        """
+        return type(self)(init_dict=self.as_dict())
 
     # get_logger method is available in all object
     get_logger = get_logger
@@ -539,12 +594,15 @@ class LamSlotWind(LamSlot):
         check_var("Ksfill", value, "float", Vmin=0, Vmax=1)
         self._Ksfill = value
 
-    # Imposed Slot Fill factor (if None, will be computed according to the winding and the slot)
-    # Type : float, min = 0, max = 1
     Ksfill = property(
         fget=_get_Ksfill,
         fset=_set_Ksfill,
-        doc=u"""Imposed Slot Fill factor (if None, will be computed according to the winding and the slot)""",
+        doc=u"""Imposed Slot Fill factor (if None, will be computed according to the winding and the slot)
+
+        :Type: float
+        :min: 0
+        :max: 1
+        """,
     )
 
     def _get_winding(self):
@@ -559,8 +617,11 @@ class LamSlotWind(LamSlot):
         if self._winding is not None:
             self._winding.parent = self
 
-    # Lamination's Winding
-    # Type : Winding
     winding = property(
-        fget=_get_winding, fset=_set_winding, doc=u"""Lamination's Winding"""
+        fget=_get_winding,
+        fset=_set_winding,
+        doc=u"""Lamination's Winding
+
+        :Type: Winding
+        """,
     )

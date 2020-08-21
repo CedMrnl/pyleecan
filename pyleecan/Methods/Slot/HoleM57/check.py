@@ -1,11 +1,4 @@
 # -*- coding: utf-8 -*-
-"""@package Methods.Machine.HoleM50.check
-Check that the HoleM50 is correct
-@date Created on Mon Jan 18 12:53:23 2016
-@copyright (C) 2015-2016 EOMYS ENGINEERING.
-@author pierre_b
-@todo unittest it
-"""
 
 from numpy import arcsin, pi
 
@@ -27,4 +20,25 @@ def check(self):
     Raises
     _______
     """
+    # Check that everything is set
+    if self.W0 is None:
+        raise S57_NoneError("You must set W0 !")
+    elif self.W1 is None:
+        raise S57_NoneError("You must set W1 !")
+    elif self.W2 is None:
+        raise S57_NoneError("You must set W2 !")
+    elif self.W3 is None:
+        raise S57_NoneError("You must set W3 !")
+    elif self.W4 is None:
+        raise S57_NoneError("You must set W4 !")
+    elif self.H1 is None:
+        raise S57_NoneError("You must set H1 !")
+    elif self.H2 is None:
+        raise S57_NoneError("You must set H2 !")
+
+
+class S57_NoneError(SlotCheckError):
+    """Raised when a propery of HoleM57 is None
+    """
+
     pass

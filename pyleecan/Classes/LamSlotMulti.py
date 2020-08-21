@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""File generated according to Generator/ClassesRef/Machine/LamSlotMulti.csv
-WARNING! All changes made in this file will be lost!
+# File generated according to Generator/ClassesRef/Machine/LamSlotMulti.csv
+# WARNING! All changes made in this file will be lost!
+"""Method code available at https://github.com/Eomys/pyleecan/tree/master/pyleecan/Methods/Machine/LamSlotMulti
 """
 
 from os import linesep
@@ -171,6 +172,12 @@ class LamSlotMulti(Lamination):
         get_bore_desc = get_bore_desc
     # save method is available in all object
     save = save
+
+    # generic copy method
+    def copy(self):
+        """Return a copy of the class
+        """
+        return type(self)(init_dict=self.as_dict())
 
     # get_logger method is available in all object
     get_logger = get_logger
@@ -409,10 +416,13 @@ class LamSlotMulti(Lamination):
             if obj is not None:
                 obj.parent = self
 
-    # List of lamination Slot
-    # Type : [Slot]
     slot_list = property(
-        fget=_get_slot_list, fset=_set_slot_list, doc=u"""List of lamination Slot"""
+        fget=_get_slot_list,
+        fset=_set_slot_list,
+        doc=u"""List of lamination Slot
+
+        :Type: [Slot]
+        """,
     )
 
     def _get_alpha(self):
@@ -421,7 +431,9 @@ class LamSlotMulti(Lamination):
 
     def _set_alpha(self, value):
         """setter of alpha"""
-        if type(value) is list:
+        if value is None:
+            value = array([])
+        elif type(value) is list:
             try:
                 value = array(value)
             except:
@@ -429,8 +441,11 @@ class LamSlotMulti(Lamination):
         check_var("alpha", value, "ndarray")
         self._alpha = value
 
-    # Angular position of the Slots
-    # Type : ndarray
     alpha = property(
-        fget=_get_alpha, fset=_set_alpha, doc=u"""Angular position of the Slots"""
+        fget=_get_alpha,
+        fset=_set_alpha,
+        doc=u"""Angular position of the Slots
+
+        :Type: ndarray
+        """,
     )

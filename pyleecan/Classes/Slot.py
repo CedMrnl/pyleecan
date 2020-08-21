@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""File generated according to Generator/ClassesRef/Slot/Slot.csv
-WARNING! All changes made in this file will be lost!
+# File generated according to Generator/ClassesRef/Slot/Slot.csv
+# WARNING! All changes made in this file will be lost!
+"""Method code available at https://github.com/Eomys/pyleecan/tree/master/pyleecan/Methods/Slot/Slot
 """
 
 from os import linesep
@@ -66,6 +67,11 @@ try:
     from ..Methods.Slot.Slot.plot import plot
 except ImportError as error:
     plot = error
+
+try:
+    from ..Methods.Slot.Slot.comp_width_opening import comp_width_opening
+except ImportError as error:
+    comp_width_opening = error
 
 
 from ._check import InitUnKnowClassError
@@ -186,8 +192,26 @@ class Slot(FrozenClass):
         )
     else:
         plot = plot
+    # cf Methods.Slot.Slot.comp_width_opening
+    if isinstance(comp_width_opening, ImportError):
+        comp_width_opening = property(
+            fget=lambda x: raise_(
+                ImportError(
+                    "Can't use Slot method comp_width_opening: "
+                    + str(comp_width_opening)
+                )
+            )
+        )
+    else:
+        comp_width_opening = comp_width_opening
     # save method is available in all object
     save = save
+
+    # generic copy method
+    def copy(self):
+        """Return a copy of the class
+        """
+        return type(self)(init_dict=self.as_dict())
 
     # get_logger method is available in all object
     get_logger = get_logger
@@ -268,6 +292,13 @@ class Slot(FrozenClass):
         check_var("Zs", value, "int", Vmin=0, Vmax=1000)
         self._Zs = value
 
-    # slot number
-    # Type : int, min = 0, max = 1000
-    Zs = property(fget=_get_Zs, fset=_set_Zs, doc=u"""slot number""")
+    Zs = property(
+        fget=_get_Zs,
+        fset=_set_Zs,
+        doc=u"""slot number
+
+        :Type: int
+        :min: 0
+        :max: 1000
+        """,
+    )

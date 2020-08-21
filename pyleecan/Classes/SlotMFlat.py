@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""File generated according to Generator/ClassesRef/Slot/SlotMFlat.csv
-WARNING! All changes made in this file will be lost!
+# File generated according to Generator/ClassesRef/Slot/SlotMFlat.csv
+# WARNING! All changes made in this file will be lost!
+"""Method code available at https://github.com/Eomys/pyleecan/tree/master/pyleecan/Methods/Slot/SlotMFlat
 """
 
 from os import linesep
@@ -142,6 +143,12 @@ class SlotMFlat(SlotMag):
         get_point_bottom = get_point_bottom
     # save method is available in all object
     save = save
+
+    # generic copy method
+    def copy(self):
+        """Return a copy of the class
+        """
+        return type(self)(init_dict=self.as_dict())
 
     # get_logger method is available in all object
     get_logger = get_logger
@@ -309,9 +316,15 @@ class SlotMFlat(SlotMag):
         check_var("H0", value, "float", Vmin=0)
         self._H0 = value
 
-    # Slot isthmus height
-    # Type : float, min = 0
-    H0 = property(fget=_get_H0, fset=_set_H0, doc=u"""Slot isthmus height""")
+    H0 = property(
+        fget=_get_H0,
+        fset=_set_H0,
+        doc=u"""Slot isthmus height
+
+        :Type: float
+        :min: 0
+        """,
+    )
 
     def _get_W0(self):
         """getter of W0"""
@@ -322,9 +335,15 @@ class SlotMFlat(SlotMag):
         check_var("W0", value, "float", Vmin=0)
         self._W0 = value
 
-    # Slot isthmus width.
-    # Type : float, min = 0
-    W0 = property(fget=_get_W0, fset=_set_W0, doc=u"""Slot isthmus width.""")
+    W0 = property(
+        fget=_get_W0,
+        fset=_set_W0,
+        doc=u"""Slot isthmus width.
+
+        :Type: float
+        :min: 0
+        """,
+    )
 
     def _get_W0_is_rad(self):
         """getter of W0_is_rad"""
@@ -335,10 +354,13 @@ class SlotMFlat(SlotMag):
         check_var("W0_is_rad", value, "bool")
         self._W0_is_rad = value
 
-    # W0 unit, 0 for m, 1 for rad
-    # Type : bool
     W0_is_rad = property(
-        fget=_get_W0_is_rad, fset=_set_W0_is_rad, doc=u"""W0 unit, 0 for m, 1 for rad"""
+        fget=_get_W0_is_rad,
+        fset=_set_W0_is_rad,
+        doc=u"""W0 unit, 0 for m, 1 for rad
+
+        :Type: bool
+        """,
     )
 
     def _get_magnet(self):
@@ -357,6 +379,11 @@ class SlotMFlat(SlotMag):
             if obj is not None:
                 obj.parent = self
 
-    # List of magnet
-    # Type : [MagnetFlat]
-    magnet = property(fget=_get_magnet, fset=_set_magnet, doc=u"""List of magnet""")
+    magnet = property(
+        fget=_get_magnet,
+        fset=_set_magnet,
+        doc=u"""List of magnet
+
+        :Type: [MagnetFlat]
+        """,
+    )

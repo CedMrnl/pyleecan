@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""File generated according to Generator/ClassesRef/Machine/WindingSC.csv
-WARNING! All changes made in this file will be lost!
+# File generated according to Generator/ClassesRef/Machine/WindingSC.csv
+# WARNING! All changes made in this file will be lost!
+"""Method code available at https://github.com/Eomys/pyleecan/tree/master/pyleecan/Methods/Machine/WindingSC
 """
 
 from os import linesep
@@ -31,6 +32,7 @@ class WindingSC(Winding):
     """short-circuit winding (e.g. squirrel cage type)"""
 
     VERSION = 1
+    NAME = "short-circuit"
 
     # Check ImportError to remove unnecessary dependencies in unused method
     # cf Methods.Machine.WindingSC.comp_connection_mat
@@ -58,6 +60,12 @@ class WindingSC(Winding):
         get_dim_wind = get_dim_wind
     # save method is available in all object
     save = save
+
+    # generic copy method
+    def copy(self):
+        """Return a copy of the class
+        """
+        return type(self)(init_dict=self.as_dict())
 
     # get_logger method is available in all object
     get_logger = get_logger

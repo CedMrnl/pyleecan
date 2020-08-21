@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""File generated according to Generator/ClassesRef/Machine/MagnetType11.csv
-WARNING! All changes made in this file will be lost!
+# File generated according to Generator/ClassesRef/Machine/MagnetType11.csv
+# WARNING! All changes made in this file will be lost!
+"""Method code available at https://github.com/Eomys/pyleecan/tree/master/pyleecan/Methods/Machine/MagnetType11
 """
 
 from os import linesep
@@ -95,6 +96,12 @@ class MagnetType11(MagnetPolar):
         comp_surface = comp_surface
     # save method is available in all object
     save = save
+
+    # generic copy method
+    def copy(self):
+        """Return a copy of the class
+        """
+        return type(self)(init_dict=self.as_dict())
 
     # get_logger method is available in all object
     get_logger = get_logger
@@ -212,10 +219,14 @@ class MagnetType11(MagnetPolar):
         check_var("Wmag", value, "float", Vmin=0)
         self._Wmag = value
 
-    # magnet bottom width [rad]
-    # Type : float, min = 0
     Wmag = property(
-        fget=_get_Wmag, fset=_set_Wmag, doc=u"""magnet bottom width [rad]"""
+        fget=_get_Wmag,
+        fset=_set_Wmag,
+        doc=u"""magnet bottom width [rad]
+
+        :Type: float
+        :min: 0
+        """,
     )
 
     def _get_Hmag(self):
@@ -227,6 +238,12 @@ class MagnetType11(MagnetPolar):
         check_var("Hmag", value, "float", Vmin=0)
         self._Hmag = value
 
-    # magnet radial height [m]
-    # Type : float, min = 0
-    Hmag = property(fget=_get_Hmag, fset=_set_Hmag, doc=u"""magnet radial height [m]""")
+    Hmag = property(
+        fget=_get_Hmag,
+        fset=_set_Hmag,
+        doc=u"""magnet radial height [m]
+
+        :Type: float
+        :min: 0
+        """,
+    )

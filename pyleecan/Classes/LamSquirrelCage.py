@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""File generated according to Generator/ClassesRef/Machine/LamSquirrelCage.csv
-WARNING! All changes made in this file will be lost!
+# File generated according to Generator/ClassesRef/Machine/LamSquirrelCage.csv
+# WARNING! All changes made in this file will be lost!
+"""Method code available at https://github.com/Eomys/pyleecan/tree/master/pyleecan/Methods/Machine/LamSquirrelCage
 """
 
 from os import linesep
@@ -31,6 +32,18 @@ try:
     from ..Methods.Machine.LamSquirrelCage.plot import plot
 except ImportError as error:
     plot = error
+
+try:
+    from ..Methods.Machine.LamSquirrelCage.comp_number_phase_eq import (
+        comp_number_phase_eq,
+    )
+except ImportError as error:
+    comp_number_phase_eq = error
+
+try:
+    from ..Methods.Machine.LamSquirrelCage.comp_sym import comp_sym
+except ImportError as error:
+    comp_sym = error
 
 
 from ._check import InitUnKnowClassError
@@ -89,8 +102,37 @@ class LamSquirrelCage(LamSlotWind):
         )
     else:
         plot = plot
+    # cf Methods.Machine.LamSquirrelCage.comp_number_phase_eq
+    if isinstance(comp_number_phase_eq, ImportError):
+        comp_number_phase_eq = property(
+            fget=lambda x: raise_(
+                ImportError(
+                    "Can't use LamSquirrelCage method comp_number_phase_eq: "
+                    + str(comp_number_phase_eq)
+                )
+            )
+        )
+    else:
+        comp_number_phase_eq = comp_number_phase_eq
+    # cf Methods.Machine.LamSquirrelCage.comp_sym
+    if isinstance(comp_sym, ImportError):
+        comp_sym = property(
+            fget=lambda x: raise_(
+                ImportError(
+                    "Can't use LamSquirrelCage method comp_sym: " + str(comp_sym)
+                )
+            )
+        )
+    else:
+        comp_sym = comp_sym
     # save method is available in all object
     save = save
+
+    # generic copy method
+    def copy(self):
+        """Return a copy of the class
+        """
+        return type(self)(init_dict=self.as_dict())
 
     # get_logger method is available in all object
     get_logger = get_logger
@@ -297,12 +339,14 @@ class LamSquirrelCage(LamSlotWind):
         check_var("Hscr", value, "float", Vmin=0)
         self._Hscr = value
 
-    # short circuit ring section radial height [m]
-    # Type : float, min = 0
     Hscr = property(
         fget=_get_Hscr,
         fset=_set_Hscr,
-        doc=u"""short circuit ring section radial height [m]""",
+        doc=u"""short circuit ring section radial height [m]
+
+        :Type: float
+        :min: 0
+        """,
     )
 
     def _get_Lscr(self):
@@ -314,12 +358,14 @@ class LamSquirrelCage(LamSlotWind):
         check_var("Lscr", value, "float", Vmin=0)
         self._Lscr = value
 
-    # short circuit ring section axial length
-    # Type : float, min = 0
     Lscr = property(
         fget=_get_Lscr,
         fset=_set_Lscr,
-        doc=u"""short circuit ring section axial length""",
+        doc=u"""short circuit ring section axial length
+
+        :Type: float
+        :min: 0
+        """,
     )
 
     def _get_ring_mat(self):
@@ -334,10 +380,11 @@ class LamSquirrelCage(LamSlotWind):
         if self._ring_mat is not None:
             self._ring_mat.parent = self
 
-    # Material of the Rotor short circuit ring
-    # Type : Material
     ring_mat = property(
         fget=_get_ring_mat,
         fset=_set_ring_mat,
-        doc=u"""Material of the Rotor short circuit ring""",
+        doc=u"""Material of the Rotor short circuit ring
+
+        :Type: Material
+        """,
     )

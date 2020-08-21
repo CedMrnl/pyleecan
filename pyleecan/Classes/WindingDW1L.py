@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""File generated according to Generator/ClassesRef/Machine/WindingDW1L.csv
-WARNING! All changes made in this file will be lost!
+# File generated according to Generator/ClassesRef/Machine/WindingDW1L.csv
+# WARNING! All changes made in this file will be lost!
+"""Method code available at https://github.com/Eomys/pyleecan/tree/master/pyleecan/Methods/Machine/WindingDW1L
 """
 
 from os import linesep
@@ -31,6 +32,7 @@ class WindingDW1L(Winding):
     """single layer overlapping integral distributed winding"""
 
     VERSION = 1
+    NAME = "single layer distributed"
 
     # Check ImportError to remove unnecessary dependencies in unused method
     # cf Methods.Machine.WindingDW1L.comp_connection_mat
@@ -58,6 +60,12 @@ class WindingDW1L(Winding):
         get_dim_wind = get_dim_wind
     # save method is available in all object
     save = save
+
+    # generic copy method
+    def copy(self):
+        """Return a copy of the class
+        """
+        return type(self)(init_dict=self.as_dict())
 
     # get_logger method is available in all object
     get_logger = get_logger
@@ -197,10 +205,13 @@ class WindingDW1L(Winding):
         check_var("coil_pitch", value, "int", Vmin=0, Vmax=1000)
         self._coil_pitch = value
 
-    # winding coil pitch or coil span expressed in slots (coil_pitch1=Zs/(2p)->full-pitch distributed winding, coil_pitch1<Zs/(2p)->chorded/shorted-pitch distributed winding, coil_pitch1=1->tooth-winding). Coil pitch is sometimes written 1/9 means Input.Magnetics.coil_pitch1=9-1=8
-    # Type : int, min = 0, max = 1000
     coil_pitch = property(
         fget=_get_coil_pitch,
         fset=_set_coil_pitch,
-        doc=u"""winding coil pitch or coil span expressed in slots (coil_pitch1=Zs/(2p)->full-pitch distributed winding, coil_pitch1<Zs/(2p)->chorded/shorted-pitch distributed winding, coil_pitch1=1->tooth-winding). Coil pitch is sometimes written 1/9 means Input.Magnetics.coil_pitch1=9-1=8""",
+        doc=u"""winding coil pitch or coil span expressed in slots (coil_pitch1=Zs/(2p)->full-pitch distributed winding, coil_pitch1<Zs/(2p)->chorded/shorted-pitch distributed winding, coil_pitch1=1->tooth-winding). Coil pitch is sometimes written 1/9 means Input.Magnetics.coil_pitch1=9-1=8
+
+        :Type: int
+        :min: 0
+        :max: 1000
+        """,
     )

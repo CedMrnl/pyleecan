@@ -20,10 +20,10 @@ def check_cstr(solver, indiv):
     # Non valid simulation violate every constraints
     if indiv.is_simu_valid == False:
         indiv.cstr_viol = len(solver.problem.constraint)
-        return False
+        return True  # To not add errors to infeasible
 
     # Browse constraints
-    for _, constraint in solver.problem.constraint.items():
+    for constraint in solver.problem.constraint:
         # Compute value to compare
         var_val = constraint.get_variable(indiv.output)
 

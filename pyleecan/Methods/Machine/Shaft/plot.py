@@ -4,10 +4,12 @@ from matplotlib.patches import Patch
 from matplotlib.pyplot import axis, legend
 
 from ....Functions.init_fig import init_fig
-from ....Methods.Machine import SHAFT_COLOR
+from ....definitions import config_dict
+
+SHAFT_COLOR = config_dict["PLOT"]["COLOR_DICT"]["SHAFT_COLOR"]
 
 
-def plot(self, fig=None, sym=1, alpha=0, delta=0, is_edge_only=False):
+def plot(self, fig=None, sym=1, alpha=0, delta=0, is_edge_only=False, is_show=True):
     """Plot the Shaft in a matplotlib fig
 
     Parameters
@@ -25,6 +27,8 @@ def plot(self, fig=None, sym=1, alpha=0, delta=0, is_edge_only=False):
         Complex value for translation
     is_edge_only: bool
         To plot transparent Patches
+    is_show : bool
+        To call show at the end of the method
 
     Returns
     -------
@@ -55,4 +59,5 @@ def plot(self, fig=None, sym=1, alpha=0, delta=0, is_edge_only=False):
         label_leg.append("Shaft")
 
         legend(patch_leg, label_leg)
-    fig.show()
+    if is_show:
+        fig.show()

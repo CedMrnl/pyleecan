@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 
 from matplotlib.pyplot import axis
-from ....Methods.Machine import ROTOR_COLOR, STATOR_COLOR
 
 from ....Functions.init_fig import init_fig
+from ....definitions import config_dict
+
+ROTOR_COLOR = config_dict["PLOT"]["COLOR_DICT"]["ROTOR_COLOR"]
+STATOR_COLOR = config_dict["PLOT"]["COLOR_DICT"]["STATOR_COLOR"]
 
 
 def plot(self, fig=None):

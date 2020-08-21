@@ -4,9 +4,14 @@ from matplotlib.patches import Patch
 from matplotlib.pyplot import axis, legend
 
 from ....Functions.Winding.find_wind_phase_color import find_wind_phase_color
+from ....Functions.Winding.gen_phase_list import gen_name
 from ....Functions.init_fig import init_fig
-from ....Methods.Machine import PHASE_COLOR, PHASE_NAME, ROTOR_COLOR, STATOR_COLOR
+from ....definitions import config_dict
 from ....Classes.WindingSC import WindingSC
+
+PHASE_COLORS = config_dict["PLOT"]["COLOR_DICT"]["PHASE_COLORS"]
+ROTOR_COLOR = config_dict["PLOT"]["COLOR_DICT"]["ROTOR_COLOR"]
+STATOR_COLOR = config_dict["PLOT"]["COLOR_DICT"]["STATOR_COLOR"]
 
 
 def plot(
@@ -18,6 +23,7 @@ def plot(
     delta=0,
     is_edge_only=False,
     is_display=True,
+    is_show=True,
 ):
     """Plot the Lamination in a matplotlib fig
 
@@ -40,6 +46,8 @@ def plot(
         To plot transparent Patches
     is_display : bool
         False to return the patches
+    is_show : bool
+        To call show at the end of the method
     Returns
     -------
     patches : list
@@ -103,13 +111,15 @@ def plot(
                 axes.set_title("Rotor with Winding")
             # Add the winding legend only if needed
             if not is_lam_only:
+                phase_name = gen_name(qs, is_add_phase=True)
                 for ii in range(qs):
-                    if not ("Phase " + PHASE_NAME[ii] in label_leg):
+                    if not phase_name[ii] in label_leg:
                         # Avoid adding twice the same label
-                        index = ii % len(PHASE_COLOR)
-                        patch_leg.append(Patch(color=PHASE_COLOR[index]))
-                        label_leg.append("Phase " + PHASE_NAME[ii])
+                        index = ii % len(PHASE_COLORS)
+                        patch_leg.append(Patch(color=PHASE_COLORS[index]))
+                        label_leg.append(phase_name[ii])
             legend(patch_leg, label_leg)
-        fig.show()
+        if is_show:
+            fig.show()
     else:
         return patches

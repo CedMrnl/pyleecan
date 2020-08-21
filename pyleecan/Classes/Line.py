@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""File generated according to Generator/ClassesRef/Geometry/Line.csv
-WARNING! All changes made in this file will be lost!
+# File generated according to Generator/ClassesRef/Geometry/Line.csv
+# WARNING! All changes made in this file will be lost!
+"""Method code available at https://github.com/Eomys/pyleecan/tree/master/pyleecan/Methods/Geometry/Line
 """
 
 from os import linesep
@@ -20,6 +21,12 @@ class Line(FrozenClass):
 
     # save method is available in all object
     save = save
+
+    # generic copy method
+    def copy(self):
+        """Return a copy of the class
+        """
+        return type(self)(init_dict=self.as_dict())
 
     # get_logger method is available in all object
     get_logger = get_logger
@@ -100,10 +107,11 @@ class Line(FrozenClass):
         check_var("label", value, "str")
         self._label = value
 
-    # the label of the Line (EX: Yoke_side)
-    # Type : str
     label = property(
         fget=_get_label,
         fset=_set_label,
-        doc=u"""the label of the Line (EX: Yoke_side)""",
+        doc=u"""the label of the Line (EX: Yoke_side)
+
+        :Type: str
+        """,
     )

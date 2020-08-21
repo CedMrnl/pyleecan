@@ -1,4 +1,8 @@
 # <img alt="Pyleecan" src="https://www.pyleecan.org/_static/favicon.png" height="120">
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+<a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+
 ## Presentation
 PYLEECAN™ objective is to provide a **user-friendly, unified, flexible simulation framework for the multiphysic design and optimization of electrical machines and drives** based on fully open-source software.
 
@@ -23,7 +27,7 @@ On a longer term, PYLEECAN should also include the following five physics with d
 ## Origin and status of the project
 EOMYS initiated in 2018 the open-source project named PYLEECAN (Python Library for Electrical Engineering Computational Analysis) under Apache license by releasing a part of [MANATEE](https://eomys.com/produits/manatee/article/logiciel-manatee?lang=en) commercial software scripts. These initial scripts included a fully **object-oriented modelling** of main radial flux electrical machines, with parameterized geometry. However, PYLEECAN is not an EOMYS-only project, the initial maintainers includes other companies and universities and all contributors are welcome.
 
-* PYLEECAN is fully coupled to [FEMM](http://www.femm.info) to carry **non-linear magnetostatic** analysis including sliding band and symmetries.
+* PYLEECAN is fully coupled to [FEMM](http://www.femm.info) to carry **non-linear magnetostatic** analysis including sliding band and symmetries. For now this coupling is available only on Windows.
 * PYLEECAN includes a **Graphical User Interface** to define main 2D radial flux topologies parametrized geometries (PMSM, IM, SRM, SyRM) including material library.
 * PYLEECAN is coupled to [Gmsh](http://gmsh.info/) **2D/3D finite element mesh generator** to run third-party multiphysic solvers. 
 * PYLEECAN is coupled to a **multiobjective optimization** library to carry design optimization of electrical machines.

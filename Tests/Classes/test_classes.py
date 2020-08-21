@@ -1,22 +1,19 @@
 # -*- coding: utf-8 -*-
 
 from os.path import join
-from os import remove
+from os import remove, chdir
 
 import pytest
 from importlib import import_module
+import matplotlib.pyplot as plt
 from numpy import array_equal, empty, array
 from pyleecan.Generator.read_fct import read_all
 from pyleecan.Generator.ClassGenerator.init_method_generator import get_mother_attr
 from pyleecan.definitions import DOC_DIR
-from Tests.find import (
-    find_test_value,
-    is_type_list,
-    is_type_dict,
-    MissingTypeError,
-    PYTHON_TYPE,
-)
+from Tests.find import find_test_value, is_type_list, is_type_dict, MissingTypeError
+from pyleecan.Generator import PYTHON_TYPE
 
+from Tests import save_path
 from pyleecan.Classes._check import CheckMinError, CheckTypeError, CheckMaxError
 from pyleecan.Classes._check import NotADictError
 from pyleecan.Classes._frozen import FrozenClass, FrozenError
@@ -25,6 +22,7 @@ from pyleecan.Classes._frozen import FrozenClass, FrozenError
 gen_dict = read_all(DOC_DIR)  # dict of class dict
 # Remove one list level (packages Machine, Simulation, Material...)
 class_list = list(gen_dict.values())
+
 from pyleecan.Classes.import_all import *
 
 
@@ -53,14 +51,7 @@ def test_class_init_default(class_dict):
         result = test_obj.__getattribute__(prop["name"])
         if prop["value"] == "None":
             prop["value"] = None
-        if type_name in PYTHON_TYPE:
-            assert result == prop["value"], (
-                "Error for class "
-                + class_dict["name"]
-                + " for property: "
-                + prop["name"],
-            )
-        elif type_name == "dict":
+        if type_name == "dict":
             # Default value is empty dict
             if prop["value"] == "":
                 value = {}
@@ -72,6 +63,21 @@ def test_class_init_default(class_dict):
                 + " for property: "
                 + prop["name"],
             )
+        elif type_name in PYTHON_TYPE:
+            if type_name == "list" and prop["value"] == -1:
+                assert result == [], (
+                    "Error for class "
+                    + class_dict["name"]
+                    + " for property: "
+                    + prop["name"],
+                )
+            else:
+                assert result == prop["value"], (
+                    "Error for class "
+                    + class_dict["name"]
+                    + " for property: "
+                    + prop["name"],
+                )
         elif is_type_list(type_name):  # List of pyleecan type
             assert result == list(), (
                 "Error for class "
@@ -127,11 +133,13 @@ def test_class_init_str(class_dict):
     test_obj = eval(class_dict["name"] + "()")
 
     # Save the object in a file
-    test_obj.save("tmp.json")
+    chdir(save_path)
+    tmp_file = join(save_path, "tmp.json").replace("\\", "/")
+    test_obj.save(tmp_file)
 
     # Initate a second object from the saved file
     test_obj2 = eval(class_dict["name"] + "(init_str='tmp.json')")
-    remove("tmp.json")
+    remove(tmp_file)
 
     # Compare the two objects
     assert test_obj == test_obj2
@@ -154,18 +162,18 @@ def test_class_as_dict(class_dict):
             d[prop["name"]] = None
         elif type(prop["value"]) is str and "()" in prop["value"]:
             d[prop["name"]] = eval(prop["value"] + ".as_dict()")
-        elif prop["type"] in PYTHON_TYPE:
-            d[prop["name"]] = prop["value"]
         elif prop["type"] == "dict":
             if prop["value"] == "":
                 d[prop["name"]] = {}
             else:
                 d[prop["name"]] = prop["value"]
         elif prop["type"] == "list":
-            if prop["value"] == "":
+            if prop["value"] in ["", -1]:
                 d[prop["name"]] = []
             else:
                 d[prop["name"]] = prop["value"]
+        elif prop["type"] in PYTHON_TYPE:  # PYTHON_TYPE and not dict or list
+            d[prop["name"]] = prop["value"]
         elif is_type_list(prop["type"]):  # List of pyleecan type
             d[prop["name"]] = list()
         elif is_type_dict(prop["type"]):  # Dict of pyleecan type
@@ -200,7 +208,10 @@ def test_class_set_None(class_dict):
     test_obj._set_None()
     prop_list = get_mother_attr(gen_dict, class_dict, "properties")[0]
     for prop in prop_list:
-        if prop["type"] == "ndarray" or prop["type"] in PYTHON_TYPE:
+        # ndarray set as None are set as array([])
+        if prop["type"] == "ndarray":
+            assert array_equal(test_obj.__getattribute__(prop["name"]), array([]))
+        elif prop["type"] in PYTHON_TYPE:
             assert test_obj.__getattribute__(prop["name"]) == None
 
 
@@ -224,15 +235,30 @@ def test_class_inherit(class_dict):
         assert eval("issubclass(" + class_dict["name"] + ", FrozenClass)") == True
 
 
-@pytest.mark.parametrize("class_dict", class_list)
+@pytest.mark.parametrize("class_dict", class_list)  # [86:87]
 def test_class_methods(class_dict):
     """Check if the class has all its methods"""
+    test_obj = eval(class_dict["name"] + "()")
+
     meth_list = get_mother_attr(gen_dict, class_dict, "methods")[0]
     for meth in meth_list:
         meth = meth.split(".")[-1]  # Get the methods name if in a folder
+
+        # Check if the method exists, shouldn't be raised because of the class generator
         assert eval("hasattr(" + class_dict["name"] + ", '" + meth + "')") == True, (
             class_dict["name"] + " has no method: " + meth
         )
+
+        # Check if the methods doesn't raise ImportError
+        try:
+            eval("test_obj." + meth + "()")
+        except ImportError as err:
+            raise err  # Raise the ImportError because the method doesn't exist
+        except:
+            pass
+
+    # Some methods may generate plots
+    plt.close("all")
 
 
 @pytest.mark.parametrize("class_dict", class_list)
@@ -316,4 +342,22 @@ def test_class_prop_doc(class_dict):
             + prop["name"]
             + "').__doc__.splitlines()"
         )
-        assert result == prop["desc"].split("\\n")
+
+        # Check only the part from the csv
+        type_index = 2
+        for line in result[2:]:
+            if ":Type:" in line:
+                break
+            else:
+                type_index += 1
+        assert result[: type_index - 1] == prop["desc"].split("\\n")
+
+
+@pytest.mark.parametrize("class_dict", class_list)
+def test_class_copy(class_dict):
+    """Check if the copy method is correct
+    """
+
+    test_obj = eval(class_dict["name"] + "()")
+    result = test_obj.copy()
+    assert test_obj == result

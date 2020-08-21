@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""File generated according to Generator/ClassesRef/Machine/MachineAsync.csv
-WARNING! All changes made in this file will be lost!
+# File generated according to Generator/ClassesRef/Machine/MachineAsync.csv
+# WARNING! All changes made in this file will be lost!
+"""Method code available at https://github.com/Eomys/pyleecan/tree/master/pyleecan/Methods/Machine/MachineAsync
 """
 
 from os import linesep
@@ -17,6 +18,11 @@ try:
 except ImportError as error:
     is_synchronous = error
 
+try:
+    from ..Methods.Machine.MachineAsync.comp_desc_dict import comp_desc_dict
+except ImportError as error:
+    comp_desc_dict = error
+
 
 from ._check import InitUnKnowClassError
 from .Frame import Frame
@@ -28,6 +34,7 @@ class MachineAsync(Machine):
 
     VERSION = 1
 
+    # Check ImportError to remove unnecessary dependencies in unused method
     # cf Methods.Machine.MachineAsync.is_synchronous
     if isinstance(is_synchronous, ImportError):
         is_synchronous = property(
@@ -40,8 +47,26 @@ class MachineAsync(Machine):
         )
     else:
         is_synchronous = is_synchronous
+    # cf Methods.Machine.MachineAsync.comp_desc_dict
+    if isinstance(comp_desc_dict, ImportError):
+        comp_desc_dict = property(
+            fget=lambda x: raise_(
+                ImportError(
+                    "Can't use MachineAsync method comp_desc_dict: "
+                    + str(comp_desc_dict)
+                )
+            )
+        )
+    else:
+        comp_desc_dict = comp_desc_dict
     # save method is available in all object
     save = save
+
+    # generic copy method
+    def copy(self):
+        """Return a copy of the class
+        """
+        return type(self)(init_dict=self.as_dict())
 
     # get_logger method is available in all object
     get_logger = get_logger

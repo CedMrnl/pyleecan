@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""File generated according to Generator/ClassesRef/Slot/SlotW61.csv
-WARNING! All changes made in this file will be lost!
+# File generated according to Generator/ClassesRef/Slot/SlotW61.csv
+# WARNING! All changes made in this file will be lost!
+"""Method code available at https://github.com/Eomys/pyleecan/tree/master/pyleecan/Methods/Slot/SlotW61
 """
 
 from os import linesep
@@ -169,6 +170,12 @@ class SlotW61(SlotWind):
         comp_surface_wind = comp_surface_wind
     # save method is available in all object
     save = save
+
+    # generic copy method
+    def copy(self):
+        """Return a copy of the class
+        """
+        return type(self)(init_dict=self.as_dict())
 
     # get_logger method is available in all object
     get_logger = get_logger
@@ -344,9 +351,15 @@ class SlotW61(SlotWind):
         check_var("W0", value, "float", Vmin=0)
         self._W0 = value
 
-    # Pole top width
-    # Type : float, min = 0
-    W0 = property(fget=_get_W0, fset=_set_W0, doc=u"""Pole top width""")
+    W0 = property(
+        fget=_get_W0,
+        fset=_set_W0,
+        doc=u"""Pole top width
+
+        :Type: float
+        :min: 0
+        """,
+    )
 
     def _get_W1(self):
         """getter of W1"""
@@ -357,9 +370,15 @@ class SlotW61(SlotWind):
         check_var("W1", value, "float", Vmin=0)
         self._W1 = value
 
-    # Pole top width
-    # Type : float, min = 0
-    W1 = property(fget=_get_W1, fset=_set_W1, doc=u"""Pole top width""")
+    W1 = property(
+        fget=_get_W1,
+        fset=_set_W1,
+        doc=u"""Pole top width
+
+        :Type: float
+        :min: 0
+        """,
+    )
 
     def _get_W2(self):
         """getter of W2"""
@@ -370,9 +389,15 @@ class SlotW61(SlotWind):
         check_var("W2", value, "float", Vmin=0)
         self._W2 = value
 
-    # Pole bottom width
-    # Type : float, min = 0
-    W2 = property(fget=_get_W2, fset=_set_W2, doc=u"""Pole bottom width""")
+    W2 = property(
+        fget=_get_W2,
+        fset=_set_W2,
+        doc=u"""Pole bottom width
+
+        :Type: float
+        :min: 0
+        """,
+    )
 
     def _get_H0(self):
         """getter of H0"""
@@ -383,9 +408,15 @@ class SlotW61(SlotWind):
         check_var("H0", value, "float", Vmin=0)
         self._H0 = value
 
-    # Pole top height
-    # Type : float, min = 0
-    H0 = property(fget=_get_H0, fset=_set_H0, doc=u"""Pole top height""")
+    H0 = property(
+        fget=_get_H0,
+        fset=_set_H0,
+        doc=u"""Pole top height
+
+        :Type: float
+        :min: 0
+        """,
+    )
 
     def _get_H1(self):
         """getter of H1"""
@@ -396,9 +427,15 @@ class SlotW61(SlotWind):
         check_var("H1", value, "float", Vmin=0)
         self._H1 = value
 
-    # Pole intermediate height
-    # Type : float, min = 0
-    H1 = property(fget=_get_H1, fset=_set_H1, doc=u"""Pole intermediate height""")
+    H1 = property(
+        fget=_get_H1,
+        fset=_set_H1,
+        doc=u"""Pole intermediate height
+
+        :Type: float
+        :min: 0
+        """,
+    )
 
     def _get_H2(self):
         """getter of H2"""
@@ -409,9 +446,15 @@ class SlotW61(SlotWind):
         check_var("H2", value, "float", Vmin=0)
         self._H2 = value
 
-    # Pole bottom height
-    # Type : float, min = 0
-    H2 = property(fget=_get_H2, fset=_set_H2, doc=u"""Pole bottom height""")
+    H2 = property(
+        fget=_get_H2,
+        fset=_set_H2,
+        doc=u"""Pole bottom height
+
+        :Type: float
+        :min: 0
+        """,
+    )
 
     def _get_H3(self):
         """getter of H3"""
@@ -422,9 +465,15 @@ class SlotW61(SlotWind):
         check_var("H3", value, "float", Vmin=0)
         self._H3 = value
 
-    # Top Distance Ploe-coil
-    # Type : float, min = 0
-    H3 = property(fget=_get_H3, fset=_set_H3, doc=u"""Top Distance Ploe-coil """)
+    H3 = property(
+        fget=_get_H3,
+        fset=_set_H3,
+        doc=u"""Top Distance Ploe-coil 
+
+        :Type: float
+        :min: 0
+        """,
+    )
 
     def _get_H4(self):
         """getter of H4"""
@@ -435,9 +484,15 @@ class SlotW61(SlotWind):
         check_var("H4", value, "float", Vmin=0)
         self._H4 = value
 
-    # Bottom Distance Ploe-coil
-    # Type : float, min = 0
-    H4 = property(fget=_get_H4, fset=_set_H4, doc=u"""Bottom Distance Ploe-coil """)
+    H4 = property(
+        fget=_get_H4,
+        fset=_set_H4,
+        doc=u"""Bottom Distance Ploe-coil 
+
+        :Type: float
+        :min: 0
+        """,
+    )
 
     def _get_W3(self):
         """getter of W3"""
@@ -448,6 +503,12 @@ class SlotW61(SlotWind):
         check_var("W3", value, "float", Vmin=0)
         self._W3 = value
 
-    # Edge Distance Ploe-coil
-    # Type : float, min = 0
-    W3 = property(fget=_get_W3, fset=_set_W3, doc=u"""Edge Distance Ploe-coil """)
+    W3 = property(
+        fget=_get_W3,
+        fset=_set_W3,
+        doc=u"""Edge Distance Ploe-coil 
+
+        :Type: float
+        :min: 0
+        """,
+    )

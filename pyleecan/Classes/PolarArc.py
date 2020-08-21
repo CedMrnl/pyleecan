@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""File generated according to Generator/ClassesRef/Geometry/PolarArc.csv
-WARNING! All changes made in this file will be lost!
+# File generated according to Generator/ClassesRef/Geometry/PolarArc.csv
+# WARNING! All changes made in this file will be lost!
+"""Method code available at https://github.com/Eomys/pyleecan/tree/master/pyleecan/Methods/Geometry/PolarArc
 """
 
 from os import linesep
@@ -159,6 +160,12 @@ class PolarArc(Surface):
     # save method is available in all object
     save = save
 
+    # generic copy method
+    def copy(self):
+        """Return a copy of the class
+        """
+        return type(self)(init_dict=self.as_dict())
+
     # get_logger method is available in all object
     get_logger = get_logger
 
@@ -261,9 +268,15 @@ class PolarArc(Surface):
         check_var("angle", value, "float", Vmin=0)
         self._angle = value
 
-    # Polar angle
-    # Type : float, min = 0
-    angle = property(fget=_get_angle, fset=_set_angle, doc=u"""Polar angle""")
+    angle = property(
+        fget=_get_angle,
+        fset=_set_angle,
+        doc=u"""Polar angle
+
+        :Type: float
+        :min: 0
+        """,
+    )
 
     def _get_height(self):
         """getter of height"""
@@ -274,8 +287,12 @@ class PolarArc(Surface):
         check_var("height", value, "float", Vmin=0)
         self._height = value
 
-    # The Heigth of the PolarAngle
-    # Type : float, min = 0
     height = property(
-        fget=_get_height, fset=_set_height, doc=u"""The Heigth of the PolarAngle"""
+        fget=_get_height,
+        fset=_set_height,
+        doc=u"""The Heigth of the PolarAngle
+
+        :Type: float
+        :min: 0
+        """,
     )

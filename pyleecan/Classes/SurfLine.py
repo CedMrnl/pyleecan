@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""File generated according to Generator/ClassesRef/Geometry/SurfLine.csv
-WARNING! All changes made in this file will be lost!
+# File generated according to Generator/ClassesRef/Geometry/SurfLine.csv
+# WARNING! All changes made in this file will be lost!
+"""Method code available at https://github.com/Eomys/pyleecan/tree/master/pyleecan/Methods/Geometry/SurfLine
 """
 
 from os import linesep
@@ -174,6 +175,12 @@ class SurfLine(Surface):
     # save method is available in all object
     save = save
 
+    # generic copy method
+    def copy(self):
+        """Return a copy of the class
+        """
+        return type(self)(init_dict=self.as_dict())
+
     # get_logger method is available in all object
     get_logger = get_logger
 
@@ -316,8 +323,11 @@ class SurfLine(Surface):
             if obj is not None:
                 obj.parent = self
 
-    # List of Lines
-    # Type : [Line]
     line_list = property(
-        fget=_get_line_list, fset=_set_line_list, doc=u"""List of Lines """
+        fget=_get_line_list,
+        fset=_set_line_list,
+        doc=u"""List of Lines 
+
+        :Type: [Line]
+        """,
     )

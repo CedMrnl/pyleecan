@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""File generated according to Generator/ClassesRef/Machine/LamSlotMag.csv
-WARNING! All changes made in this file will be lost!
+# File generated according to Generator/ClassesRef/Machine/LamSlotMag.csv
+# WARNING! All changes made in this file will be lost!
+"""Method code available at https://github.com/Eomys/pyleecan/tree/master/pyleecan/Methods/Machine/LamSlotMag
 """
 
 from os import linesep
@@ -51,6 +52,11 @@ try:
     from ..Methods.Machine.LamSlotMag.comp_angle_d_axis import comp_angle_d_axis
 except ImportError as error:
     comp_angle_d_axis = error
+
+try:
+    from ..Methods.Machine.LamSlotMag.comp_sym import comp_sym
+except ImportError as error:
+    comp_sym = error
 
 
 from ._check import InitUnKnowClassError
@@ -152,8 +158,23 @@ class LamSlotMag(LamSlot):
         )
     else:
         comp_angle_d_axis = comp_angle_d_axis
+    # cf Methods.Machine.LamSlotMag.comp_sym
+    if isinstance(comp_sym, ImportError):
+        comp_sym = property(
+            fget=lambda x: raise_(
+                ImportError("Can't use LamSlotMag method comp_sym: " + str(comp_sym))
+            )
+        )
+    else:
+        comp_sym = comp_sym
     # save method is available in all object
     save = save
+
+    # generic copy method
+    def copy(self):
+        """Return a copy of the class
+        """
+        return type(self)(init_dict=self.as_dict())
 
     # get_logger method is available in all object
     get_logger = get_logger

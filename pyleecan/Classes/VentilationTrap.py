@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""File generated according to Generator/ClassesRef/Slot/VentilationTrap.csv
-WARNING! All changes made in this file will be lost!
+# File generated according to Generator/ClassesRef/Slot/VentilationTrap.csv
+# WARNING! All changes made in this file will be lost!
+"""Method code available at https://github.com/Eomys/pyleecan/tree/master/pyleecan/Methods/Slot/VentilationTrap
 """
 
 from os import linesep
@@ -105,6 +106,12 @@ class VentilationTrap(Hole):
         get_center = get_center
     # save method is available in all object
     save = save
+
+    # generic copy method
+    def copy(self):
+        """Return a copy of the class
+        """
+        return type(self)(init_dict=self.as_dict())
 
     # get_logger method is available in all object
     get_logger = get_logger
@@ -246,12 +253,15 @@ class VentilationTrap(Hole):
         check_var("Alpha0", value, "float", Vmin=0, Vmax=6.29)
         self._Alpha0 = value
 
-    # Shift angle of the hole around circumference
-    # Type : float, min = 0, max = 6.29
     Alpha0 = property(
         fget=_get_Alpha0,
         fset=_set_Alpha0,
-        doc=u"""Shift angle of the hole around circumference""",
+        doc=u"""Shift angle of the hole around circumference
+
+        :Type: float
+        :min: 0
+        :max: 6.29
+        """,
     )
 
     def _get_D0(self):
@@ -263,9 +273,15 @@ class VentilationTrap(Hole):
         check_var("D0", value, "float", Vmin=0)
         self._D0 = value
 
-    # Hole height
-    # Type : float, min = 0
-    D0 = property(fget=_get_D0, fset=_set_D0, doc=u"""Hole height""")
+    D0 = property(
+        fget=_get_D0,
+        fset=_set_D0,
+        doc=u"""Hole height
+
+        :Type: float
+        :min: 0
+        """,
+    )
 
     def _get_H0(self):
         """getter of H0"""
@@ -276,9 +292,15 @@ class VentilationTrap(Hole):
         check_var("H0", value, "float", Vmin=0)
         self._H0 = value
 
-    # Radius of the hole bottom
-    # Type : float, min = 0
-    H0 = property(fget=_get_H0, fset=_set_H0, doc=u"""Radius of the hole bottom""")
+    H0 = property(
+        fget=_get_H0,
+        fset=_set_H0,
+        doc=u"""Radius of the hole bottom
+
+        :Type: float
+        :min: 0
+        """,
+    )
 
     def _get_W1(self):
         """getter of W1"""
@@ -289,9 +311,15 @@ class VentilationTrap(Hole):
         check_var("W1", value, "float", Vmin=0)
         self._W1 = value
 
-    # Hole small basis
-    # Type : float, min = 0
-    W1 = property(fget=_get_W1, fset=_set_W1, doc=u"""Hole small basis""")
+    W1 = property(
+        fget=_get_W1,
+        fset=_set_W1,
+        doc=u"""Hole small basis
+
+        :Type: float
+        :min: 0
+        """,
+    )
 
     def _get_W2(self):
         """getter of W2"""
@@ -302,6 +330,12 @@ class VentilationTrap(Hole):
         check_var("W2", value, "float", Vmin=0)
         self._W2 = value
 
-    # Hole large basis
-    # Type : float, min = 0
-    W2 = property(fget=_get_W2, fset=_set_W2, doc=u"""Hole large basis""")
+    W2 = property(
+        fget=_get_W2,
+        fset=_set_W2,
+        doc=u"""Hole large basis
+
+        :Type: float
+        :min: 0
+        """,
+    )

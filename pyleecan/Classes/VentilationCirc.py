@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""File generated according to Generator/ClassesRef/Slot/VentilationCirc.csv
-WARNING! All changes made in this file will be lost!
+# File generated according to Generator/ClassesRef/Slot/VentilationCirc.csv
+# WARNING! All changes made in this file will be lost!
+"""Method code available at https://github.com/Eomys/pyleecan/tree/master/pyleecan/Methods/Slot/VentilationCirc
 """
 
 from os import linesep
@@ -105,6 +106,12 @@ class VentilationCirc(Hole):
         get_center = get_center
     # save method is available in all object
     save = save
+
+    # generic copy method
+    def copy(self):
+        """Return a copy of the class
+        """
+        return type(self)(init_dict=self.as_dict())
 
     # get_logger method is available in all object
     get_logger = get_logger
@@ -219,12 +226,15 @@ class VentilationCirc(Hole):
         check_var("Alpha0", value, "float", Vmin=0, Vmax=6.29)
         self._Alpha0 = value
 
-    # Shift angle of the holes around circumference
-    # Type : float, min = 0, max = 6.29
     Alpha0 = property(
         fget=_get_Alpha0,
         fset=_set_Alpha0,
-        doc=u"""Shift angle of the holes around circumference""",
+        doc=u"""Shift angle of the holes around circumference
+
+        :Type: float
+        :min: 0
+        :max: 6.29
+        """,
     )
 
     def _get_D0(self):
@@ -236,9 +246,15 @@ class VentilationCirc(Hole):
         check_var("D0", value, "float", Vmin=0)
         self._D0 = value
 
-    # Hole diameters
-    # Type : float, min = 0
-    D0 = property(fget=_get_D0, fset=_set_D0, doc=u"""Hole diameters""")
+    D0 = property(
+        fget=_get_D0,
+        fset=_set_D0,
+        doc=u"""Hole diameters
+
+        :Type: float
+        :min: 0
+        """,
+    )
 
     def _get_H0(self):
         """getter of H0"""
@@ -249,6 +265,12 @@ class VentilationCirc(Hole):
         check_var("H0", value, "float", Vmin=0)
         self._H0 = value
 
-    # Diameter of the hole centers
-    # Type : float, min = 0
-    H0 = property(fget=_get_H0, fset=_set_H0, doc=u"""Diameter of the hole centers""")
+    H0 = property(
+        fget=_get_H0,
+        fset=_set_H0,
+        doc=u"""Diameter of the hole centers
+
+        :Type: float
+        :min: 0
+        """,
+    )

@@ -1,4 +1,4 @@
-from numpy import argmax, cos, abs as np_abs, angle as np_angle
+from numpy import pi, argmax, cos, abs as np_abs, angle as np_angle
 
 
 def comp_angle_d_axis(self):
@@ -20,8 +20,11 @@ def comp_angle_d_axis(self):
     p = self.get_pole_pair_number()
 
     # Get the unit mmf FFT and angle values
-    (angle_rotor, mmmf_a) = MMF.get_along("angle")
-    (wavenumber, mmf_ft) = MMF.get_FT_along("wavenumber")
+    results = MMF.get_along("angle")
+    angle_rotor = results["angle"]
+    results = MMF.get_along("wavenumber")
+    wavenumber = results["wavenumber"]
+    mmf_ft = results[MMF.symbol]
 
     # Find the angle where the FFT is max
     indr_fund = np_abs(wavenumber - p).argmin()
@@ -29,4 +32,8 @@ def comp_angle_d_axis(self):
     magmax = np_abs(mmf_ft[indr_fund])
     mmf_waveform = magmax * cos(p * angle_rotor + phimax)
     ind_max = argmax(mmf_waveform)
-    return angle_rotor[ind_max]
+    d_angle = angle_rotor[ind_max]
+
+    # Get the first angle according to symmetry
+    (sym, _) = self.comp_sym()
+    return d_angle % (2 * pi / sym)

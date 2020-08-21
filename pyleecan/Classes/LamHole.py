@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""File generated according to Generator/ClassesRef/Machine/LamHole.csv
-WARNING! All changes made in this file will be lost!
+# File generated according to Generator/ClassesRef/Machine/LamHole.csv
+# WARNING! All changes made in this file will be lost!
+"""Method code available at https://github.com/Eomys/pyleecan/tree/master/pyleecan/Methods/Machine/LamHole
 """
 
 from os import linesep
@@ -61,6 +62,11 @@ try:
     from ..Methods.Machine.LamHole.comp_angle_d_axis import comp_angle_d_axis
 except ImportError as error:
     comp_angle_d_axis = error
+
+try:
+    from ..Methods.Machine.LamHole.comp_sym import comp_sym
+except ImportError as error:
+    comp_sym = error
 
 
 from ._check import InitUnKnowClassError
@@ -184,8 +190,23 @@ class LamHole(Lamination):
         )
     else:
         comp_angle_d_axis = comp_angle_d_axis
+    # cf Methods.Machine.LamHole.comp_sym
+    if isinstance(comp_sym, ImportError):
+        comp_sym = property(
+            fget=lambda x: raise_(
+                ImportError("Can't use LamHole method comp_sym: " + str(comp_sym))
+            )
+        )
+    else:
+        comp_sym = comp_sym
     # save method is available in all object
     save = save
+
+    # generic copy method
+    def copy(self):
+        """Return a copy of the class
+        """
+        return type(self)(init_dict=self.as_dict())
 
     # get_logger method is available in all object
     get_logger = get_logger
@@ -430,9 +451,14 @@ class LamHole(Lamination):
             if obj is not None:
                 obj.parent = self
 
-    # lamination Hole
-    # Type : [Hole]
-    hole = property(fget=_get_hole, fset=_set_hole, doc=u"""lamination Hole""")
+    hole = property(
+        fget=_get_hole,
+        fset=_set_hole,
+        doc=u"""lamination Hole
+
+        :Type: [Hole]
+        """,
+    )
 
     def _get_bore(self):
         """getter of bore"""
@@ -446,6 +472,11 @@ class LamHole(Lamination):
         if self._bore is not None:
             self._bore.parent = self
 
-    # Bore Shape
-    # Type : Bore
-    bore = property(fget=_get_bore, fset=_set_bore, doc=u"""Bore Shape""")
+    bore = property(
+        fget=_get_bore,
+        fset=_set_bore,
+        doc=u"""Bore Shape
+
+        :Type: Bore
+        """,
+    )

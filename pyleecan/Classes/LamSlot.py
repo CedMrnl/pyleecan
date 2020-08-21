@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""File generated according to Generator/ClassesRef/Machine/LamSlot.csv
-WARNING! All changes made in this file will be lost!
+# File generated according to Generator/ClassesRef/Machine/LamSlot.csv
+# WARNING! All changes made in this file will be lost!
+"""Method code available at https://github.com/Eomys/pyleecan/tree/master/pyleecan/Methods/Machine/LamSlot
 """
 
 from os import linesep
@@ -56,6 +57,16 @@ try:
     from ..Methods.Machine.LamSlot.get_bore_desc import get_bore_desc
 except ImportError as error:
     get_bore_desc = error
+
+try:
+    from ..Methods.Machine.LamSlot.comp_radius_mid_yoke import comp_radius_mid_yoke
+except ImportError as error:
+    comp_radius_mid_yoke = error
+
+try:
+    from ..Methods.Machine.LamSlot.comp_sym import comp_sym
+except ImportError as error:
+    comp_sym = error
 
 
 from ._check import InitUnKnowClassError
@@ -166,8 +177,35 @@ class LamSlot(Lamination):
         )
     else:
         get_bore_desc = get_bore_desc
+    # cf Methods.Machine.LamSlot.comp_radius_mid_yoke
+    if isinstance(comp_radius_mid_yoke, ImportError):
+        comp_radius_mid_yoke = property(
+            fget=lambda x: raise_(
+                ImportError(
+                    "Can't use LamSlot method comp_radius_mid_yoke: "
+                    + str(comp_radius_mid_yoke)
+                )
+            )
+        )
+    else:
+        comp_radius_mid_yoke = comp_radius_mid_yoke
+    # cf Methods.Machine.LamSlot.comp_sym
+    if isinstance(comp_sym, ImportError):
+        comp_sym = property(
+            fget=lambda x: raise_(
+                ImportError("Can't use LamSlot method comp_sym: " + str(comp_sym))
+            )
+        )
+    else:
+        comp_sym = comp_sym
     # save method is available in all object
     save = save
+
+    # generic copy method
+    def copy(self):
+        """Return a copy of the class
+        """
+        return type(self)(init_dict=self.as_dict())
 
     # get_logger method is available in all object
     get_logger = get_logger
@@ -408,6 +446,11 @@ class LamSlot(Lamination):
         if self._slot is not None:
             self._slot.parent = self
 
-    # lamination Slot
-    # Type : Slot
-    slot = property(fget=_get_slot, fset=_set_slot, doc=u"""lamination Slot""")
+    slot = property(
+        fget=_get_slot,
+        fset=_set_slot,
+        doc=u"""lamination Slot
+
+        :Type: Slot
+        """,
+    )

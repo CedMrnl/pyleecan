@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""File generated according to Generator/ClassesRef/Machine/WindingUD.csv
-WARNING! All changes made in this file will be lost!
+# File generated according to Generator/ClassesRef/Machine/WindingUD.csv
+# WARNING! All changes made in this file will be lost!
+"""Method code available at https://github.com/Eomys/pyleecan/tree/master/pyleecan/Methods/Machine/WindingUD
 """
 
 from os import linesep
@@ -32,6 +33,7 @@ class WindingUD(Winding):
     """User defined winding"""
 
     VERSION = 1
+    NAME = "User defined"
 
     # Check ImportError to remove unnecessary dependencies in unused method
     # cf Methods.Machine.WindingUD.comp_connection_mat
@@ -59,6 +61,12 @@ class WindingUD(Winding):
         get_dim_wind = get_dim_wind
     # save method is available in all object
     save = save
+
+    # generic copy method
+    def copy(self):
+        """Return a copy of the class
+        """
+        return type(self)(init_dict=self.as_dict())
 
     # get_logger method is available in all object
     get_logger = get_logger
@@ -205,7 +213,9 @@ class WindingUD(Winding):
 
     def _set_user_wind_mat(self, value):
         """setter of user_wind_mat"""
-        if type(value) is list:
+        if value is None:
+            value = array([])
+        elif type(value) is list:
             try:
                 value = array(value)
             except:
@@ -213,10 +223,11 @@ class WindingUD(Winding):
         check_var("user_wind_mat", value, "ndarray")
         self._user_wind_mat = value
 
-    # user defined Winding matrix
-    # Type : ndarray
     user_wind_mat = property(
         fget=_get_user_wind_mat,
         fset=_set_user_wind_mat,
-        doc=u"""user defined Winding matrix""",
+        doc=u"""user defined Winding matrix
+
+        :Type: ndarray
+        """,
     )
