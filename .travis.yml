@@ -23,7 +23,8 @@ install:
   - python -m pip install --upgrade pip # all three OSes agree about 'pip3'
   - python -m pip install -r requirements.txt
   - python -m pip install pywinauto # Needed to install FEMM
-  - sudo python Tests/installation_femm.py
+  - Set-ItemProperty -Path REGISTRY::HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System -Name ConsentPromptBehaviorAdmin -Value 0
+  - python Tests/installation_femm.py
   - python -m pip install .
 # 'python' points to Python 2.7 on macOS but points to Python 3.8 on Linux and Windows
 # 'python3' is a 'command not found' error on Windows but 'py' works on Windows only
