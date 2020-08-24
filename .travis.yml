@@ -21,10 +21,10 @@ jobs:
       env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
 install: 
   - python -m pip install --upgrade pip # all three OSes agree about 'pip3'
-  - python -m pip install pywinauto # Needed to install FEMM
-  - python Tests/installation_femm.py
   - python -m pip install -r requirements.txt
   - python -m pip install .
+  # - python -m pip install pywinauto # Needed to install FEMM
+  # - python Tests/installation_femm.py
 # 'python' points to Python 2.7 on macOS but points to Python 3.8 on Linux and Windows
 # 'python3' is a 'command not found' error on Windows but 'py' works on Windows only
-script: python -m pytest Tests -m "not GMSH or not FEMM" --continue-on-collection-errors
+script: python -m pytest Tests -m "not GMSH and not FEMM" --continue-on-collection-errors
