@@ -20,7 +20,7 @@ jobs:
         - choco install python --version 3.8.0
       env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
 install: 
-  - powershell -Command Set-ItemProperty -Path REGISTRY::HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System -Name ConsentPromptBehaviorAdmin -Value 0
+  - powershell -Command Set-ItemProperty -Path REGISTRY::HKEY_LOCAL_MACHINE/Software/Microsoft/Windows/CurrentVersion/Policies/System -Name ConsentPromptBehaviorAdmin -Value 0
   - python -m pip install --upgrade pip # all three OSes agree about 'pip3'
   - python -m pip install pywinauto # Needed to install FEMM
   - python Tests/installation_femm.py
