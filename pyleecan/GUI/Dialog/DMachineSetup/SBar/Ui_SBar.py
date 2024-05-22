@@ -14,7 +14,6 @@ from .....GUI.Dialog.DMatLib.WMatSelect.WMatSelectV import WMatSelectV
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_SBar(object):
     def setupUi(self, SBar):
         if not SBar.objectName():
@@ -28,9 +27,7 @@ class Ui_SBar(object):
         self.img_ring = QLabel(SBar)
         self.img_ring.setObjectName(u"img_ring")
         self.img_ring.setMaximumSize(QSize(16777215, 16777215))
-        self.img_ring.setPixmap(
-            QPixmap(u":/images/images/MachineSetup/Bar/ShortCircuitRing_schematics.png")
-        )
+        self.img_ring.setPixmap(QPixmap(u":/images/images/MachineSetup/Bar/ShortCircuitRing_schematics.png"))
         self.img_ring.setScaledContents(False)
         self.img_ring.setAlignment(Qt.AlignCenter)
 
@@ -117,6 +114,7 @@ class Ui_SBar(object):
 
         self.gridLayout.addWidget(self.in_Lscr, 1, 0, 1, 1)
 
+
         self.verticalLayout_2.addLayout(self.gridLayout)
 
         self.w_mat_scr = WMatSelectV(self.g_ring)
@@ -124,6 +122,7 @@ class Ui_SBar(object):
         self.w_mat_scr.setMinimumSize(QSize(100, 0))
 
         self.verticalLayout_2.addWidget(self.w_mat_scr)
+
 
         self.verticalLayout_4.addWidget(self.g_ring)
 
@@ -141,11 +140,10 @@ class Ui_SBar(object):
 
         self.horizontalLayout.addWidget(self.c_bar_type)
 
-        self.horizontalSpacer_2 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer_2)
+
 
         self.verticalLayout.addLayout(self.horizontalLayout)
 
@@ -155,11 +153,10 @@ class Ui_SBar(object):
 
         self.verticalLayout.addWidget(self.w_bar)
 
+
         self.verticalLayout_4.addWidget(self.g_bar)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_4.addItem(self.verticalSpacer)
 
@@ -167,13 +164,12 @@ class Ui_SBar(object):
 
         self.horizontalLayout_2.addWidget(self.scrollArea)
 
+
         self.verticalLayout_5.addLayout(self.horizontalLayout_2)
 
         self.horizontalLayout_3 = QHBoxLayout()
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.horizontalSpacer_3 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_3.addItem(self.horizontalSpacer_3)
 
@@ -193,6 +189,7 @@ class Ui_SBar(object):
 
         self.horizontalLayout_3.addWidget(self.b_next)
 
+
         self.verticalLayout_5.addLayout(self.horizontalLayout_3)
 
         QWidget.setTabOrder(self.b_previous, self.b_plot)
@@ -200,15 +197,12 @@ class Ui_SBar(object):
         self.retranslateUi(SBar)
 
         QMetaObject.connectSlotsByName(SBar)
-
     # setupUi
 
     def retranslateUi(self, SBar):
         SBar.setWindowTitle(QCoreApplication.translate("SBar", u"Form", None))
         self.img_ring.setText("")
-        self.g_ring.setTitle(
-            QCoreApplication.translate("SBar", u"Short Circuit Ring", None)
-        )
+        self.g_ring.setTitle(QCoreApplication.translate("SBar", u"Short Circuit Ring", None))
         self.unit_Hscr.setText(QCoreApplication.translate("SBar", u"m", None))
         self.unit_Lscr.setText(QCoreApplication.translate("SBar", u"m", None))
         self.in_Hscr.setText(QCoreApplication.translate("SBar", u"Hscr :", None))
@@ -216,15 +210,11 @@ class Ui_SBar(object):
         self.in_Lewout.setText(QCoreApplication.translate("SBar", u"Lewout :", None))
         self.in_Lscr.setText(QCoreApplication.translate("SBar", u"Lscr :", None))
         self.g_bar.setTitle(QCoreApplication.translate("SBar", u"Bar", None))
-        self.c_bar_type.setItemText(
-            0, QCoreApplication.translate("SBar", u"Rectangular bar", None)
-        )
-        self.c_bar_type.setItemText(
-            1, QCoreApplication.translate("SBar", u"Die cast bar", None)
-        )
+        self.c_bar_type.setItemText(0, QCoreApplication.translate("SBar", u"Rectangular bar", None))
+        self.c_bar_type.setItemText(1, QCoreApplication.translate("SBar", u"Die cast bar", None))
 
         self.b_plot.setText(QCoreApplication.translate("SBar", u"Preview", None))
         self.b_previous.setText(QCoreApplication.translate("SBar", u"Previous", None))
         self.b_next.setText(QCoreApplication.translate("SBar", u"Save", None))
-
     # retranslateUi
+

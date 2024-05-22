@@ -15,7 +15,6 @@ from .....GUI.Tools.MPLCanvas import MPLCanvas
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_SSimu(object):
     def setupUi(self, SSimu):
         if not SSimu.objectName():
@@ -43,11 +42,10 @@ class Ui_SSimu(object):
         self.txt_tuto.setSizePolicy(sizePolicy)
         self.txt_tuto.setMaximumSize(QSize(16777215, 70))
         self.txt_tuto.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.txt_tuto.setTextInteractionFlags(
-            Qt.TextSelectableByKeyboard | Qt.TextSelectableByMouse
-        )
+        self.txt_tuto.setTextInteractionFlags(Qt.TextSelectableByKeyboard|Qt.TextSelectableByMouse)
 
         self.verticalLayout_3.addWidget(self.txt_tuto)
+
 
         self.horizontalLayout.addLayout(self.verticalLayout_3)
 
@@ -163,6 +161,7 @@ class Ui_SSimu(object):
 
         self.gridLayout.addWidget(self.unit_T_mag, 4, 2, 1, 1)
 
+
         self.verticalLayout_2.addWidget(self.g_OP)
 
         self.g_mag = QGroupBox(self.scrollAreaWidgetContents)
@@ -229,6 +228,7 @@ class Ui_SSimu(object):
 
         self.gridLayout_2.addWidget(self.is_mesh_sol, 6, 0, 1, 1)
 
+
         self.verticalLayout_2.addWidget(self.g_mag)
 
         self.g_losses_model = QGroupBox(self.scrollAreaWidgetContents)
@@ -267,6 +267,7 @@ class Ui_SSimu(object):
 
         self.gridLayout_3.addWidget(self.unit_Trot, 1, 2, 1, 1)
 
+
         self.verticalLayout_2.addWidget(self.g_losses_model)
 
         self.g_out = QGroupBox(self.scrollAreaWidgetContents)
@@ -285,6 +286,7 @@ class Ui_SSimu(object):
 
         self.horizontalLayout_2.addWidget(self.le_name)
 
+
         self.verticalLayout.addLayout(self.horizontalLayout_2)
 
         self.w_path_result = WPathSelectorV(self.g_out)
@@ -292,19 +294,16 @@ class Ui_SSimu(object):
         sizePolicy2 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
         sizePolicy2.setHorizontalStretch(0)
         sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(
-            self.w_path_result.sizePolicy().hasHeightForWidth()
-        )
+        sizePolicy2.setHeightForWidth(self.w_path_result.sizePolicy().hasHeightForWidth())
         self.w_path_result.setSizePolicy(sizePolicy2)
         self.w_path_result.setMinimumSize(QSize(100, 0))
 
         self.verticalLayout.addWidget(self.w_path_result)
 
+
         self.verticalLayout_2.addWidget(self.g_out)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_2.addItem(self.verticalSpacer)
 
@@ -312,13 +311,12 @@ class Ui_SSimu(object):
 
         self.horizontalLayout.addWidget(self.scrollArea)
 
+
         self.verticalLayout_4.addLayout(self.horizontalLayout)
 
         self.horizontalLayout_3 = QHBoxLayout()
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.horizontalSpacer_3 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_3.addItem(self.horizontalSpacer_3)
 
@@ -332,161 +330,100 @@ class Ui_SSimu(object):
 
         self.horizontalLayout_3.addWidget(self.b_next)
 
+
         self.verticalLayout_4.addLayout(self.horizontalLayout_3)
+
 
         self.retranslateUi(SSimu)
 
         QMetaObject.connectSlotsByName(SSimu)
-
     # setupUi
 
     def retranslateUi(self, SSimu):
         SSimu.setWindowTitle(QCoreApplication.translate("SSimu", u"Form", None))
-        self.txt_tuto.setHtml(
-            QCoreApplication.translate(
-                "SSimu",
-                u'<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">\n'
-                '<html><head><meta name="qrichtext" content="1" /><style type="text/css">\n'
-                "p, li { white-space: pre-wrap; }\n"
-                "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:8.15094pt; font-weight:400; font-style:normal;\">\n"
-                '<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt; font-weight:600;">Only Single Speed current driven FEMM simulation is available in this GUI</span></p>\n'
-                '<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt; font-weight:600;">Other models, Sensitivity, Variable speed, Optimization are available in scripting mode</span></p></body></html>',
-                None,
-            )
-        )
-        self.g_OP.setTitle(
-            QCoreApplication.translate("SSimu", u"Operating Point", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.in_N0.setToolTip(
-            QCoreApplication.translate("SSimu", u"Stator external radius", None)
-        )
-        # endif // QT_CONFIG(tooltip)
+        self.txt_tuto.setHtml(QCoreApplication.translate("SSimu", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:8.15094pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt; font-weight:600;\">Only Single Speed current driven FEMM simulation is available in this GUI</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt; font-weight:600;\">Other models, Sensitivity, Variable speed, Optimization are available in scripting mode</span></p></body></html>", None))
+        self.g_OP.setTitle(QCoreApplication.translate("SSimu", u"Operating Point", None))
+#if QT_CONFIG(tooltip)
+        self.in_N0.setToolTip(QCoreApplication.translate("SSimu", u"Stator external radius", None))
+#endif // QT_CONFIG(tooltip)
         self.in_N0.setText(QCoreApplication.translate("SSimu", u"N0:", None))
-        # if QT_CONFIG(tooltip)
-        self.lf_N0.setToolTip(
-            QCoreApplication.translate("SSimu", u"Stator external radius", None)
-        )
-        # endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(tooltip)
+        self.lf_N0.setToolTip(QCoreApplication.translate("SSimu", u"Stator external radius", None))
+#endif // QT_CONFIG(tooltip)
         self.lf_N0.setText(QCoreApplication.translate("SSimu", u"3000", None))
         self.unit_N0.setText(QCoreApplication.translate("SSimu", u"[rpm]", None))
-        # if QT_CONFIG(tooltip)
-        self.in_I1.setToolTip(
-            QCoreApplication.translate("SSimu", u"Stator external radius", None)
-        )
-        # endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(tooltip)
+        self.in_I1.setToolTip(QCoreApplication.translate("SSimu", u"Stator external radius", None))
+#endif // QT_CONFIG(tooltip)
         self.in_I1.setText(QCoreApplication.translate("SSimu", u"Id:", None))
-        # if QT_CONFIG(tooltip)
-        self.lf_I1.setToolTip(
-            QCoreApplication.translate("SSimu", u"Stator external radius", None)
-        )
-        # endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(tooltip)
+        self.lf_I1.setToolTip(QCoreApplication.translate("SSimu", u"Stator external radius", None))
+#endif // QT_CONFIG(tooltip)
         self.lf_I1.setText(QCoreApplication.translate("SSimu", u"0", None))
         self.unit_I1.setText(QCoreApplication.translate("SSimu", u"[Arms]", None))
-        # if QT_CONFIG(tooltip)
-        self.in_I2.setToolTip(
-            QCoreApplication.translate("SSimu", u"Stator external radius", None)
-        )
-        # endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(tooltip)
+        self.in_I2.setToolTip(QCoreApplication.translate("SSimu", u"Stator external radius", None))
+#endif // QT_CONFIG(tooltip)
         self.in_I2.setText(QCoreApplication.translate("SSimu", u"Iq:", None))
-        # if QT_CONFIG(tooltip)
-        self.lf_I2.setToolTip(
-            QCoreApplication.translate("SSimu", u"Stator external radius", None)
-        )
-        # endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(tooltip)
+        self.lf_I2.setToolTip(QCoreApplication.translate("SSimu", u"Stator external radius", None))
+#endif // QT_CONFIG(tooltip)
         self.lf_I2.setText(QCoreApplication.translate("SSimu", u"0", None))
         self.unit_I2.setText(QCoreApplication.translate("SSimu", u"[Arms]", None))
-        # if QT_CONFIG(tooltip)
-        self.in_I3.setToolTip(
-            QCoreApplication.translate("SSimu", u"Stator external radius", None)
-        )
-        # endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(tooltip)
+        self.in_I3.setToolTip(QCoreApplication.translate("SSimu", u"Stator external radius", None))
+#endif // QT_CONFIG(tooltip)
         self.in_I3.setText(QCoreApplication.translate("SSimu", u"If:", None))
-        # if QT_CONFIG(tooltip)
-        self.lf_I3.setToolTip(
-            QCoreApplication.translate("SSimu", u"Stator external radius", None)
-        )
-        # endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(tooltip)
+        self.lf_I3.setToolTip(QCoreApplication.translate("SSimu", u"Stator external radius", None))
+#endif // QT_CONFIG(tooltip)
         self.unit_I3.setText(QCoreApplication.translate("SSimu", u"[Arms]", None))
-        # if QT_CONFIG(tooltip)
-        self.in_T_mag.setToolTip(
-            QCoreApplication.translate("SSimu", u"Stator external radius", None)
-        )
-        # endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(tooltip)
+        self.in_T_mag.setToolTip(QCoreApplication.translate("SSimu", u"Stator external radius", None))
+#endif // QT_CONFIG(tooltip)
         self.in_T_mag.setText(QCoreApplication.translate("SSimu", u"T_mag:", None))
-        # if QT_CONFIG(tooltip)
-        self.lf_T_mag.setToolTip(
-            QCoreApplication.translate("SSimu", u"Stator external radius", None)
-        )
-        # endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(tooltip)
+        self.lf_T_mag.setToolTip(QCoreApplication.translate("SSimu", u"Stator external radius", None))
+#endif // QT_CONFIG(tooltip)
         self.lf_T_mag.setText(QCoreApplication.translate("SSimu", u"20", None))
         self.unit_T_mag.setText(QCoreApplication.translate("SSimu", u"[\u00b0C]", None))
-        self.g_mag.setTitle(
-            QCoreApplication.translate("SSimu", u"Magnetic Model", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.in_Kmesh.setToolTip(
-            QCoreApplication.translate("SSimu", u"Stator external radius", None)
-        )
-        # endif // QT_CONFIG(tooltip)
-        self.in_Kmesh.setText(
-            QCoreApplication.translate("SSimu", u"Mesh fineness factor:", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.in_Na_tot.setToolTip(
-            QCoreApplication.translate("SSimu", u"Stator external radius", None)
-        )
-        # endif // QT_CONFIG(tooltip)
-        self.in_Na_tot.setText(
-            QCoreApplication.translate(
-                "SSimu", u"Angular points (over 360\u00b0)", None
-            )
-        )
-        # if QT_CONFIG(tooltip)
-        self.in_Nt_tot.setToolTip(
-            QCoreApplication.translate("SSimu", u"Stator external radius", None)
-        )
-        # endif // QT_CONFIG(tooltip)
-        self.in_Nt_tot.setText(
-            QCoreApplication.translate("SSimu", u"Time steps (over one turn)", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.in_nb_worker.setToolTip(
-            QCoreApplication.translate("SSimu", u"Stator external radius", None)
-        )
-        # endif // QT_CONFIG(tooltip)
-        self.in_nb_worker.setText(
-            QCoreApplication.translate("SSimu", u"Number of workers:", None)
-        )
-        self.is_per_a.setText(
-            QCoreApplication.translate("SSimu", u"Angular periodicity", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.lf_Kmesh.setToolTip(
-            QCoreApplication.translate("SSimu", u"Stator external radius", None)
-        )
-        # endif // QT_CONFIG(tooltip)
+        self.g_mag.setTitle(QCoreApplication.translate("SSimu", u"Magnetic Model", None))
+#if QT_CONFIG(tooltip)
+        self.in_Kmesh.setToolTip(QCoreApplication.translate("SSimu", u"Stator external radius", None))
+#endif // QT_CONFIG(tooltip)
+        self.in_Kmesh.setText(QCoreApplication.translate("SSimu", u"Mesh fineness factor:", None))
+#if QT_CONFIG(tooltip)
+        self.in_Na_tot.setToolTip(QCoreApplication.translate("SSimu", u"Stator external radius", None))
+#endif // QT_CONFIG(tooltip)
+        self.in_Na_tot.setText(QCoreApplication.translate("SSimu", u"Angular points (over 360\u00b0)", None))
+#if QT_CONFIG(tooltip)
+        self.in_Nt_tot.setToolTip(QCoreApplication.translate("SSimu", u"Stator external radius", None))
+#endif // QT_CONFIG(tooltip)
+        self.in_Nt_tot.setText(QCoreApplication.translate("SSimu", u"Time steps (over one turn)", None))
+#if QT_CONFIG(tooltip)
+        self.in_nb_worker.setToolTip(QCoreApplication.translate("SSimu", u"Stator external radius", None))
+#endif // QT_CONFIG(tooltip)
+        self.in_nb_worker.setText(QCoreApplication.translate("SSimu", u"Number of workers:", None))
+        self.is_per_a.setText(QCoreApplication.translate("SSimu", u"Angular periodicity", None))
+#if QT_CONFIG(tooltip)
+        self.lf_Kmesh.setToolTip(QCoreApplication.translate("SSimu", u"Stator external radius", None))
+#endif // QT_CONFIG(tooltip)
         self.lf_Kmesh.setText(QCoreApplication.translate("SSimu", u"1", None))
-        self.is_per_t.setText(
-            QCoreApplication.translate("SSimu", u"Time periodicity", None)
-        )
-        self.is_mesh_sol.setText(
-            QCoreApplication.translate("SSimu", u"Export FEA result", None)
-        )
-        self.g_losses_model.setTitle(
-            QCoreApplication.translate("SSimu", u"Losses Model", None)
-        )
+        self.is_per_t.setText(QCoreApplication.translate("SSimu", u"Time periodicity", None))
+        self.is_mesh_sol.setText(QCoreApplication.translate("SSimu", u"Export FEA result", None))
+        self.g_losses_model.setTitle(QCoreApplication.translate("SSimu", u"Losses Model", None))
         self.unit_Tsta.setText(QCoreApplication.translate("SSimu", u"[\u00b0C]", None))
-        # if QT_CONFIG(tooltip)
-        self.lf_Trot.setToolTip(
-            QCoreApplication.translate("SSimu", u"Rotor temperature", None)
-        )
-        # endif // QT_CONFIG(tooltip)
-        # if QT_CONFIG(tooltip)
-        self.lf_Tsta.setToolTip(
-            QCoreApplication.translate("SSimu", u"Stator temperature", None)
-        )
-        # endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(tooltip)
+        self.lf_Trot.setToolTip(QCoreApplication.translate("SSimu", u"Rotor temperature", None))
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(tooltip)
+        self.lf_Tsta.setToolTip(QCoreApplication.translate("SSimu", u"Stator temperature", None))
+#endif // QT_CONFIG(tooltip)
         self.in_Tsta.setText(QCoreApplication.translate("SSimu", u"Tsta", None))
         self.in_Trot.setText(QCoreApplication.translate("SSimu", u"Trot", None))
         self.unit_Trot.setText(QCoreApplication.translate("SSimu", u"[\u00b0C]", None))
@@ -494,5 +431,5 @@ class Ui_SSimu(object):
         self.in_name.setText(QCoreApplication.translate("SSimu", u"Simu name:", None))
         self.b_previous.setText(QCoreApplication.translate("SSimu", u"Previous", None))
         self.b_next.setText(QCoreApplication.translate("SSimu", u"Run", None))
-
     # retranslateUi
+

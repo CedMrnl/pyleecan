@@ -16,7 +16,6 @@ from ......GUI.Tools.WPathSelector.WPathSelectorV import WPathSelectorV
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_PWSlotUD(object):
     def setupUi(self, PWSlotUD):
         if not PWSlotUD.objectName():
@@ -68,11 +67,10 @@ class Ui_PWSlotUD(object):
 
         self.verticalLayout.addWidget(self.w_wedge_mat)
 
+
         self.verticalLayout_2.addWidget(self.g_wedge)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_2.addItem(self.verticalSpacer)
 
@@ -85,17 +83,15 @@ class Ui_PWSlotUD(object):
 
         self.horizontalLayout.addWidget(self.scrollArea)
 
+
         self.retranslateUi(PWSlotUD)
 
         QMetaObject.connectSlotsByName(PWSlotUD)
-
     # setupUi
 
     def retranslateUi(self, PWSlotUD):
         PWSlotUD.setWindowTitle(QCoreApplication.translate("PWSlotUD", u"Form", None))
-        self.b_dxf.setText(
-            QCoreApplication.translate("PWSlotUD", u"Define Slot from DXF", None)
-        )
+        self.b_dxf.setText(QCoreApplication.translate("PWSlotUD", u"Define Slot from DXF", None))
         self.g_wedge.setTitle(QCoreApplication.translate("PWSlotUD", u"Wedge", None))
-
     # retranslateUi
+

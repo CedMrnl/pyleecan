@@ -14,7 +14,6 @@ from .....GUI.Tools.HelpButton import HelpButton
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_DBore(object):
     def setupUi(self, DBore):
         if not DBore.objectName():
@@ -22,9 +21,7 @@ class Ui_DBore(object):
         DBore.resize(820, 600)
         DBore.setMinimumSize(QSize(820, 600))
         icon = QIcon()
-        icon.addFile(
-            u":/images/images/icon/pyleecan_64.png", QSize(), QIcon.Normal, QIcon.Off
-        )
+        icon.addFile(u":/images/images/icon/pyleecan_64.png", QSize(), QIcon.Normal, QIcon.Off)
         DBore.setWindowIcon(icon)
         self.main_layout = QVBoxLayout(DBore)
         self.main_layout.setObjectName(u"main_layout")
@@ -60,11 +57,10 @@ class Ui_DBore(object):
 
         self.horizontalLayout_2.addWidget(self.c_alpha_unit)
 
-        self.horizontalSpacer_3 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_2.addItem(self.horizontalSpacer_3)
+
 
         self.main_layout.addLayout(self.horizontalLayout_2)
 
@@ -80,9 +76,7 @@ class Ui_DBore(object):
 
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.horizontalSpacer = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
 
@@ -101,33 +95,26 @@ class Ui_DBore(object):
 
         self.horizontalLayout.addWidget(self.b_ok)
 
+
         self.main_layout.addLayout(self.horizontalLayout)
+
 
         self.retranslateUi(DBore)
 
         QMetaObject.connectSlotsByName(DBore)
-
     # setupUi
 
     def retranslateUi(self, DBore):
-        DBore.setWindowTitle(
-            QCoreApplication.translate("DBore", u"Uneven bore shape setup", None)
-        )
-        self.c_bore_type.setItemText(
-            0, QCoreApplication.translate("DBore", u"Bore Flower", None)
-        )
+        DBore.setWindowTitle(QCoreApplication.translate("DBore", u"Uneven bore shape setup", None))
+        self.c_bore_type.setItemText(0, QCoreApplication.translate("DBore", u"Bore Flower", None))
 
         self.b_help.setText("")
         self.in_alpha.setText(QCoreApplication.translate("DBore", u"alpha :", None))
-        self.c_alpha_unit.setItemText(
-            0, QCoreApplication.translate("DBore", u"[rad]", None)
-        )
-        self.c_alpha_unit.setItemText(
-            1, QCoreApplication.translate("DBore", u"[\u00b0]", None)
-        )
+        self.c_alpha_unit.setItemText(0, QCoreApplication.translate("DBore", u"[rad]", None))
+        self.c_alpha_unit.setItemText(1, QCoreApplication.translate("DBore", u"[\u00b0]", None))
 
         self.b_plot.setText(QCoreApplication.translate("DBore", u"Preview", None))
         self.b_cancel.setText(QCoreApplication.translate("DBore", u"Cancel", None))
         self.b_ok.setText(QCoreApplication.translate("DBore", u"Ok", None))
-
     # retranslateUi
+

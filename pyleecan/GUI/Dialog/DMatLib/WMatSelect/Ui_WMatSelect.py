@@ -11,7 +11,6 @@ from PySide2.QtWidgets import *
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_WMatSelect(object):
     def setupUi(self, WMatSelect):
         if not WMatSelect.objectName():
@@ -55,9 +54,7 @@ class Ui_WMatSelect(object):
 
         self.horizontalLayout.addWidget(self.b_matlib)
 
-        self.horizontalSpacer = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
 
@@ -66,28 +63,15 @@ class Ui_WMatSelect(object):
         self.retranslateUi(WMatSelect)
 
         QMetaObject.connectSlotsByName(WMatSelect)
-
     # setupUi
 
     def retranslateUi(self, WMatSelect):
-        WMatSelect.setWindowTitle(
-            QCoreApplication.translate("WMatSelect", u"Form", None)
-        )
-        self.in_mat_type.setText(
-            QCoreApplication.translate("WMatSelect", u"mat_type :", None)
-        )
-        self.c_mat_type.setItemText(
-            0, QCoreApplication.translate("WMatSelect", u"M400-50A", None)
-        )
-        self.c_mat_type.setItemText(
-            1, QCoreApplication.translate("WMatSelect", u"M350-50A", None)
-        )
-        self.c_mat_type.setItemText(
-            2, QCoreApplication.translate("WMatSelect", u"M330-35A", None)
-        )
+        WMatSelect.setWindowTitle(QCoreApplication.translate("WMatSelect", u"Form", None))
+        self.in_mat_type.setText(QCoreApplication.translate("WMatSelect", u"mat_type :", None))
+        self.c_mat_type.setItemText(0, QCoreApplication.translate("WMatSelect", u"M400-50A", None))
+        self.c_mat_type.setItemText(1, QCoreApplication.translate("WMatSelect", u"M350-50A", None))
+        self.c_mat_type.setItemText(2, QCoreApplication.translate("WMatSelect", u"M330-35A", None))
 
-        self.b_matlib.setText(
-            QCoreApplication.translate("WMatSelect", u"Edit Materials", None)
-        )
-
+        self.b_matlib.setText(QCoreApplication.translate("WMatSelect", u"Edit Materials", None))
     # retranslateUi
+

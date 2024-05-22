@@ -11,7 +11,6 @@ from PySide2.QtWidgets import *
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_DMachineSetup(object):
     def setupUi(self, DMachineSetup):
         if not DMachineSetup.objectName():
@@ -42,11 +41,10 @@ class Ui_DMachineSetup(object):
 
         self.verticalLayout.addWidget(self.b_save)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout.addItem(self.verticalSpacer)
+
 
         self.main_layout.addLayout(self.verticalLayout)
 
@@ -61,17 +59,15 @@ class Ui_DMachineSetup(object):
 
         self.main_layout.addWidget(self.w_step)
 
+
         self.retranslateUi(DMachineSetup)
 
         QMetaObject.connectSlotsByName(DMachineSetup)
-
     # setupUi
 
     def retranslateUi(self, DMachineSetup):
-        DMachineSetup.setWindowTitle(
-            QCoreApplication.translate("DMachineSetup", u"Pyleecan Machine Setup", None)
-        )
+        DMachineSetup.setWindowTitle(QCoreApplication.translate("DMachineSetup", u"Pyleecan Machine Setup", None))
         self.b_load.setText(QCoreApplication.translate("DMachineSetup", u"Load", None))
         self.b_save.setText(QCoreApplication.translate("DMachineSetup", u"Save", None))
-
     # retranslateUi
+

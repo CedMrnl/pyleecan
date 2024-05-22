@@ -30,7 +30,7 @@ PYLEECAN_VERSION = "1.5.2"
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
-python_requires = ">= 3.6, <3.11"
+python_requires = ">= 3.6, <=3.11"
 
 # Pyleecan main dependancies
 install_requires = [
@@ -52,6 +52,7 @@ install_requires = [
     "xlrd>=1.2.0",
     "xlwt>=1.3.0",
 ]
+
 # Pyleecan optional dependancies
 full_require = [
     "deap>=1.3.1",

@@ -11,16 +11,13 @@ from PySide2.QtWidgets import *
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_DTableData(object):
     def setupUi(self, DTableData):
         if not DTableData.objectName():
             DTableData.setObjectName(u"DTableData")
         DTableData.resize(746, 536)
         icon = QIcon()
-        icon.addFile(
-            u":/images/images/icon/pyleecan_64.png", QSize(), QIcon.Normal, QIcon.Off
-        )
+        icon.addFile(u":/images/images/icon/pyleecan_64.png", QSize(), QIcon.Normal, QIcon.Off)
         DTableData.setWindowIcon(icon)
         self.verticalLayout = QVBoxLayout(DTableData)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -60,6 +57,7 @@ class Ui_DTableData(object):
 
         self.horizontalLayout.addWidget(self.b_import)
 
+
         self.verticalLayout.addLayout(self.horizontalLayout)
 
         self.w_tab = QTableWidget(DTableData)
@@ -69,9 +67,7 @@ class Ui_DTableData(object):
 
         self.horizontalLayout_2 = QHBoxLayout()
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.horizontalSpacer = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_2.addItem(self.horizontalSpacer)
 
@@ -80,39 +76,30 @@ class Ui_DTableData(object):
 
         self.horizontalLayout_2.addWidget(self.b_plot)
 
+
         self.verticalLayout.addLayout(self.horizontalLayout_2)
 
         self.b_close = QDialogButtonBox(DTableData)
         self.b_close.setObjectName(u"b_close")
         self.b_close.setOrientation(Qt.Horizontal)
-        self.b_close.setStandardButtons(QDialogButtonBox.Cancel | QDialogButtonBox.Ok)
+        self.b_close.setStandardButtons(QDialogButtonBox.Cancel|QDialogButtonBox.Ok)
 
         self.verticalLayout.addWidget(self.b_close)
+
 
         self.retranslateUi(DTableData)
         self.b_close.accepted.connect(DTableData.accept)
         self.b_close.rejected.connect(DTableData.reject)
 
         QMetaObject.connectSlotsByName(DTableData)
-
     # setupUi
 
     def retranslateUi(self, DTableData):
-        DTableData.setWindowTitle(
-            QCoreApplication.translate("DTableData", u"Material Library", None)
-        )
+        DTableData.setWindowTitle(QCoreApplication.translate("DTableData", u"Material Library", None))
         self.in_row.setText(QCoreApplication.translate("DTableData", u"N_row: ", None))
-        self.in_col.setText(
-            QCoreApplication.translate("DTableData", u"N_column:", None)
-        )
-        self.b_export.setText(
-            QCoreApplication.translate("DTableData", u"Export to csv", None)
-        )
-        self.b_import.setText(
-            QCoreApplication.translate("DTableData", u"Import from csv/xlsx", None)
-        )
-        self.b_plot.setText(
-            QCoreApplication.translate("DTableData", u"Preview Plot", None)
-        )
-
+        self.in_col.setText(QCoreApplication.translate("DTableData", u"N_column:", None))
+        self.b_export.setText(QCoreApplication.translate("DTableData", u"Export to csv", None))
+        self.b_import.setText(QCoreApplication.translate("DTableData", u"Import from csv/xlsx", None))
+        self.b_plot.setText(QCoreApplication.translate("DTableData", u"Preview Plot", None))
     # retranslateUi
+

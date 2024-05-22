@@ -14,7 +14,6 @@ from ......GUI.Tools.FloatEdit import FloatEdit
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_PHoleM52(object):
     def setupUi(self, PHoleM52):
         if not PHoleM52.objectName():
@@ -35,9 +34,7 @@ class Ui_PHoleM52(object):
         self.img_slot.setSizePolicy(sizePolicy)
         self.img_slot.setMinimumSize(QSize(0, 0))
         self.img_slot.setMaximumSize(QSize(16777215, 16777215))
-        self.img_slot.setPixmap(
-            QPixmap(u":/images/images/MachineSetup/SMHoleMag/HoleM52_mag_int_rotor.png")
-        )
+        self.img_slot.setPixmap(QPixmap(u":/images/images/MachineSetup/SMHoleMag/HoleM52_mag_int_rotor.png"))
         self.img_slot.setScaledContents(False)
         self.img_slot.setAlignment(Qt.AlignCenter)
 
@@ -48,18 +45,15 @@ class Ui_PHoleM52(object):
         sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(
-            self.txt_constraint.sizePolicy().hasHeightForWidth()
-        )
+        sizePolicy1.setHeightForWidth(self.txt_constraint.sizePolicy().hasHeightForWidth())
         self.txt_constraint.setSizePolicy(sizePolicy1)
         self.txt_constraint.setMinimumSize(QSize(200, 0))
         self.txt_constraint.setMaximumSize(QSize(16777215, 50))
         self.txt_constraint.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.txt_constraint.setTextInteractionFlags(
-            Qt.TextSelectableByKeyboard | Qt.TextSelectableByMouse
-        )
+        self.txt_constraint.setTextInteractionFlags(Qt.TextSelectableByKeyboard|Qt.TextSelectableByMouse)
 
         self.verticalLayout_3.addWidget(self.txt_constraint)
+
 
         self.horizontalLayout.addLayout(self.verticalLayout_3)
 
@@ -150,6 +144,7 @@ class Ui_PHoleM52(object):
 
         self.gridLayout.addWidget(self.unit_W0, 3, 2, 1, 1)
 
+
         self.verticalLayout_4.addLayout(self.gridLayout)
 
         self.w_mat_0 = WMatSelect(self.scrollAreaWidgetContents)
@@ -164,9 +159,7 @@ class Ui_PHoleM52(object):
 
         self.verticalLayout_4.addWidget(self.w_mat_1)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_4.addItem(self.verticalSpacer)
 
@@ -195,6 +188,7 @@ class Ui_PHoleM52(object):
 
         self.verticalLayout.addWidget(self.out_W1)
 
+
         self.verticalLayout_4.addWidget(self.g_output)
 
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
@@ -210,25 +204,18 @@ class Ui_PHoleM52(object):
         self.retranslateUi(PHoleM52)
 
         QMetaObject.connectSlotsByName(PHoleM52)
-
     # setupUi
 
     def retranslateUi(self, PHoleM52):
         PHoleM52.setWindowTitle(QCoreApplication.translate("PHoleM52", u"Form", None))
         self.img_slot.setText("")
-        self.txt_constraint.setHtml(
-            QCoreApplication.translate(
-                "PHoleM52",
-                u'<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">\n'
-                '<html><head><meta name="qrichtext" content="1" /><style type="text/css">\n'
-                "p, li { white-space: pre-wrap; }\n"
-                "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-                '<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt; font-weight:600; text-decoration: underline;">Constraints :</span></p>\n'
-                '<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">H2 &lt; H1</span></p>\n'
-                '<p align="center" style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;"><br /></p></body></html>',
-                None,
-            )
-        )
+        self.txt_constraint.setHtml(QCoreApplication.translate("PHoleM52", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt; font-weight:600; text-decoration: underline;\">Constraints :</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">H2 &lt; H1</span></p>\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>", None))
         self.in_W3.setText(QCoreApplication.translate("PHoleM52", u"W3", None))
         self.unit_W3.setText(QCoreApplication.translate("PHoleM52", u"m", None))
         self.in_H0.setText(QCoreApplication.translate("PHoleM52", u"H0", None))
@@ -240,15 +227,9 @@ class Ui_PHoleM52(object):
         self.in_W0.setText(QCoreApplication.translate("PHoleM52", u"W0", None))
         self.unit_W0.setText(QCoreApplication.translate("PHoleM52", u"m", None))
         self.g_output.setTitle(QCoreApplication.translate("PHoleM52", u"Output", None))
-        self.out_slot_surface.setText(
-            QCoreApplication.translate("PHoleM52", u"Slot suface : ?", None)
-        )
-        self.out_magnet_surface.setText(
-            QCoreApplication.translate("PHoleM52", u"Magnet surface : ?", None)
-        )
-        self.out_alpha.setText(
-            QCoreApplication.translate("PHoleM52", u"Alpha : ?", None)
-        )
+        self.out_slot_surface.setText(QCoreApplication.translate("PHoleM52", u"Slot suface : ?", None))
+        self.out_magnet_surface.setText(QCoreApplication.translate("PHoleM52", u"Magnet surface : ?", None))
+        self.out_alpha.setText(QCoreApplication.translate("PHoleM52", u"Alpha : ?", None))
         self.out_W1.setText(QCoreApplication.translate("PHoleM52", u"W1 : ?", None))
-
     # retranslateUi
+

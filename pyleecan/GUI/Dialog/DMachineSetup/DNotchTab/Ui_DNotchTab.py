@@ -11,7 +11,6 @@ from PySide2.QtWidgets import *
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_DNotchTab(object):
     def setupUi(self, DNotchTab):
         if not DNotchTab.objectName():
@@ -24,9 +23,7 @@ class Ui_DNotchTab(object):
         DNotchTab.setSizePolicy(sizePolicy)
         DNotchTab.setMinimumSize(QSize(780, 640))
         icon = QIcon()
-        icon.addFile(
-            u":/images/images/icon/pyleecan_64.png", QSize(), QIcon.Normal, QIcon.Off
-        )
+        icon.addFile(u":/images/images/icon/pyleecan_64.png", QSize(), QIcon.Normal, QIcon.Off)
         DNotchTab.setWindowIcon(icon)
         self.verticalLayout = QVBoxLayout(DNotchTab)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -37,17 +34,14 @@ class Ui_DNotchTab(object):
 
         self.horizontalLayout_3.addWidget(self.b_add)
 
-        self.horizontalSpacer_2 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_3.addItem(self.horizontalSpacer_2)
 
+
         self.verticalLayout.addLayout(self.horizontalLayout_3)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Preferred
-        )
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Preferred)
 
         self.verticalLayout.addItem(self.verticalSpacer)
 
@@ -60,9 +54,7 @@ class Ui_DNotchTab(object):
 
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.horizontalSpacer = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
 
@@ -82,25 +74,23 @@ class Ui_DNotchTab(object):
 
         self.horizontalLayout.addWidget(self.b_ok)
 
+
         self.verticalLayout.addLayout(self.horizontalLayout)
+
 
         self.retranslateUi(DNotchTab)
 
         self.tab_notch.setCurrentIndex(-1)
 
-        QMetaObject.connectSlotsByName(DNotchTab)
 
+        QMetaObject.connectSlotsByName(DNotchTab)
     # setupUi
 
     def retranslateUi(self, DNotchTab):
-        DNotchTab.setWindowTitle(
-            QCoreApplication.translate("DNotchTab", u"Notches Setup", None)
-        )
-        self.b_add.setText(
-            QCoreApplication.translate("DNotchTab", u"Add new notch", None)
-        )
+        DNotchTab.setWindowTitle(QCoreApplication.translate("DNotchTab", u"Notches Setup", None))
+        self.b_add.setText(QCoreApplication.translate("DNotchTab", u"Add new notch", None))
         self.b_plot.setText(QCoreApplication.translate("DNotchTab", u"Preview", None))
         self.b_cancel.setText(QCoreApplication.translate("DNotchTab", u"Cancel", None))
         self.b_ok.setText(QCoreApplication.translate("DNotchTab", u"Ok", None))
-
     # retranslateUi
+

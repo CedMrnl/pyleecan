@@ -2,14 +2,13 @@
 """File generated according to PVentPolar/gen_list.json
 WARNING! All changes made in this file will be lost!
 """
-from pyleecan.GUI.Dialog.DMachineSetup.DAVDuct.PVentPolar.Ui_PVentPolar import (
-    Ui_PVentPolar,
-)
+from pyleecan.GUI.Dialog.DMachineSetup.DAVDuct.PVentPolar.Ui_PVentPolar import Ui_PVentPolar
 
 
 class Gen_PVentPolar(Ui_PVentPolar):
     def setupUi(self, PVentPolar):
-        """Abstract class to update the widget according to the csv doc"""
+        """Abstract class to update the widget according to the csv doc
+        """
         Ui_PVentPolar.setupUi(self, PVentPolar)
         # Setup of in_Zh
         txt = self.tr(u"""Number of Hole around the circumference""")

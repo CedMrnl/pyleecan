@@ -2,14 +2,13 @@
 """File generated according to PBoreSinePole/gen_list.json
 WARNING! All changes made in this file will be lost!
 """
-from pyleecan.GUI.Dialog.DMachineSetup.DBore.PBoreSinePole.Ui_PBoreSinePole import (
-    Ui_PBoreSinePole,
-)
+from pyleecan.GUI.Dialog.DMachineSetup.DBore.PBoreSinePole.Ui_PBoreSinePole import Ui_PBoreSinePole
 
 
 class Gen_PBoreSinePole(Ui_PBoreSinePole):
     def setupUi(self, PBoreSinePole):
-        """Abstract class to update the widget according to the csv doc"""
+        """Abstract class to update the widget according to the csv doc
+        """
         Ui_PBoreSinePole.setupUi(self, PBoreSinePole)
         # Setup of in_N
         txt = self.tr(u"""Number of Poles""")

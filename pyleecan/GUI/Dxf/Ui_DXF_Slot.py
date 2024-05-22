@@ -14,16 +14,13 @@ from ...GUI.Tools.WPathSelector.WPathSelector import WPathSelector
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_DXF_Slot(object):
     def setupUi(self, DXF_Slot):
         if not DXF_Slot.objectName():
             DXF_Slot.setObjectName(u"DXF_Slot")
         DXF_Slot.resize(968, 674)
         icon = QIcon()
-        icon.addFile(
-            u":/images/images/icon/pyleecan_64.png", QSize(), QIcon.Normal, QIcon.Off
-        )
+        icon.addFile(u":/images/images/icon/pyleecan_64.png", QSize(), QIcon.Normal, QIcon.Off)
         DXF_Slot.setWindowIcon(icon)
         self.horizontalLayout_5 = QHBoxLayout(DXF_Slot)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
@@ -47,11 +44,10 @@ class Ui_DXF_Slot(object):
 
         self.horizontalLayout.addWidget(self.b_tuto)
 
-        self.horizontalSpacer_2 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer_2)
+
 
         self.layout_plot.addLayout(self.horizontalLayout)
 
@@ -60,6 +56,7 @@ class Ui_DXF_Slot(object):
         self.textBrowser.setMaximumSize(QSize(16777215, 200))
 
         self.layout_plot.addWidget(self.textBrowser)
+
 
         self.horizontalLayout_5.addLayout(self.layout_plot)
 
@@ -77,9 +74,7 @@ class Ui_DXF_Slot(object):
         sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(
-            self.w_path_selector.sizePolicy().hasHeightForWidth()
-        )
+        sizePolicy.setHeightForWidth(self.w_path_selector.sizePolicy().hasHeightForWidth())
         self.w_path_selector.setSizePolicy(sizePolicy)
 
         self.verticalLayout.addWidget(self.w_path_selector)
@@ -107,7 +102,9 @@ class Ui_DXF_Slot(object):
 
         self.horizontalLayout_3.addWidget(self.lf_tol)
 
+
         self.verticalLayout.addLayout(self.horizontalLayout_3)
+
 
         self.verticalLayout_2.addWidget(self.g_import)
 
@@ -132,6 +129,7 @@ class Ui_DXF_Slot(object):
 
         self.horizontalLayout_7.addWidget(self.si_Zs)
 
+
         self.verticalLayout_2.addLayout(self.horizontalLayout_7)
 
         self.horizontalLayout_6 = QHBoxLayout()
@@ -143,12 +141,11 @@ class Ui_DXF_Slot(object):
 
         self.lf_axe_angle = FloatEdit(self.widget)
         self.lf_axe_angle.setObjectName(u"lf_axe_angle")
-        sizePolicy1.setHeightForWidth(
-            self.lf_axe_angle.sizePolicy().hasHeightForWidth()
-        )
+        sizePolicy1.setHeightForWidth(self.lf_axe_angle.sizePolicy().hasHeightForWidth())
         self.lf_axe_angle.setSizePolicy(sizePolicy1)
 
         self.horizontalLayout_6.addWidget(self.lf_axe_angle)
+
 
         self.verticalLayout_2.addLayout(self.horizontalLayout_6)
 
@@ -188,6 +185,7 @@ class Ui_DXF_Slot(object):
 
         self.gridLayout.addWidget(self.si_wind_end_index, 2, 1, 1, 1)
 
+
         self.verticalLayout_2.addWidget(self.g_active)
 
         self.g_center = QGroupBox(self.widget)
@@ -223,11 +221,10 @@ class Ui_DXF_Slot(object):
 
         self.gridLayout_2.addWidget(self.lf_center_y, 1, 1, 1, 1)
 
+
         self.verticalLayout_2.addWidget(self.g_center)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_2.addItem(self.verticalSpacer)
 
@@ -245,14 +242,13 @@ class Ui_DXF_Slot(object):
 
         self.horizontalLayout_4.addWidget(self.lf_scaling)
 
+
         self.verticalLayout_2.addLayout(self.horizontalLayout_4)
 
         self.horizontalLayout_2 = QHBoxLayout()
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.horizontalLayout_2.setSizeConstraint(QLayout.SetFixedSize)
-        self.horizontalSpacer = QSpacerItem(
-            40, 20, QSizePolicy.Fixed, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Fixed, QSizePolicy.Minimum)
 
         self.horizontalLayout_2.addItem(self.horizontalSpacer)
 
@@ -266,102 +262,60 @@ class Ui_DXF_Slot(object):
 
         self.horizontalLayout_2.addWidget(self.b_save)
 
+
         self.verticalLayout_2.addLayout(self.horizontalLayout_2)
 
+
         self.horizontalLayout_5.addWidget(self.widget)
+
 
         self.retranslateUi(DXF_Slot)
 
         QMetaObject.connectSlotsByName(DXF_Slot)
-
     # setupUi
 
     def retranslateUi(self, DXF_Slot):
-        DXF_Slot.setWindowTitle(
-            QCoreApplication.translate("DXF_Slot", u"Define Slot from DXF", None)
-        )
-        self.b_reset.setText(
-            QCoreApplication.translate("DXF_Slot", u"Reset View", None)
-        )
-        self.b_cancel.setText(
-            QCoreApplication.translate("DXF_Slot", u"Cancel Selection", None)
-        )
-        self.b_tuto.setText(
-            QCoreApplication.translate("DXF_Slot", u"Open Tutorial", None)
-        )
-        self.textBrowser.setHtml(
-            QCoreApplication.translate(
-                "DXF_Slot",
-                u'<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">\n'
-                '<html><head><meta name="qrichtext" content="1" /><style type="text/css">\n'
-                "p, li { white-space: pre-wrap; }\n"
-                "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">1) Import your DXF file in [m] or set a scaling factor</span></p>\n'
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">FEMM convertion enables to merge close points according to tolerance in [local unit] and converts lines to arcs and segments (splines need to be converted)</span></p>\n'
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0p'
-                'x; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">2) Click on lines and arcs to draw the contour of a single slot</span></p>\n'
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">3) First point and last point must be on the bore radius (must match the lamination radius)</span></p>\n'
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">4) The winding area is defined by a part of the slot contour and a closing line:</span></p>\n'
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">- The points are ordered in trigonometrical order (from bore radius to bore radius)</span></p>\n'
-                '<p align="justify" style=" margin-top:0px; margin-'
-                'bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">- First point index is 0</span></p>\n'
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">- Closing line can be either a segment or an arc (centered on X=0, Y=0)</span></p>\n'
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">5) Plot to check and save</span></p></body></html>',
-                None,
-            )
-        )
-        self.g_import.setTitle(
-            QCoreApplication.translate("DXF_Slot", u"DXF file import", None)
-        )
-        self.is_convert.setText(
-            QCoreApplication.translate("DXF_Slot", u"Convert through FEMM", None)
-        )
-        self.in_tol.setText(
-            QCoreApplication.translate("DXF_Slot", u"Merge tolerance [l.u.]", None)
-        )
+        DXF_Slot.setWindowTitle(QCoreApplication.translate("DXF_Slot", u"Define Slot from DXF", None))
+        self.b_reset.setText(QCoreApplication.translate("DXF_Slot", u"Reset View", None))
+        self.b_cancel.setText(QCoreApplication.translate("DXF_Slot", u"Cancel Selection", None))
+        self.b_tuto.setText(QCoreApplication.translate("DXF_Slot", u"Open Tutorial", None))
+        self.textBrowser.setHtml(QCoreApplication.translate("DXF_Slot", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">1) Import your DXF file in [m] or set a scaling factor</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">FEMM convertion enables to merge close points according to tolerance in [local unit] and converts lines to arcs and segments (splines need to be converted)</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0p"
+                        "x; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">2) Click on lines and arcs to draw the contour of a single slot</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">3) First point and last point must be on the bore radius (must match the lamination radius)</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">4) The winding area is defined by a part of the slot contour and a closing line:</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">- The points are ordered in trigonometrical order (from bore radius to bore radius)</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-"
+                        "bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">- First point index is 0</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">- Closing line can be either a segment or an arc (centered on X=0, Y=0)</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">5) Plot to check and save</span></p></body></html>", None))
+        self.g_import.setTitle(QCoreApplication.translate("DXF_Slot", u"DXF file import", None))
+        self.is_convert.setText(QCoreApplication.translate("DXF_Slot", u"Convert through FEMM", None))
+        self.in_tol.setText(QCoreApplication.translate("DXF_Slot", u"Merge tolerance [l.u.]", None))
         self.lf_tol.setText(QCoreApplication.translate("DXF_Slot", u"1e-5", None))
-        self.in_Zs.setText(
-            QCoreApplication.translate("DXF_Slot", u"Number of slots", None)
-        )
-        self.in_axe_angle.setText(
-            QCoreApplication.translate("DXF_Slot", u"Slot axe angle shift", None)
-        )
+        self.in_Zs.setText(QCoreApplication.translate("DXF_Slot", u"Number of slots", None))
+        self.in_axe_angle.setText(QCoreApplication.translate("DXF_Slot", u"Slot axe angle shift", None))
         self.lf_axe_angle.setText(QCoreApplication.translate("DXF_Slot", u"0", None))
         self.g_active.setTitle(QCoreApplication.translate("DXF_Slot", u"Winding", None))
-        self.c_type_line.setItemText(
-            0, QCoreApplication.translate("DXF_Slot", u"Segment", None)
-        )
-        self.c_type_line.setItemText(
-            1, QCoreApplication.translate("DXF_Slot", u"Arc1", None)
-        )
+        self.c_type_line.setItemText(0, QCoreApplication.translate("DXF_Slot", u"Segment", None))
+        self.c_type_line.setItemText(1, QCoreApplication.translate("DXF_Slot", u"Arc1", None))
 
-        self.in_wind_begin_index.setText(
-            QCoreApplication.translate("DXF_Slot", u"Winding start index", None)
-        )
-        self.in_type_line.setText(
-            QCoreApplication.translate("DXF_Slot", u"Closing line type", None)
-        )
-        self.in_wind_end_index.setText(
-            QCoreApplication.translate("DXF_Slot", u"Winding end index", None)
-        )
-        self.g_center.setTitle(
-            QCoreApplication.translate("DXF_Slot", u"Machine Center", None)
-        )
-        self.in_coord_center_X.setText(
-            QCoreApplication.translate("DXF_Slot", u"X coordinate [l.u.]", None)
-        )
+        self.in_wind_begin_index.setText(QCoreApplication.translate("DXF_Slot", u"Winding start index", None))
+        self.in_type_line.setText(QCoreApplication.translate("DXF_Slot", u"Closing line type", None))
+        self.in_wind_end_index.setText(QCoreApplication.translate("DXF_Slot", u"Winding end index", None))
+        self.g_center.setTitle(QCoreApplication.translate("DXF_Slot", u"Machine Center", None))
+        self.in_coord_center_X.setText(QCoreApplication.translate("DXF_Slot", u"X coordinate [l.u.]", None))
         self.lf_center_x.setText(QCoreApplication.translate("DXF_Slot", u"0", None))
-        self.in_coord_center_Y.setText(
-            QCoreApplication.translate("DXF_Slot", u"Y coordinate [l.u.]", None)
-        )
+        self.in_coord_center_Y.setText(QCoreApplication.translate("DXF_Slot", u"Y coordinate [l.u.]", None))
         self.lf_center_y.setText(QCoreApplication.translate("DXF_Slot", u"0", None))
-        self.in_scaling.setText(
-            QCoreApplication.translate(
-                "DXF_Slot", u"Scaling factor [l.u.] to [m]", None
-            )
-        )
+        self.in_scaling.setText(QCoreApplication.translate("DXF_Slot", u"Scaling factor [l.u.] to [m]", None))
         self.lf_scaling.setText(QCoreApplication.translate("DXF_Slot", u"1", None))
         self.b_plot.setText(QCoreApplication.translate("DXF_Slot", u"Plot", None))
         self.b_save.setText(QCoreApplication.translate("DXF_Slot", u"Save", None))
-
     # retranslateUi
+

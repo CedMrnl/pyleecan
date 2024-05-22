@@ -15,7 +15,6 @@ from ......GUI.Dialog.DMatLib.WMatSelect.WMatSelectV import WMatSelectV
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_PCondType11(object):
     def setupUi(self, PCondType11):
         if not PCondType11.objectName():
@@ -27,9 +26,7 @@ class Ui_PCondType11(object):
         self.img_cond.setObjectName(u"img_cond")
         self.img_cond.setMinimumSize(QSize(0, 0))
         self.img_cond.setMaximumSize(QSize(16777215, 16777215))
-        self.img_cond.setPixmap(
-            QPixmap(u":/images/images/MachineSetup/WindParam/CondType11.png")
-        )
+        self.img_cond.setPixmap(QPixmap(u":/images/images/MachineSetup/WindParam/CondType11.png"))
         self.img_cond.setScaledContents(False)
         self.img_cond.setAlignment(Qt.AlignCenter)
 
@@ -124,6 +121,7 @@ class Ui_PCondType11(object):
 
         self.gridLayout_2.addWidget(self.lf_Hwire, 3, 1, 1, 1)
 
+
         self.verticalLayout.addLayout(self.gridLayout_2)
 
         self.w_mat_0 = WMatSelectV(self.scrollAreaWidgetContents)
@@ -168,6 +166,7 @@ class Ui_PCondType11(object):
 
         self.gridLayout.addWidget(self.w_mat_1, 1, 0, 1, 3)
 
+
         self.verticalLayout.addWidget(self.g_ins)
 
         self.horizontalLayout_2 = QHBoxLayout()
@@ -193,11 +192,10 @@ class Ui_PCondType11(object):
 
         self.horizontalLayout_2.addWidget(self.unit_Lewout)
 
+
         self.verticalLayout.addLayout(self.horizontalLayout_2)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout.addItem(self.verticalSpacer)
 
@@ -220,88 +218,39 @@ class Ui_PCondType11(object):
         self.retranslateUi(PCondType11)
 
         QMetaObject.connectSlotsByName(PCondType11)
-
     # setupUi
 
     def retranslateUi(self, PCondType11):
-        PCondType11.setWindowTitle(
-            QCoreApplication.translate("PCondType11", u"Form", None)
-        )
+        PCondType11.setWindowTitle(QCoreApplication.translate("PCondType11", u"Form", None))
         self.img_cond.setText("")
-        self.in_Wwire.setText(
-            QCoreApplication.translate("PCondType11", u"Conductor width", None)
-        )
-        self.in_Nwpc1_tan.setText(
-            QCoreApplication.translate(
-                "PCondType11", u"Strands in tangential direction", None
-            )
-        )
+        self.in_Wwire.setText(QCoreApplication.translate("PCondType11", u"Conductor width", None))
+        self.in_Nwpc1_tan.setText(QCoreApplication.translate("PCondType11", u"Strands in tangential direction", None))
         self.unit_Wwire.setText(QCoreApplication.translate("PCondType11", u"m", None))
-        self.in_Hwire.setText(
-            QCoreApplication.translate("PCondType11", u"Conductor height", None)
-        )
-        self.in_Nwpc1_rad.setText(
-            QCoreApplication.translate(
-                "PCondType11", u"Strands in radial direction", None
-            )
-        )
+        self.in_Hwire.setText(QCoreApplication.translate("PCondType11", u"Conductor height", None))
+        self.in_Nwpc1_rad.setText(QCoreApplication.translate("PCondType11", u"Strands in radial direction", None))
         self.unit_Hwire.setText(QCoreApplication.translate("PCondType11", u"m", None))
-        self.g_ins.setTitle(
-            QCoreApplication.translate("PCondType11", u"Insulation", None)
-        )
-        self.in_Wins_wire.setText(
-            QCoreApplication.translate("PCondType11", u"Insulator thickness", None)
-        )
-        self.unit_Wins_wire.setText(
-            QCoreApplication.translate("PCondType11", u"m", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.in_Lewout.setToolTip(
-            QCoreApplication.translate(
-                "PCondType11", u"End-winding length on one side for a half-turn", None
-            )
-        )
-        # endif // QT_CONFIG(tooltip)
-        # if QT_CONFIG(whatsthis)
-        self.in_Lewout.setWhatsThis(
-            QCoreApplication.translate(
-                "PCondType11",
-                u"End-winding length on one side for a half-turn (only used in voltage driven simulations)",
-                None,
-            )
-        )
-        # endif // QT_CONFIG(whatsthis)
-        self.in_Lewout.setText(
-            QCoreApplication.translate("PCondType11", u"End winding length", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.lf_Lewout.setToolTip(
-            QCoreApplication.translate(
-                "PCondType11", u"End-winding length on one side for a half-turn", None
-            )
-        )
-        # endif // QT_CONFIG(tooltip)
-        # if QT_CONFIG(whatsthis)
-        self.lf_Lewout.setWhatsThis(
-            QCoreApplication.translate(
-                "PCondType11", u"End-winding length on one side for a half-turn", None
-            )
-        )
-        # endif // QT_CONFIG(whatsthis)
-        # if QT_CONFIG(tooltip)
-        self.unit_Lewout.setToolTip(
-            QCoreApplication.translate(
-                "PCondType11", u"End-winding length on one side for a half-turn", None
-            )
-        )
-        # endif // QT_CONFIG(tooltip)
-        # if QT_CONFIG(whatsthis)
-        self.unit_Lewout.setWhatsThis(
-            QCoreApplication.translate(
-                "PCondType11", u"End-winding length on one side for a half-turn", None
-            )
-        )
-        # endif // QT_CONFIG(whatsthis)
+        self.g_ins.setTitle(QCoreApplication.translate("PCondType11", u"Insulation", None))
+        self.in_Wins_wire.setText(QCoreApplication.translate("PCondType11", u"Insulator thickness", None))
+        self.unit_Wins_wire.setText(QCoreApplication.translate("PCondType11", u"m", None))
+#if QT_CONFIG(tooltip)
+        self.in_Lewout.setToolTip(QCoreApplication.translate("PCondType11", u"End-winding length on one side for a half-turn", None))
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.in_Lewout.setWhatsThis(QCoreApplication.translate("PCondType11", u"End-winding length on one side for a half-turn (only used in voltage driven simulations)", None))
+#endif // QT_CONFIG(whatsthis)
+        self.in_Lewout.setText(QCoreApplication.translate("PCondType11", u"End winding length", None))
+#if QT_CONFIG(tooltip)
+        self.lf_Lewout.setToolTip(QCoreApplication.translate("PCondType11", u"End-winding length on one side for a half-turn", None))
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.lf_Lewout.setWhatsThis(QCoreApplication.translate("PCondType11", u"End-winding length on one side for a half-turn", None))
+#endif // QT_CONFIG(whatsthis)
+#if QT_CONFIG(tooltip)
+        self.unit_Lewout.setToolTip(QCoreApplication.translate("PCondType11", u"End-winding length on one side for a half-turn", None))
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.unit_Lewout.setWhatsThis(QCoreApplication.translate("PCondType11", u"End-winding length on one side for a half-turn", None))
+#endif // QT_CONFIG(whatsthis)
         self.unit_Lewout.setText(QCoreApplication.translate("PCondType11", u"m", None))
-
     # retranslateUi
+

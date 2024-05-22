@@ -31,15 +31,13 @@ class Ui_PCondType22(object):
 
         self.verticalLayout.addWidget(self.w_out)
 
+
         self.retranslateUi(PCondType22)
 
         QMetaObject.connectSlotsByName(PCondType22)
-
     # setupUi
 
     def retranslateUi(self, PCondType22):
-        PCondType22.setWindowTitle(
-            QCoreApplication.translate("PCondType22", u"Form", None)
-        )
-
+        PCondType22.setWindowTitle(QCoreApplication.translate("PCondType22", u"Form", None))
     # retranslateUi
+

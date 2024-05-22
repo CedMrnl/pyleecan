@@ -13,16 +13,13 @@ from .....GUI.Tools.HelpButton import HelpButton
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_DAVDuct(object):
     def setupUi(self, DAVDuct):
         if not DAVDuct.objectName():
             DAVDuct.setObjectName(u"DAVDuct")
         DAVDuct.resize(771, 639)
         icon = QIcon()
-        icon.addFile(
-            u":/images/images/icon/pyleecan_64.png", QSize(), QIcon.Normal, QIcon.Off
-        )
+        icon.addFile(u":/images/images/icon/pyleecan_64.png", QSize(), QIcon.Normal, QIcon.Off)
         DAVDuct.setWindowIcon(icon)
         self.verticalLayout = QVBoxLayout(DAVDuct)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -38,11 +35,10 @@ class Ui_DAVDuct(object):
 
         self.horizontalLayout_2.addWidget(self.b_help)
 
-        self.horizontalSpacer_2 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_2.addItem(self.horizontalSpacer_2)
+
 
         self.verticalLayout.addLayout(self.horizontalLayout_2)
 
@@ -60,9 +56,7 @@ class Ui_DAVDuct(object):
 
         self.horizontalLayout_4 = QHBoxLayout()
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
-        self.horizontalSpacer_5 = QSpacerItem(
-            218, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_5 = QSpacerItem(218, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_4.addItem(self.horizontalSpacer_5)
 
@@ -81,32 +75,26 @@ class Ui_DAVDuct(object):
 
         self.horizontalLayout_4.addWidget(self.b_ok)
 
+
         self.verticalLayout.addLayout(self.horizontalLayout_4)
+
 
         self.retranslateUi(DAVDuct)
 
         self.tab_vent.setCurrentIndex(0)
 
-        QMetaObject.connectSlotsByName(DAVDuct)
 
+        QMetaObject.connectSlotsByName(DAVDuct)
     # setupUi
 
     def retranslateUi(self, DAVDuct):
-        DAVDuct.setWindowTitle(
-            QCoreApplication.translate("DAVDuct", u"Set axial cooling duct", None)
-        )
+        DAVDuct.setWindowTitle(QCoreApplication.translate("DAVDuct", u"Set axial cooling duct", None))
         self.b_new.setText(QCoreApplication.translate("DAVDuct", u"Add New Set", None))
         self.b_help.setText("")
-        self.tab_vent.setTabText(
-            self.tab_vent.indexOf(self.tab),
-            QCoreApplication.translate("DAVDuct", u"Tab 1", None),
-        )
-        self.tab_vent.setTabText(
-            self.tab_vent.indexOf(self.tab_2),
-            QCoreApplication.translate("DAVDuct", u"Tab 2", None),
-        )
+        self.tab_vent.setTabText(self.tab_vent.indexOf(self.tab), QCoreApplication.translate("DAVDuct", u"Tab 1", None))
+        self.tab_vent.setTabText(self.tab_vent.indexOf(self.tab_2), QCoreApplication.translate("DAVDuct", u"Tab 2", None))
         self.b_plot.setText(QCoreApplication.translate("DAVDuct", u"Preview", None))
         self.b_cancel.setText(QCoreApplication.translate("DAVDuct", u"Cancel", None))
         self.b_ok.setText(QCoreApplication.translate("DAVDuct", u"Ok", None))
-
     # retranslateUi
+

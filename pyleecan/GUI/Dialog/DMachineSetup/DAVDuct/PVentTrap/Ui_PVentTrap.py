@@ -15,7 +15,6 @@ from ......GUI.Tools.SpinBox import SpinBox
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_PVentTrap(object):
     def setupUi(self, PVentTrap):
         if not PVentTrap.objectName():
@@ -34,11 +33,7 @@ class Ui_PVentTrap(object):
         self.img_vent.setSizePolicy(sizePolicy)
         self.img_vent.setMinimumSize(QSize(410, 300))
         self.img_vent.setMaximumSize(QSize(16777215, 16777215))
-        self.img_vent.setPixmap(
-            QPixmap(
-                u":/images/images/MachineSetup/LamParam/VentilationTrap_empty_int_rotor.png"
-            )
-        )
+        self.img_vent.setPixmap(QPixmap(u":/images/images/MachineSetup/LamParam/VentilationTrap_empty_int_rotor.png"))
         self.img_vent.setScaledContents(False)
         self.img_vent.setAlignment(Qt.AlignCenter)
 
@@ -126,11 +121,10 @@ class Ui_PVentTrap(object):
 
         self.gridLayout.addWidget(self.unit_W1, 3, 2, 1, 1)
 
+
         self.verticalLayout.addLayout(self.gridLayout)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 228, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 228, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout.addItem(self.verticalSpacer)
 
@@ -148,7 +142,6 @@ class Ui_PVentTrap(object):
         self.retranslateUi(PVentTrap)
 
         QMetaObject.connectSlotsByName(PVentTrap)
-
     # setupUi
 
     def retranslateUi(self, PVentTrap):
@@ -163,5 +156,5 @@ class Ui_PVentTrap(object):
         self.in_W2.setText(QCoreApplication.translate("PVentTrap", u"W2 :", None))
         self.unit_D0.setText(QCoreApplication.translate("PVentTrap", u"m", None))
         self.unit_W1.setText(QCoreApplication.translate("PVentTrap", u"m", None))
-
     # retranslateUi
+

@@ -13,7 +13,6 @@ from .....GUI.Tools.FloatEdit import FloatEdit
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_WImportLinspace(object):
     def setupUi(self, WImportLinspace):
         if not WImportLinspace.objectName():
@@ -40,6 +39,7 @@ class Ui_WImportLinspace(object):
         self.is_end.setObjectName(u"is_end")
 
         self.horizontalLayout.addWidget(self.is_end)
+
 
         self.verticalLayout.addLayout(self.horizontalLayout)
 
@@ -91,37 +91,24 @@ class Ui_WImportLinspace(object):
 
         self.horizontalLayout_2.addWidget(self.lf_stop)
 
+
         self.verticalLayout.addLayout(self.horizontalLayout_2)
+
 
         self.retranslateUi(WImportLinspace)
 
         QMetaObject.connectSlotsByName(WImportLinspace)
-
     # setupUi
 
     def retranslateUi(self, WImportLinspace):
-        WImportLinspace.setWindowTitle(
-            QCoreApplication.translate("WImportLinspace", u"Form", None)
-        )
-        self.c_type_lin.setItemText(
-            0, QCoreApplication.translate("WImportLinspace", u"Start, End, N", None)
-        )
-        self.c_type_lin.setItemText(
-            1, QCoreApplication.translate("WImportLinspace", u"Start, End, Step", None)
-        )
+        WImportLinspace.setWindowTitle(QCoreApplication.translate("WImportLinspace", u"Form", None))
+        self.c_type_lin.setItemText(0, QCoreApplication.translate("WImportLinspace", u"Start, End, N", None))
+        self.c_type_lin.setItemText(1, QCoreApplication.translate("WImportLinspace", u"Start, End, Step", None))
 
-        self.is_end.setText(
-            QCoreApplication.translate("WImportLinspace", u"Include End Point", None)
-        )
-        self.in_start.setText(
-            QCoreApplication.translate("WImportLinspace", u"Start: ", None)
-        )
+        self.is_end.setText(QCoreApplication.translate("WImportLinspace", u"Include End Point", None))
+        self.in_start.setText(QCoreApplication.translate("WImportLinspace", u"Start: ", None))
         self.in_N.setText(QCoreApplication.translate("WImportLinspace", u"N: ", None))
-        self.in_step.setText(
-            QCoreApplication.translate("WImportLinspace", u"Step: ", None)
-        )
-        self.in_stop.setText(
-            QCoreApplication.translate("WImportLinspace", u"Stop: ", None)
-        )
-
+        self.in_step.setText(QCoreApplication.translate("WImportLinspace", u"Step: ", None))
+        self.in_stop.setText(QCoreApplication.translate("WImportLinspace", u"Stop: ", None))
     # retranslateUi
+

@@ -11,7 +11,6 @@ from PySide2.QtWidgets import *
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_WImportMatrixTable(object):
     def setupUi(self, WImportMatrixTable):
         if not WImportMatrixTable.objectName():
@@ -20,9 +19,7 @@ class Ui_WImportMatrixTable(object):
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(
-            WImportMatrixTable.sizePolicy().hasHeightForWidth()
-        )
+        sizePolicy.setHeightForWidth(WImportMatrixTable.sizePolicy().hasHeightForWidth())
         WImportMatrixTable.setSizePolicy(sizePolicy)
         WImportMatrixTable.setMinimumSize(QSize(0, 0))
         self.horizontalLayout = QHBoxLayout(WImportMatrixTable)
@@ -47,29 +44,17 @@ class Ui_WImportMatrixTable(object):
 
         self.horizontalLayout.addWidget(self.b_plot)
 
+
         self.retranslateUi(WImportMatrixTable)
 
         QMetaObject.connectSlotsByName(WImportMatrixTable)
-
     # setupUi
 
     def retranslateUi(self, WImportMatrixTable):
-        WImportMatrixTable.setWindowTitle(
-            QCoreApplication.translate("WImportMatrixTable", u"Form", None)
-        )
-        self.in_matrix.setText(
-            QCoreApplication.translate(
-                "WImportMatrixTable", u"Matrix size (100,2)", None
-            )
-        )
-        self.b_convert.setText(
-            QCoreApplication.translate("WImportMatrixTable", u"Convert to Excel", None)
-        )
-        self.b_tab.setText(
-            QCoreApplication.translate("WImportMatrixTable", u"Edit Table", None)
-        )
-        self.b_plot.setText(
-            QCoreApplication.translate("WImportMatrixTable", u"Preview Plot", None)
-        )
-
+        WImportMatrixTable.setWindowTitle(QCoreApplication.translate("WImportMatrixTable", u"Form", None))
+        self.in_matrix.setText(QCoreApplication.translate("WImportMatrixTable", u"Matrix size (100,2)", None))
+        self.b_convert.setText(QCoreApplication.translate("WImportMatrixTable", u"Convert to Excel", None))
+        self.b_tab.setText(QCoreApplication.translate("WImportMatrixTable", u"Edit Table", None))
+        self.b_plot.setText(QCoreApplication.translate("WImportMatrixTable", u"Preview Plot", None))
     # retranslateUi
+

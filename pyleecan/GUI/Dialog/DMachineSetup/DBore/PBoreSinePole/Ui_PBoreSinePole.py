@@ -14,7 +14,6 @@ from ......GUI.Dialog.DMachineSetup.DBore.WBoreOut.WBoreOut import WBoreOut
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_PBoreSinePole(object):
     def setupUi(self, PBoreSinePole):
         if not PBoreSinePole.objectName():
@@ -34,13 +33,12 @@ class Ui_PBoreSinePole(object):
         sizePolicy.setHeightForWidth(self.img_bore.sizePolicy().hasHeightForWidth())
         self.img_bore.setSizePolicy(sizePolicy)
         self.img_bore.setMaximumSize(QSize(16777215, 16777215))
-        self.img_bore.setPixmap(
-            QPixmap(u":/images/images/MachineSetup/LamParam/BoreSinePole.png")
-        )
+        self.img_bore.setPixmap(QPixmap(u":/images/images/MachineSetup/LamParam/BoreSinePole.png"))
         self.img_bore.setScaledContents(False)
         self.img_bore.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_2.addWidget(self.img_bore)
+
 
         self.horizontalLayout.addLayout(self.verticalLayout_2)
 
@@ -134,11 +132,10 @@ class Ui_PBoreSinePole(object):
 
         self.gridLayout.addWidget(self.unit_delta_q, 4, 2, 1, 1)
 
+
         self.verticalLayout.addLayout(self.gridLayout)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout.addItem(self.verticalSpacer)
 
@@ -151,34 +148,24 @@ class Ui_PBoreSinePole(object):
 
         self.horizontalLayout.addWidget(self.scrollArea)
 
+
         self.retranslateUi(PBoreSinePole)
 
         QMetaObject.connectSlotsByName(PBoreSinePole)
-
     # setupUi
 
     def retranslateUi(self, PBoreSinePole):
-        PBoreSinePole.setWindowTitle(
-            QCoreApplication.translate("PBoreSinePole", u"Form", None)
-        )
+        PBoreSinePole.setWindowTitle(QCoreApplication.translate("PBoreSinePole", u"Form", None))
         self.img_bore.setText("")
         self.unit_N.setText("")
         self.unit_k.setText("")
         self.in_W0.setText(QCoreApplication.translate("PBoreSinePole", u"W0", None))
         self.unit_W0.setText(QCoreApplication.translate("PBoreSinePole", u"[m]", None))
-        self.in_delta_q.setText(
-            QCoreApplication.translate("PBoreSinePole", u"delta_q", None)
-        )
-        self.in_delta_d.setText(
-            QCoreApplication.translate("PBoreSinePole", u"delta_d", None)
-        )
+        self.in_delta_q.setText(QCoreApplication.translate("PBoreSinePole", u"delta_q", None))
+        self.in_delta_d.setText(QCoreApplication.translate("PBoreSinePole", u"delta_d", None))
         self.in_k.setText(QCoreApplication.translate("PBoreSinePole", u"k", None))
         self.in_N.setText(QCoreApplication.translate("PBoreSinePole", u"N", None))
-        self.unit_delta_d.setText(
-            QCoreApplication.translate("PBoreSinePole", u"[m]", None)
-        )
-        self.unit_delta_q.setText(
-            QCoreApplication.translate("PBoreSinePole", u"[m]", None)
-        )
-
+        self.unit_delta_d.setText(QCoreApplication.translate("PBoreSinePole", u"[m]", None))
+        self.unit_delta_q.setText(QCoreApplication.translate("PBoreSinePole", u"[m]", None))
     # retranslateUi
+

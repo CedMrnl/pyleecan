@@ -15,7 +15,6 @@ from ......GUI.Dialog.DMatLib.WMatSelect.WMatSelectV import WMatSelectV
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_PWSlot12(object):
     def setupUi(self, PWSlot12):
         if not PWSlot12.objectName():
@@ -35,13 +34,12 @@ class Ui_PWSlot12(object):
         sizePolicy.setHeightForWidth(self.img_slot.sizePolicy().hasHeightForWidth())
         self.img_slot.setSizePolicy(sizePolicy)
         self.img_slot.setMaximumSize(QSize(16777215, 16777215))
-        self.img_slot.setPixmap(
-            QPixmap(u":/images/images/MachineSetup/WSlot/SlotW12_wind_ext_stator.png")
-        )
+        self.img_slot.setPixmap(QPixmap(u":/images/images/MachineSetup/WSlot/SlotW12_wind_ext_stator.png"))
         self.img_slot.setScaledContents(False)
         self.img_slot.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_2.addWidget(self.img_slot)
+
 
         self.horizontalLayout.addLayout(self.verticalLayout_2)
 
@@ -117,6 +115,7 @@ class Ui_PWSlot12(object):
 
         self.gridLayout.addWidget(self.unit_H1, 3, 2, 1, 1)
 
+
         self.verticalLayout_3.addLayout(self.gridLayout)
 
         self.g_wedge = QGroupBox(self.scrollAreaWidgetContents)
@@ -131,11 +130,10 @@ class Ui_PWSlot12(object):
 
         self.verticalLayout.addWidget(self.w_wedge_mat)
 
+
         self.verticalLayout_3.addWidget(self.g_wedge)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_3.addItem(self.verticalSpacer)
 
@@ -155,7 +153,6 @@ class Ui_PWSlot12(object):
         self.retranslateUi(PWSlot12)
 
         QMetaObject.connectSlotsByName(PWSlot12)
-
     # setupUi
 
     def retranslateUi(self, PWSlot12):
@@ -170,5 +167,5 @@ class Ui_PWSlot12(object):
         self.in_H1.setText(QCoreApplication.translate("PWSlot12", u"H1", None))
         self.unit_H1.setText(QCoreApplication.translate("PWSlot12", u"m", None))
         self.g_wedge.setTitle(QCoreApplication.translate("PWSlot12", u"Wedge", None))
-
     # retranslateUi
+

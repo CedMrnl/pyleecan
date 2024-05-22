@@ -13,7 +13,6 @@ from ....GUI.Tools.WPathSelector.WPathSelector import WPathSelector
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_GUIOption(object):
     def setupUi(self, GUIOption):
         if not GUIOption.objectName():
@@ -42,6 +41,7 @@ class Ui_GUIOption(object):
 
         self.horizontalLayout.addWidget(self.c_unit_m)
 
+
         self.verticalLayout.addLayout(self.horizontalLayout)
 
         self.horizontalLayout_2 = QHBoxLayout()
@@ -58,40 +58,28 @@ class Ui_GUIOption(object):
 
         self.horizontalLayout_2.addWidget(self.c_unit_m2)
 
+
         self.verticalLayout.addLayout(self.horizontalLayout_2)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout.addItem(self.verticalSpacer)
+
 
         self.retranslateUi(GUIOption)
 
         QMetaObject.connectSlotsByName(GUIOption)
-
     # setupUi
 
     def retranslateUi(self, GUIOption):
         GUIOption.setWindowTitle(QCoreApplication.translate("GUIOption", u"Form", None))
-        self.in_unit_m.setText(
-            QCoreApplication.translate("GUIOption", u"Meter unit", None)
-        )
-        self.c_unit_m.setItemText(
-            0, QCoreApplication.translate("GUIOption", u"m", None)
-        )
-        self.c_unit_m.setItemText(
-            1, QCoreApplication.translate("GUIOption", u"mm", None)
-        )
+        self.in_unit_m.setText(QCoreApplication.translate("GUIOption", u"Meter unit", None))
+        self.c_unit_m.setItemText(0, QCoreApplication.translate("GUIOption", u"m", None))
+        self.c_unit_m.setItemText(1, QCoreApplication.translate("GUIOption", u"mm", None))
 
-        self.in_unit_m2.setText(
-            QCoreApplication.translate("GUIOption", u"Surface unit", None)
-        )
-        self.c_unit_m2.setItemText(
-            0, QCoreApplication.translate("GUIOption", u"m\u00b2", None)
-        )
-        self.c_unit_m2.setItemText(
-            1, QCoreApplication.translate("GUIOption", u"mm\u00b2", None)
-        )
+        self.in_unit_m2.setText(QCoreApplication.translate("GUIOption", u"Surface unit", None))
+        self.c_unit_m2.setItemText(0, QCoreApplication.translate("GUIOption", u"m\u00b2", None))
+        self.c_unit_m2.setItemText(1, QCoreApplication.translate("GUIOption", u"mm\u00b2", None))
 
     # retranslateUi
+

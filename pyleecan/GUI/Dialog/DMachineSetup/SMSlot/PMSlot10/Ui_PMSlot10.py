@@ -16,7 +16,6 @@ from ......GUI.Dialog.DMatLib.WMatSelect.WMatSelectV import WMatSelectV
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_PMSlot10(object):
     def setupUi(self, PMSlot10):
         if not PMSlot10.objectName():
@@ -36,9 +35,7 @@ class Ui_PMSlot10(object):
         sizePolicy.setHeightForWidth(self.img_slot.sizePolicy().hasHeightForWidth())
         self.img_slot.setSizePolicy(sizePolicy)
         self.img_slot.setMaximumSize(QSize(16777215, 16777215))
-        self.img_slot.setPixmap(
-            QPixmap(u":/images/images/MachineSetup/WMSlot/SlotM10_mag_int_rotor.png")
-        )
+        self.img_slot.setPixmap(QPixmap(u":/images/images/MachineSetup/WMSlot/SlotM10_mag_int_rotor.png"))
         self.img_slot.setScaledContents(False)
         self.img_slot.setAlignment(Qt.AlignCenter)
 
@@ -49,17 +46,14 @@ class Ui_PMSlot10(object):
         sizePolicy1 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(
-            self.txt_constraint.sizePolicy().hasHeightForWidth()
-        )
+        sizePolicy1.setHeightForWidth(self.txt_constraint.sizePolicy().hasHeightForWidth())
         self.txt_constraint.setSizePolicy(sizePolicy1)
         self.txt_constraint.setMaximumSize(QSize(16777215, 50))
         self.txt_constraint.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.txt_constraint.setTextInteractionFlags(
-            Qt.TextSelectableByKeyboard | Qt.TextSelectableByMouse
-        )
+        self.txt_constraint.setTextInteractionFlags(Qt.TextSelectableByKeyboard|Qt.TextSelectableByMouse)
 
         self.verticalLayout_2.addWidget(self.txt_constraint)
+
 
         self.horizontalLayout.addLayout(self.verticalLayout_2)
 
@@ -88,6 +82,7 @@ class Ui_PMSlot10(object):
         self.w_key_mat.setObjectName(u"w_key_mat")
 
         self.gridLayout_2.addWidget(self.w_key_mat, 9, 0, 1, 2)
+
 
         self.verticalLayout_3.addWidget(self.g_key)
 
@@ -153,11 +148,10 @@ class Ui_PMSlot10(object):
 
         self.gridLayout.addWidget(self.unit_H0, 1, 2, 1, 1)
 
+
         self.verticalLayout_3.addLayout(self.gridLayout)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_3.addItem(self.verticalSpacer)
 
@@ -180,24 +174,17 @@ class Ui_PMSlot10(object):
         self.retranslateUi(PMSlot10)
 
         QMetaObject.connectSlotsByName(PMSlot10)
-
     # setupUi
 
     def retranslateUi(self, PMSlot10):
         PMSlot10.setWindowTitle(QCoreApplication.translate("PMSlot10", u"Form", None))
         self.img_slot.setText("")
-        self.txt_constraint.setHtml(
-            QCoreApplication.translate(
-                "PMSlot10",
-                u'<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">\n'
-                '<html><head><meta name="qrichtext" content="1" /><style type="text/css">\n'
-                "p, li { white-space: pre-wrap; }\n"
-                "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:8.15094pt; font-weight:400; font-style:normal;\">\n"
-                '<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt; font-weight:600; text-decoration: underline;">Constraints :</span></p>\n'
-                '<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">W1 &lt;= W0</span></p></body></html>',
-                None,
-            )
-        )
+        self.txt_constraint.setHtml(QCoreApplication.translate("PMSlot10", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:8.15094pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt; font-weight:600; text-decoration: underline;\">Constraints :</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">W1 &lt;= W0</span></p></body></html>", None))
         self.g_key.setTitle(QCoreApplication.translate("PMSlot10", u"Key", None))
         self.in_H1.setText(QCoreApplication.translate("PMSlot10", u"H1", None))
         self.in_W1.setText(QCoreApplication.translate("PMSlot10", u"W1", None))
@@ -207,5 +194,5 @@ class Ui_PMSlot10(object):
         self.unit_W1.setText(QCoreApplication.translate("PMSlot10", u"[m]", None))
         self.in_H0.setText(QCoreApplication.translate("PMSlot10", u"H0", None))
         self.unit_H0.setText(QCoreApplication.translate("PMSlot10", u"[m]", None))
-
     # retranslateUi
+

@@ -13,7 +13,6 @@ from pyleecan.GUI.Tools.HelpButton import HelpButton
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_SMHoleMag(object):
     def setupUi(self, SMHoleMag):
         if not SMHoleMag.objectName():
@@ -40,11 +39,10 @@ class Ui_SMHoleMag(object):
 
         self.horizontalLayout_2.addWidget(self.out_hole_pitch)
 
-        self.horizontalSpacer_3 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_2.addItem(self.horizontalSpacer_3)
+
 
         self.verticalLayout.addLayout(self.horizontalLayout_2)
 
@@ -55,17 +53,14 @@ class Ui_SMHoleMag(object):
 
         self.horizontalLayout_3.addWidget(self.b_add)
 
-        self.horizontalSpacer_2 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_3.addItem(self.horizontalSpacer_2)
 
+
         self.verticalLayout.addLayout(self.horizontalLayout_3)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Preferred
-        )
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Preferred)
 
         self.verticalLayout.addItem(self.verticalSpacer)
 
@@ -78,9 +73,7 @@ class Ui_SMHoleMag(object):
 
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.horizontalSpacer = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
 
@@ -100,29 +93,25 @@ class Ui_SMHoleMag(object):
 
         self.horizontalLayout.addWidget(self.b_next)
 
+
         self.verticalLayout.addLayout(self.horizontalLayout)
+
 
         self.retranslateUi(SMHoleMag)
 
         self.tab_hole.setCurrentIndex(-1)
 
-        QMetaObject.connectSlotsByName(SMHoleMag)
 
+        QMetaObject.connectSlotsByName(SMHoleMag)
     # setupUi
 
     def retranslateUi(self, SMHoleMag):
         SMHoleMag.setWindowTitle(QCoreApplication.translate("SMHoleMag", u"Form", None))
         self.b_help.setText("")
-        self.out_hole_pitch.setText(
-            QCoreApplication.translate("SMHoleMag", u"Slot pitch = 2*Pi / Zs = ", None)
-        )
-        self.b_add.setText(
-            QCoreApplication.translate("SMHoleMag", u"Add new holes", None)
-        )
+        self.out_hole_pitch.setText(QCoreApplication.translate("SMHoleMag", u"Slot pitch = 2*Pi / Zs = ", None))
+        self.b_add.setText(QCoreApplication.translate("SMHoleMag", u"Add new holes", None))
         self.b_plot.setText(QCoreApplication.translate("SMHoleMag", u"Preview", None))
-        self.b_previous.setText(
-            QCoreApplication.translate("SMHoleMag", u"Previous", None)
-        )
+        self.b_previous.setText(QCoreApplication.translate("SMHoleMag", u"Previous", None))
         self.b_next.setText(QCoreApplication.translate("SMHoleMag", u"Save", None))
-
     # retranslateUi
+

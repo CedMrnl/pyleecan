@@ -15,7 +15,6 @@ from ......GUI.Dialog.DMatLib.WMatSelect.WMatSelectV import WMatSelectV
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_PWSlot14(object):
     def setupUi(self, PWSlot14):
         if not PWSlot14.objectName():
@@ -35,13 +34,12 @@ class Ui_PWSlot14(object):
         sizePolicy.setHeightForWidth(self.img_slot.sizePolicy().hasHeightForWidth())
         self.img_slot.setSizePolicy(sizePolicy)
         self.img_slot.setMaximumSize(QSize(16777215, 16777215))
-        self.img_slot.setPixmap(
-            QPixmap(u":/images/images/MachineSetup/WSlot/SlotW14_wind_ext_stator.png")
-        )
+        self.img_slot.setPixmap(QPixmap(u":/images/images/MachineSetup/WSlot/SlotW14_wind_ext_stator.png"))
         self.img_slot.setScaledContents(False)
         self.img_slot.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_2.addWidget(self.img_slot)
+
 
         self.horizontalLayout.addLayout(self.verticalLayout_2)
 
@@ -132,6 +130,7 @@ class Ui_PWSlot14(object):
 
         self.gridLayout.addWidget(self.c_H1_unit, 3, 3, 1, 1)
 
+
         self.verticalLayout_3.addLayout(self.gridLayout)
 
         self.g_wedge = QGroupBox(self.scrollAreaWidgetContents)
@@ -160,11 +159,10 @@ class Ui_PWSlot14(object):
 
         self.gridLayout_2.addWidget(self.c_wedge_type, 0, 1, 1, 1)
 
+
         self.verticalLayout_3.addWidget(self.g_wedge)
 
-        self.verticalSpacer = QSpacerItem(
-            17, 37, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(17, 37, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_3.addItem(self.verticalSpacer)
 
@@ -188,7 +186,6 @@ class Ui_PWSlot14(object):
         self.retranslateUi(PWSlot14)
 
         QMetaObject.connectSlotsByName(PWSlot14)
-
     # setupUi
 
     def retranslateUi(self, PWSlot14):
@@ -205,12 +202,8 @@ class Ui_PWSlot14(object):
         self.in_W0.setText(QCoreApplication.translate("PWSlot14", u"W0", None))
         self.g_wedge.setTitle(QCoreApplication.translate("PWSlot14", u"Wedge", None))
         self.in_type.setText(QCoreApplication.translate("PWSlot14", u"Type", None))
-        self.c_wedge_type.setItemText(
-            0, QCoreApplication.translate("PWSlot14", u"Standard", None)
-        )
+        self.c_wedge_type.setItemText(0, QCoreApplication.translate("PWSlot14", u"Standard", None))
 
-        self.c_wedge_type.setCurrentText(
-            QCoreApplication.translate("PWSlot14", u"Standard", None)
-        )
-
+        self.c_wedge_type.setCurrentText(QCoreApplication.translate("PWSlot14", u"Standard", None))
     # retranslateUi
+

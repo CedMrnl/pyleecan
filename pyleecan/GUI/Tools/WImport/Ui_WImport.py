@@ -11,7 +11,6 @@ from PySide2.QtWidgets import *
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_WImport(object):
     def setupUi(self, WImport):
         if not WImport.objectName():
@@ -37,6 +36,7 @@ class Ui_WImport(object):
 
         self.horizontalLayout.addWidget(self.c_type_import)
 
+
         self.main_layout.addLayout(self.horizontalLayout)
 
         self.w_import = QWidget(WImport)
@@ -44,16 +44,14 @@ class Ui_WImport(object):
 
         self.main_layout.addWidget(self.w_import)
 
+
         self.retranslateUi(WImport)
 
         QMetaObject.connectSlotsByName(WImport)
-
     # setupUi
 
     def retranslateUi(self, WImport):
         WImport.setWindowTitle(QCoreApplication.translate("WImport", u"Form", None))
-        self.in_param.setText(
-            QCoreApplication.translate("WImport", u"Param_name: ", None)
-        )
-
+        self.in_param.setText(QCoreApplication.translate("WImport", u"Param_name: ", None))
     # retranslateUi
+

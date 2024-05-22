@@ -14,7 +14,6 @@ from .....GUI.Tools.SpinBox import SpinBox
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_SWinding(object):
     def setupUi(self, SWinding):
         if not SWinding.objectName():
@@ -25,9 +24,7 @@ class Ui_SWinding(object):
         self.gridLayout_3.setObjectName(u"gridLayout_3")
         self.horizontalLayout_3 = QHBoxLayout()
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.horizontalSpacer_3 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_3.addItem(self.horizontalSpacer_3)
 
@@ -40,6 +37,7 @@ class Ui_SWinding(object):
         self.b_next.setObjectName(u"b_next")
 
         self.horizontalLayout_3.addWidget(self.b_next)
+
 
         self.gridLayout_3.addLayout(self.horizontalLayout_3, 1, 0, 1, 2)
 
@@ -138,6 +136,7 @@ class Ui_SWinding(object):
 
         self.gridLayout.addWidget(self.c_layer_def, 1, 0, 1, 2)
 
+
         self.gridLayout_2.addLayout(self.gridLayout, 3, 0, 1, 2)
 
         self.b_generate = QPushButton(self.g_pattern)
@@ -150,11 +149,10 @@ class Ui_SWinding(object):
 
         self.gridLayout_2.addWidget(self.b_import, 5, 0, 1, 2)
 
+
         self.verticalLayout_5.addWidget(self.g_pattern)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_5.addItem(self.verticalSpacer)
 
@@ -177,6 +175,7 @@ class Ui_SWinding(object):
 
         self.horizontalLayout_4.addWidget(self.si_Nslot)
 
+
         self.verticalLayout.addLayout(self.horizontalLayout_4)
 
         self.is_permute_B_C = QCheckBox(self.g_edit)
@@ -198,6 +197,7 @@ class Ui_SWinding(object):
         self.b_edit_wind_mat.setObjectName(u"b_edit_wind_mat")
 
         self.verticalLayout.addWidget(self.b_edit_wind_mat)
+
 
         self.verticalLayout_5.addWidget(self.g_edit)
 
@@ -252,11 +252,10 @@ class Ui_SWinding(object):
 
         self.verticalLayout_3.addWidget(self.b_export)
 
+
         self.verticalLayout_5.addWidget(self.g_output)
 
-        self.verticalSpacer_2 = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_5.addItem(self.verticalSpacer_2)
 
@@ -275,193 +274,78 @@ class Ui_SWinding(object):
 
         self.gridLayout_3.addWidget(self.w_viewer, 0, 0, 1, 1)
 
+
         self.retranslateUi(SWinding)
 
         QMetaObject.connectSlotsByName(SWinding)
-
     # setupUi
 
     def retranslateUi(self, SWinding):
         SWinding.setWindowTitle(QCoreApplication.translate("SWinding", u"Form", None))
-        self.b_previous.setText(
-            QCoreApplication.translate("SWinding", u"Previous", None)
-        )
+        self.b_previous.setText(QCoreApplication.translate("SWinding", u"Previous", None))
         self.b_next.setText(QCoreApplication.translate("SWinding", u"Next", None))
-        self.g_pattern.setTitle(
-            QCoreApplication.translate("SWinding", u"Winding pattern", None)
-        )
-        self.in_Zs_2.setText(
-            QCoreApplication.translate("SWinding", u"Generation method", None)
-        )
-        self.c_wind_type.setItemText(
-            0, QCoreApplication.translate("SWinding", u"Star of Slot", None)
-        )
-        self.c_wind_type.setItemText(
-            1, QCoreApplication.translate("SWinding", u"User Defined", None)
-        )
+        self.g_pattern.setTitle(QCoreApplication.translate("SWinding", u"Winding pattern", None))
+        self.in_Zs_2.setText(QCoreApplication.translate("SWinding", u"Generation method", None))
+        self.c_wind_type.setItemText(0, QCoreApplication.translate("SWinding", u"Star of Slot", None))
+        self.c_wind_type.setItemText(1, QCoreApplication.translate("SWinding", u"User Defined", None))
 
-        self.in_Zs.setText(
-            QCoreApplication.translate("SWinding", u"Slot number=123", None)
-        )
-        self.in_p.setText(
-            QCoreApplication.translate("SWinding", u"Pole pair number=32", None)
-        )
-        self.in_qs.setText(
-            QCoreApplication.translate("SWinding", u"Phases number", None)
-        )
-        self.in_Npcp.setText(
-            QCoreApplication.translate("SWinding", u"Parallel circuits", None)
-        )
-        self.in_coil_pitch.setText(
-            QCoreApplication.translate("SWinding", u"Throw", None)
-        )
-        self.in_Ntcoil.setText(
-            QCoreApplication.translate("SWinding", u"Turns per coil", None)
-        )
-        self.c_layer_def.setItemText(
-            0, QCoreApplication.translate("SWinding", u"Single Layer", None)
-        )
-        self.c_layer_def.setItemText(
-            1, QCoreApplication.translate("SWinding", u"Double Layer overlapping", None)
-        )
-        self.c_layer_def.setItemText(
-            2,
-            QCoreApplication.translate(
-                "SWinding", u"Double Layer non-overlapping", None
-            ),
-        )
+        self.in_Zs.setText(QCoreApplication.translate("SWinding", u"Slot number=123", None))
+        self.in_p.setText(QCoreApplication.translate("SWinding", u"Pole pair number=32", None))
+        self.in_qs.setText(QCoreApplication.translate("SWinding", u"Phases number", None))
+        self.in_Npcp.setText(QCoreApplication.translate("SWinding", u"Parallel circuits", None))
+        self.in_coil_pitch.setText(QCoreApplication.translate("SWinding", u"Throw", None))
+        self.in_Ntcoil.setText(QCoreApplication.translate("SWinding", u"Turns per coil", None))
+        self.c_layer_def.setItemText(0, QCoreApplication.translate("SWinding", u"Single Layer", None))
+        self.c_layer_def.setItemText(1, QCoreApplication.translate("SWinding", u"Double Layer overlapping", None))
+        self.c_layer_def.setItemText(2, QCoreApplication.translate("SWinding", u"Double Layer non-overlapping", None))
 
-        self.b_generate.setText(
-            QCoreApplication.translate("SWinding", u"Generate", None)
-        )
-        self.b_import.setText(
-            QCoreApplication.translate("SWinding", u"Import from CSV", None)
-        )
-        self.g_edit.setTitle(
-            QCoreApplication.translate("SWinding", u"Winding transformation", None)
-        )
-        self.in_Nslot.setText(
-            QCoreApplication.translate("SWinding", u"Slot shift", None)
-        )
-        self.is_permute_B_C.setText(
-            QCoreApplication.translate("SWinding", u"Permute B-C phases", None)
-        )
-        self.is_reverse.setText(
-            QCoreApplication.translate("SWinding", u"Reverse winding", None)
-        )
-        self.is_reverse_layer.setText(
-            QCoreApplication.translate("SWinding", u"Reverse layer", None)
-        )
-        self.b_edit_wind_mat.setText(
-            QCoreApplication.translate("SWinding", u"Edit Winding Matrix", None)
-        )
+        self.b_generate.setText(QCoreApplication.translate("SWinding", u"Generate", None))
+        self.b_import.setText(QCoreApplication.translate("SWinding", u"Import from CSV", None))
+        self.g_edit.setTitle(QCoreApplication.translate("SWinding", u"Winding transformation", None))
+        self.in_Nslot.setText(QCoreApplication.translate("SWinding", u"Slot shift", None))
+        self.is_permute_B_C.setText(QCoreApplication.translate("SWinding", u"Permute B-C phases", None))
+        self.is_reverse.setText(QCoreApplication.translate("SWinding", u"Reverse winding", None))
+        self.is_reverse_layer.setText(QCoreApplication.translate("SWinding", u"Reverse layer", None))
+        self.b_edit_wind_mat.setText(QCoreApplication.translate("SWinding", u"Edit Winding Matrix", None))
         self.g_output.setTitle(QCoreApplication.translate("SWinding", u"Output", None))
-        # if QT_CONFIG(tooltip)
-        self.out_rot_dir.setToolTip(
-            QCoreApplication.translate(
-                "SWinding",
-                u"Fundamental field rotation direction when feeding the winding with direct AC current",
-                None,
-            )
-        )
-        # endif // QT_CONFIG(tooltip)
-        # if QT_CONFIG(statustip)
-        self.out_rot_dir.setStatusTip(
-            QCoreApplication.translate(
-                "SWinding",
-                u"Fundamental field rotation direction when feeding the winding with direct AC current",
-                None,
-            )
-        )
-        # endif // QT_CONFIG(statustip)
-        # if QT_CONFIG(whatsthis)
-        self.out_rot_dir.setWhatsThis(
-            QCoreApplication.translate(
-                "SWinding",
-                u"Fundamental field rotation direction when feeding the winding with direct AC current",
-                None,
-            )
-        )
-        # endif // QT_CONFIG(whatsthis)
-        self.out_rot_dir.setText(
-            QCoreApplication.translate("SWinding", u"Rotation Direction", None)
-        )
-        self.out_ms.setText(
-            QCoreApplication.translate(
-                "SWinding", u"Number of slot per pole per phase", None
-            )
-        )
-        # if QT_CONFIG(tooltip)
-        self.out_Nperw.setToolTip(
-            QCoreApplication.translate("SWinding", u"Winding periodicity", None)
-        )
-        # endif // QT_CONFIG(tooltip)
-        self.out_Nperw.setText(
-            QCoreApplication.translate("SWinding", u"Winding periodicity", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.out_Ntspc.setToolTip(
-            QCoreApplication.translate(
-                "SWinding", u"Winding number of turns in series per phase", None
-            )
-        )
-        # endif // QT_CONFIG(tooltip)
-        # if QT_CONFIG(statustip)
-        self.out_Ntspc.setStatusTip(
-            QCoreApplication.translate(
-                "SWinding", u"Winding number of turns in series per phase", None
-            )
-        )
-        # endif // QT_CONFIG(statustip)
-        # if QT_CONFIG(whatsthis)
-        self.out_Ntspc.setWhatsThis(
-            QCoreApplication.translate(
-                "SWinding", u"Winding number of turns in series per phase", None
-            )
-        )
-        # endif // QT_CONFIG(whatsthis)
-        self.out_Ntspc.setText(
-            QCoreApplication.translate(
-                "SWinding", u"Number of turns in series per phase", None
-            )
-        )
-        # if QT_CONFIG(tooltip)
-        self.out_Ncspc.setToolTip(
-            QCoreApplication.translate(
-                "SWinding", u"Number of coils in series per parallel circuit", None
-            )
-        )
-        # endif // QT_CONFIG(tooltip)
-        # if QT_CONFIG(statustip)
-        self.out_Ncspc.setStatusTip(
-            QCoreApplication.translate(
-                "SWinding", u"Number of coils in series per parallel circuit", None
-            )
-        )
-        # endif // QT_CONFIG(statustip)
-        # if QT_CONFIG(whatsthis)
-        self.out_Ncspc.setWhatsThis(
-            QCoreApplication.translate(
-                "SWinding", u"Number of coils in series per parallel circuit", None
-            )
-        )
-        # endif // QT_CONFIG(whatsthis)
-        self.out_Ncspc.setText(
-            QCoreApplication.translate(
-                "SWinding", u"Number of coils in series per parallel circuit", None
-            )
-        )
-        self.b_plot_mmf.setText(
-            QCoreApplication.translate("SWinding", u"Plot Stator Unit MMF", None)
-        )
-        self.b_plot_linear.setText(
-            QCoreApplication.translate("SWinding", u"Plot Winding Linear Pattern", None)
-        )
-        self.b_plot_radial.setText(
-            QCoreApplication.translate("SWinding", u"Plot Winding Radial Pattern", None)
-        )
-        self.b_export.setText(
-            QCoreApplication.translate("SWinding", u"Export to CSV", None)
-        )
-
+#if QT_CONFIG(tooltip)
+        self.out_rot_dir.setToolTip(QCoreApplication.translate("SWinding", u"Fundamental field rotation direction when feeding the winding with direct AC current", None))
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(statustip)
+        self.out_rot_dir.setStatusTip(QCoreApplication.translate("SWinding", u"Fundamental field rotation direction when feeding the winding with direct AC current", None))
+#endif // QT_CONFIG(statustip)
+#if QT_CONFIG(whatsthis)
+        self.out_rot_dir.setWhatsThis(QCoreApplication.translate("SWinding", u"Fundamental field rotation direction when feeding the winding with direct AC current", None))
+#endif // QT_CONFIG(whatsthis)
+        self.out_rot_dir.setText(QCoreApplication.translate("SWinding", u"Rotation Direction", None))
+        self.out_ms.setText(QCoreApplication.translate("SWinding", u"Number of slot per pole per phase", None))
+#if QT_CONFIG(tooltip)
+        self.out_Nperw.setToolTip(QCoreApplication.translate("SWinding", u"Winding periodicity", None))
+#endif // QT_CONFIG(tooltip)
+        self.out_Nperw.setText(QCoreApplication.translate("SWinding", u"Winding periodicity", None))
+#if QT_CONFIG(tooltip)
+        self.out_Ntspc.setToolTip(QCoreApplication.translate("SWinding", u"Winding number of turns in series per phase", None))
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(statustip)
+        self.out_Ntspc.setStatusTip(QCoreApplication.translate("SWinding", u"Winding number of turns in series per phase", None))
+#endif // QT_CONFIG(statustip)
+#if QT_CONFIG(whatsthis)
+        self.out_Ntspc.setWhatsThis(QCoreApplication.translate("SWinding", u"Winding number of turns in series per phase", None))
+#endif // QT_CONFIG(whatsthis)
+        self.out_Ntspc.setText(QCoreApplication.translate("SWinding", u"Number of turns in series per phase", None))
+#if QT_CONFIG(tooltip)
+        self.out_Ncspc.setToolTip(QCoreApplication.translate("SWinding", u"Number of coils in series per parallel circuit", None))
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(statustip)
+        self.out_Ncspc.setStatusTip(QCoreApplication.translate("SWinding", u"Number of coils in series per parallel circuit", None))
+#endif // QT_CONFIG(statustip)
+#if QT_CONFIG(whatsthis)
+        self.out_Ncspc.setWhatsThis(QCoreApplication.translate("SWinding", u"Number of coils in series per parallel circuit", None))
+#endif // QT_CONFIG(whatsthis)
+        self.out_Ncspc.setText(QCoreApplication.translate("SWinding", u"Number of coils in series per parallel circuit", None))
+        self.b_plot_mmf.setText(QCoreApplication.translate("SWinding", u"Plot Stator Unit MMF", None))
+        self.b_plot_linear.setText(QCoreApplication.translate("SWinding", u"Plot Winding Linear Pattern", None))
+        self.b_plot_radial.setText(QCoreApplication.translate("SWinding", u"Plot Winding Radial Pattern", None))
+        self.b_export.setText(QCoreApplication.translate("SWinding", u"Export to CSV", None))
     # retranslateUi
+

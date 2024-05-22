@@ -7,7 +7,8 @@ from pyleecan.GUI.Dialog.DMachineSetup.DAVDuct.WVent.Ui_WVent import Ui_WVent
 
 class Gen_WVent(Ui_WVent):
     def setupUi(self, WVent):
-        """Abstract class to update the widget according to the csv doc"""
+        """Abstract class to update the widget according to the csv doc
+        """
         Ui_WVent.setupUi(self, WVent)
         # Setup of in_Alpha0
         txt = self.tr(u"""Shift angle of the holes around circumference""")

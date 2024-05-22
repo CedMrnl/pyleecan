@@ -13,7 +13,6 @@ from pyleecan.GUI.Tools.HelpButton import HelpButton
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_SWSlot(object):
     def setupUi(self, SWSlot):
         if not SWSlot.objectName():
@@ -54,11 +53,10 @@ class Ui_SWSlot(object):
 
         self.horizontalLayout_2.addWidget(self.out_Slot_pitch)
 
-        self.horizontalSpacer_3 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_2.addItem(self.horizontalSpacer_3)
+
 
         self.main_layout.addLayout(self.horizontalLayout_2)
 
@@ -74,9 +72,7 @@ class Ui_SWSlot(object):
 
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.horizontalSpacer = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
 
@@ -95,33 +91,26 @@ class Ui_SWSlot(object):
 
         self.horizontalLayout.addWidget(self.b_next)
 
+
         self.main_layout.addLayout(self.horizontalLayout)
+
 
         self.retranslateUi(SWSlot)
 
         QMetaObject.connectSlotsByName(SWSlot)
-
     # setupUi
 
     def retranslateUi(self, SWSlot):
         SWSlot.setWindowTitle(QCoreApplication.translate("SWSlot", u"Form", None))
         self.b_help.setText("")
-        self.c_slot_type.setItemText(
-            0, QCoreApplication.translate("SWSlot", u"Slot Type 10", None)
-        )
-        self.c_slot_type.setItemText(
-            1, QCoreApplication.translate("SWSlot", u"Slot Type 11", None)
-        )
-        self.c_slot_type.setItemText(
-            2, QCoreApplication.translate("SWSlot", u"Slot Type 12", None)
-        )
+        self.c_slot_type.setItemText(0, QCoreApplication.translate("SWSlot", u"Slot Type 10", None))
+        self.c_slot_type.setItemText(1, QCoreApplication.translate("SWSlot", u"Slot Type 11", None))
+        self.c_slot_type.setItemText(2, QCoreApplication.translate("SWSlot", u"Slot Type 12", None))
 
         self.in_Zs.setText(QCoreApplication.translate("SWSlot", u"Zs :", None))
-        self.out_Slot_pitch.setText(
-            QCoreApplication.translate("SWSlot", u"Slot pitch = 2*Pi / Zs = ", None)
-        )
+        self.out_Slot_pitch.setText(QCoreApplication.translate("SWSlot", u"Slot pitch = 2*Pi / Zs = ", None))
         self.b_plot.setText(QCoreApplication.translate("SWSlot", u"Preview", None))
         self.b_previous.setText(QCoreApplication.translate("SWSlot", u"Previous", None))
         self.b_next.setText(QCoreApplication.translate("SWSlot", u"Next", None))
-
     # retranslateUi
+

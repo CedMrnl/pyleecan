@@ -35,11 +35,10 @@ class Ui_WSlotMag(object):
 
         self.horizontalLayout.addWidget(self.c_slot_type)
 
-        self.horizontalSpacer = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
+
 
         self.main_layout.addLayout(self.horizontalLayout)
 
@@ -54,37 +53,22 @@ class Ui_WSlotMag(object):
 
         self.main_layout.addWidget(self.w_slot)
 
+
         self.retranslateUi(WSlotMag)
 
         QMetaObject.connectSlotsByName(WSlotMag)
-
     # setupUi
 
     def retranslateUi(self, WSlotMag):
         WSlotMag.setWindowTitle(QCoreApplication.translate("WSlotMag", u"Form", None))
-        self.c_slot_type.setItemText(
-            0, QCoreApplication.translate("WSlotMag", u"Slot Type 50", None)
-        )
-        self.c_slot_type.setItemText(
-            1, QCoreApplication.translate("WSlotMag", u"Slot Type 51", None)
-        )
-        self.c_slot_type.setItemText(
-            2, QCoreApplication.translate("WSlotMag", u"Slot Type 52", None)
-        )
-        self.c_slot_type.setItemText(
-            3, QCoreApplication.translate("WSlotMag", u"Slot Type 52 R", None)
-        )
-        self.c_slot_type.setItemText(
-            4, QCoreApplication.translate("WSlotMag", u"Slot Type 53", None)
-        )
-        self.c_slot_type.setItemText(
-            5, QCoreApplication.translate("WSlotMag", u"Slot Type 54", None)
-        )
-        self.c_slot_type.setItemText(
-            6, QCoreApplication.translate("WSlotMag", u"Slot Type 55", None)
-        )
-        self.c_slot_type.setItemText(
-            7, QCoreApplication.translate("WSlotMag", u"Slot Type 56", None)
-        )
+        self.c_slot_type.setItemText(0, QCoreApplication.translate("WSlotMag", u"Slot Type 50", None))
+        self.c_slot_type.setItemText(1, QCoreApplication.translate("WSlotMag", u"Slot Type 51", None))
+        self.c_slot_type.setItemText(2, QCoreApplication.translate("WSlotMag", u"Slot Type 52", None))
+        self.c_slot_type.setItemText(3, QCoreApplication.translate("WSlotMag", u"Slot Type 52 R", None))
+        self.c_slot_type.setItemText(4, QCoreApplication.translate("WSlotMag", u"Slot Type 53", None))
+        self.c_slot_type.setItemText(5, QCoreApplication.translate("WSlotMag", u"Slot Type 54", None))
+        self.c_slot_type.setItemText(6, QCoreApplication.translate("WSlotMag", u"Slot Type 55", None))
+        self.c_slot_type.setItemText(7, QCoreApplication.translate("WSlotMag", u"Slot Type 56", None))
 
     # retranslateUi
+

@@ -15,7 +15,6 @@ from .....GUI.Dialog.DMatLib.WMatSelect.WMatSelectV import WMatSelectV
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_SLamShape(object):
     def setupUi(self, SLamShape):
         if not SLamShape.objectName():
@@ -77,6 +76,7 @@ class Ui_SLamShape(object):
 
         self.gridLayout_2.addWidget(self.lf_Kf1, 2, 1, 1, 1)
 
+
         self.verticalLayout_5.addLayout(self.gridLayout_2)
 
         self.w_mat = WMatSelectV(self.scrollAreaWidgetContents)
@@ -100,6 +100,7 @@ class Ui_SLamShape(object):
         self.b_axial_duct.setObjectName(u"b_axial_duct")
 
         self.verticalLayout.addWidget(self.b_axial_duct)
+
 
         self.verticalLayout_5.addWidget(self.g_axial)
 
@@ -139,6 +140,7 @@ class Ui_SLamShape(object):
 
         self.gridLayout.addWidget(self.unit_Wrvd, 1, 2, 1, 1)
 
+
         self.verticalLayout_2.addLayout(self.gridLayout)
 
         self.out_length = QLabel(self.g_radial)
@@ -147,6 +149,7 @@ class Ui_SLamShape(object):
         self.out_length.setMaximumSize(QSize(16777215, 16777215))
 
         self.verticalLayout_2.addWidget(self.out_length)
+
 
         self.verticalLayout_5.addWidget(self.g_radial)
 
@@ -166,6 +169,7 @@ class Ui_SLamShape(object):
 
         self.verticalLayout_3.addWidget(self.b_notch)
 
+
         self.verticalLayout_5.addWidget(self.g_notches)
 
         self.g_bore = QGroupBox(self.scrollAreaWidgetContents)
@@ -179,11 +183,10 @@ class Ui_SLamShape(object):
 
         self.verticalLayout_6.addWidget(self.b_bore)
 
+
         self.verticalLayout_5.addWidget(self.g_bore)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_5.addItem(self.verticalSpacer)
 
@@ -191,13 +194,12 @@ class Ui_SLamShape(object):
 
         self.horizontalLayout_8.addWidget(self.scrollArea)
 
+
         self.verticalLayout_4.addLayout(self.horizontalLayout_8)
 
         self.horizontalLayout_3 = QHBoxLayout()
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.horizontalSpacer_3 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_3.addItem(self.horizontalSpacer_3)
 
@@ -211,67 +213,40 @@ class Ui_SLamShape(object):
 
         self.horizontalLayout_3.addWidget(self.b_next)
 
+
         self.verticalLayout_4.addLayout(self.horizontalLayout_3)
+
 
         self.retranslateUi(SLamShape)
 
         QMetaObject.connectSlotsByName(SLamShape)
-
     # setupUi
 
     def retranslateUi(self, SLamShape):
         SLamShape.setWindowTitle(QCoreApplication.translate("SLamShape", u"Form", None))
-        # if QT_CONFIG(tooltip)
-        self.in_L1.setToolTip(
-            QCoreApplication.translate("SLamShape", u"Stator external radius", None)
-        )
-        # endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(tooltip)
+        self.in_L1.setToolTip(QCoreApplication.translate("SLamShape", u"Stator external radius", None))
+#endif // QT_CONFIG(tooltip)
         self.in_L1.setText(QCoreApplication.translate("SLamShape", u"L1:", None))
-        # if QT_CONFIG(tooltip)
-        self.lf_L1.setToolTip(
-            QCoreApplication.translate("SLamShape", u"Stator external radius", None)
-        )
-        # endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(tooltip)
+        self.lf_L1.setToolTip(QCoreApplication.translate("SLamShape", u"Stator external radius", None))
+#endif // QT_CONFIG(tooltip)
         self.unit_L1.setText(QCoreApplication.translate("SLamShape", u"m", None))
         self.in_Kf1.setText(QCoreApplication.translate("SLamShape", u"Kf1 :", None))
-        self.g_axial.setTitle(
-            QCoreApplication.translate("SLamShape", u"Axial cooling duct", None)
-        )
-        self.out_axial_duct.setText(
-            QCoreApplication.translate("SLamShape", u"Axial : 0 set (0 ducts)", None)
-        )
-        self.b_axial_duct.setText(
-            QCoreApplication.translate("SLamShape", u"Set Axial Ducts", None)
-        )
-        self.g_radial.setTitle(
-            QCoreApplication.translate("SLamShape", u"Radial cooling duct", None)
-        )
+        self.g_axial.setTitle(QCoreApplication.translate("SLamShape", u"Axial cooling duct", None))
+        self.out_axial_duct.setText(QCoreApplication.translate("SLamShape", u"Axial : 0 set (0 ducts)", None))
+        self.b_axial_duct.setText(QCoreApplication.translate("SLamShape", u"Set Axial Ducts", None))
+        self.g_radial.setTitle(QCoreApplication.translate("SLamShape", u"Radial cooling duct", None))
         self.in_Nrvd.setText(QCoreApplication.translate("SLamShape", u"Nrvd :", None))
         self.in_Wrvd.setText(QCoreApplication.translate("SLamShape", u"Wrvd :", None))
         self.unit_Wrvd.setText(QCoreApplication.translate("SLamShape", u"m", None))
-        self.out_length.setText(
-            QCoreApplication.translate(
-                "SLamShape", u"stator total length = L1+Nrvd*Wrvd = ?", None
-            )
-        )
-        self.g_notches.setTitle(
-            QCoreApplication.translate("SLamShape", u"Notches and Keys", None)
-        )
-        self.out_notch.setText(
-            QCoreApplication.translate("SLamShape", u"0 set (0 notches)", None)
-        )
-        self.b_notch.setText(
-            QCoreApplication.translate("SLamShape", u"Set Notches", None)
-        )
-        self.g_bore.setTitle(
-            QCoreApplication.translate("SLamShape", u"Uneven bore shape", None)
-        )
-        self.b_bore.setText(
-            QCoreApplication.translate("SLamShape", u"Set Uneven Bore Shape", None)
-        )
-        self.b_previous.setText(
-            QCoreApplication.translate("SLamShape", u"Previous", None)
-        )
+        self.out_length.setText(QCoreApplication.translate("SLamShape", u"stator total length = L1+Nrvd*Wrvd = ?", None))
+        self.g_notches.setTitle(QCoreApplication.translate("SLamShape", u"Notches and Keys", None))
+        self.out_notch.setText(QCoreApplication.translate("SLamShape", u"0 set (0 notches)", None))
+        self.b_notch.setText(QCoreApplication.translate("SLamShape", u"Set Notches", None))
+        self.g_bore.setTitle(QCoreApplication.translate("SLamShape", u"Uneven bore shape", None))
+        self.b_bore.setText(QCoreApplication.translate("SLamShape", u"Set Uneven Bore Shape", None))
+        self.b_previous.setText(QCoreApplication.translate("SLamShape", u"Previous", None))
         self.b_next.setText(QCoreApplication.translate("SLamShape", u"Next", None))
-
     # retranslateUi
+

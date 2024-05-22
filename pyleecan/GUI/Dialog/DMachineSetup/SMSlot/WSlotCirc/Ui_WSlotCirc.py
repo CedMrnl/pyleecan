@@ -14,7 +14,6 @@ from ......GUI.Dialog.DMachineSetup.SWSlot.WWSlotOut.WWSlotOut import WWSlotOut
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_WSlotCirc(object):
     def setupUi(self, WSlotCirc):
         if not WSlotCirc.objectName():
@@ -34,13 +33,12 @@ class Ui_WSlotCirc(object):
         sizePolicy.setHeightForWidth(self.img_slot.sizePolicy().hasHeightForWidth())
         self.img_slot.setSizePolicy(sizePolicy)
         self.img_slot.setMaximumSize(QSize(16777215, 16777215))
-        self.img_slot.setPixmap(
-            QPixmap(u":/images/images/MachineSetup/WMSlot/SlotCirc_empty_int_rot.png")
-        )
+        self.img_slot.setPixmap(QPixmap(u":/images/images/MachineSetup/WMSlot/SlotCirc_empty_int_rot.png"))
         self.img_slot.setScaledContents(False)
         self.img_slot.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_2.addWidget(self.img_slot)
+
 
         self.horizontalLayout.addLayout(self.verticalLayout_2)
 
@@ -67,6 +65,7 @@ class Ui_WSlotCirc(object):
         self.c_H0_bore.setObjectName(u"c_H0_bore")
 
         self.horizontalLayout_2.addWidget(self.c_H0_bore)
+
 
         self.verticalLayout.addLayout(self.horizontalLayout_2)
 
@@ -102,11 +101,10 @@ class Ui_WSlotCirc(object):
 
         self.gridLayout.addWidget(self.lf_W0, 0, 1, 1, 1)
 
+
         self.verticalLayout.addLayout(self.gridLayout)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout.addItem(self.verticalSpacer)
 
@@ -124,25 +122,18 @@ class Ui_WSlotCirc(object):
         self.retranslateUi(WSlotCirc)
 
         QMetaObject.connectSlotsByName(WSlotCirc)
-
     # setupUi
 
     def retranslateUi(self, WSlotCirc):
         WSlotCirc.setWindowTitle(QCoreApplication.translate("WSlotCirc", u"Form", None))
         self.img_slot.setText("")
-        self.in_H0_bore.setText(
-            QCoreApplication.translate("WSlotCirc", u"H0 definition:", None)
-        )
-        self.c_H0_bore.setItemText(
-            0, QCoreApplication.translate("WSlotCirc", u"Opening Arc", None)
-        )
-        self.c_H0_bore.setItemText(
-            1, QCoreApplication.translate("WSlotCirc", u"Opening Segment", None)
-        )
+        self.in_H0_bore.setText(QCoreApplication.translate("WSlotCirc", u"H0 definition:", None))
+        self.c_H0_bore.setItemText(0, QCoreApplication.translate("WSlotCirc", u"Opening Arc", None))
+        self.c_H0_bore.setItemText(1, QCoreApplication.translate("WSlotCirc", u"Opening Segment", None))
 
         self.unit_H0.setText(QCoreApplication.translate("WSlotCirc", u"[m]", None))
         self.in_H0.setText(QCoreApplication.translate("WSlotCirc", u"H0", None))
         self.unit_W0.setText(QCoreApplication.translate("WSlotCirc", u"[m]", None))
         self.in_W0.setText(QCoreApplication.translate("WSlotCirc", u"W0", None))
-
     # retranslateUi
+

@@ -14,7 +14,6 @@ from ......GUI.Dialog.DMachineSetup.SWSlot.WWSlotOut.WWSlotOut import WWSlotOut
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_PWSlot24(object):
     def setupUi(self, PWSlot24):
         if not PWSlot24.objectName():
@@ -34,9 +33,7 @@ class Ui_PWSlot24(object):
         sizePolicy.setHeightForWidth(self.img_slot.sizePolicy().hasHeightForWidth())
         self.img_slot.setSizePolicy(sizePolicy)
         self.img_slot.setMaximumSize(QSize(16777215, 16777215))
-        self.img_slot.setPixmap(
-            QPixmap(u":/images/images/MachineSetup/WSlot/SlotW24_wind_ext_stator.png")
-        )
+        self.img_slot.setPixmap(QPixmap(u":/images/images/MachineSetup/WSlot/SlotW24_wind_ext_stator.png"))
         self.img_slot.setScaledContents(False)
         self.img_slot.setAlignment(Qt.AlignCenter)
 
@@ -52,6 +49,7 @@ class Ui_PWSlot24(object):
         self.textEdit.setMaximumSize(QSize(16777215, 50))
 
         self.verticalLayout_2.addWidget(self.textEdit)
+
 
         self.horizontalLayout.addLayout(self.verticalLayout_2)
 
@@ -97,11 +95,10 @@ class Ui_PWSlot24(object):
 
         self.gridLayout.addWidget(self.unit_H2, 1, 2, 1, 1)
 
+
         self.verticalLayout.addLayout(self.gridLayout)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout.addItem(self.verticalSpacer)
 
@@ -114,30 +111,24 @@ class Ui_PWSlot24(object):
 
         self.horizontalLayout.addWidget(self.scrollArea)
 
+
         self.retranslateUi(PWSlot24)
 
         QMetaObject.connectSlotsByName(PWSlot24)
-
     # setupUi
 
     def retranslateUi(self, PWSlot24):
         PWSlot24.setWindowTitle(QCoreApplication.translate("PWSlot24", u"Form", None))
         self.img_slot.setText("")
-        self.textEdit.setHtml(
-            QCoreApplication.translate(
-                "PWSlot24",
-                u'<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">\n'
-                '<html><head><meta name="qrichtext" content="1" /><style type="text/css">\n'
-                "p, li { white-space: pre-wrap; }\n"
-                "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-                '<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">Constant tooth width</span></p>\n'
-                '<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">Slot edges are not radial</span></p></body></html>',
-                None,
-            )
-        )
+        self.textEdit.setHtml(QCoreApplication.translate("PWSlot24", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">Constant tooth width</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">Slot edges are not radial</span></p></body></html>", None))
         self.in_W3.setText(QCoreApplication.translate("PWSlot24", u"W3", None))
         self.unit_W3.setText(QCoreApplication.translate("PWSlot24", u"m", None))
         self.in_H2.setText(QCoreApplication.translate("PWSlot24", u"H2", None))
         self.unit_H2.setText(QCoreApplication.translate("PWSlot24", u"m", None))
-
     # retranslateUi
+

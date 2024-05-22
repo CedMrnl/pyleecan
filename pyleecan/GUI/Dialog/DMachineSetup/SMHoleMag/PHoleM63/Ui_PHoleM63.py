@@ -14,7 +14,6 @@ from ......GUI.Dialog.DMatLib.WMatSelect.WMatSelect import WMatSelect
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_PHoleM63(object):
     def setupUi(self, PHoleM63):
         if not PHoleM63.objectName():
@@ -35,13 +34,12 @@ class Ui_PHoleM63(object):
         self.img_slot.setSizePolicy(sizePolicy)
         self.img_slot.setMinimumSize(QSize(0, 0))
         self.img_slot.setMaximumSize(QSize(16777215, 16777215))
-        self.img_slot.setPixmap(
-            QPixmap(u":/images/images/MachineSetup/SMHoleMag/HoleM63_mag_int_rotor.png")
-        )
+        self.img_slot.setPixmap(QPixmap(u":/images/images/MachineSetup/SMHoleMag/HoleM63_mag_int_rotor.png"))
         self.img_slot.setScaledContents(False)
         self.img_slot.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_2.addWidget(self.img_slot)
+
 
         self.horizontalLayout.addLayout(self.verticalLayout_2)
 
@@ -107,6 +105,7 @@ class Ui_PHoleM63(object):
 
         self.gridLayout.addWidget(self.unit_W0, 2, 3, 1, 1)
 
+
         self.verticalLayout_3.addLayout(self.gridLayout)
 
         self.w_mat_0 = WMatSelect(self.scrollAreaWidgetContents)
@@ -115,9 +114,7 @@ class Ui_PHoleM63(object):
 
         self.verticalLayout_3.addWidget(self.w_mat_0)
 
-        self.verticalSpacer_2 = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_3.addItem(self.verticalSpacer_2)
 
@@ -136,6 +133,7 @@ class Ui_PHoleM63(object):
 
         self.verticalLayout.addWidget(self.out_magnet_surface)
 
+
         self.verticalLayout_3.addWidget(self.g_output)
 
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
@@ -148,15 +146,12 @@ class Ui_PHoleM63(object):
         self.retranslateUi(PHoleM63)
 
         QMetaObject.connectSlotsByName(PHoleM63)
-
     # setupUi
 
     def retranslateUi(self, PHoleM63):
         PHoleM63.setWindowTitle(QCoreApplication.translate("PHoleM63", u"Form", None))
         self.img_slot.setText("")
-        self.ck_is_top_flat.setText(
-            QCoreApplication.translate("PHoleM63", u"Flat top", None)
-        )
+        self.ck_is_top_flat.setText(QCoreApplication.translate("PHoleM63", u"Flat top", None))
         self.in_H0.setText(QCoreApplication.translate("PHoleM63", u"H0", None))
         self.unit_H1.setText(QCoreApplication.translate("PHoleM63", u"m", None))
         self.in_H1.setText(QCoreApplication.translate("PHoleM63", u"H1", None))
@@ -164,11 +159,7 @@ class Ui_PHoleM63(object):
         self.unit_H0.setText(QCoreApplication.translate("PHoleM63", u"m", None))
         self.unit_W0.setText(QCoreApplication.translate("PHoleM63", u"m", None))
         self.g_output.setTitle(QCoreApplication.translate("PHoleM63", u"Output", None))
-        self.out_slot_surface.setText(
-            QCoreApplication.translate("PHoleM63", u"Slot suface (2 part) : ?", None)
-        )
-        self.out_magnet_surface.setText(
-            QCoreApplication.translate("PHoleM63", u"Single Magnet surface : ?", None)
-        )
-
+        self.out_slot_surface.setText(QCoreApplication.translate("PHoleM63", u"Slot suface (2 part) : ?", None))
+        self.out_magnet_surface.setText(QCoreApplication.translate("PHoleM63", u"Single Magnet surface : ?", None))
     # retranslateUi
+

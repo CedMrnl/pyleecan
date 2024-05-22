@@ -14,7 +14,6 @@ from ......GUI.Tools.FloatEdit import FloatEdit
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_PHoleM60(object):
     def setupUi(self, PHoleM60):
         if not PHoleM60.objectName():
@@ -35,9 +34,7 @@ class Ui_PHoleM60(object):
         self.img_slot.setSizePolicy(sizePolicy)
         self.img_slot.setMinimumSize(QSize(0, 0))
         self.img_slot.setMaximumSize(QSize(16777215, 16777215))
-        self.img_slot.setPixmap(
-            QPixmap(u":/images/images/MachineSetup/SMHoleMag/HoleM60_mag_int_rotor.png")
-        )
+        self.img_slot.setPixmap(QPixmap(u":/images/images/MachineSetup/SMHoleMag/HoleM60_mag_int_rotor.png"))
         self.img_slot.setScaledContents(False)
         self.img_slot.setAlignment(Qt.AlignCenter)
 
@@ -49,6 +46,7 @@ class Ui_PHoleM60(object):
         self.txt_constraint.setMaximumSize(QSize(16777215, 100))
 
         self.verticalLayout_2.addWidget(self.txt_constraint)
+
 
         self.horizontalLayout.addLayout(self.verticalLayout_2)
 
@@ -154,6 +152,7 @@ class Ui_PHoleM60(object):
 
         self.gridLayout.addWidget(self.in_H0, 0, 0, 1, 1)
 
+
         self.verticalLayout_3.addLayout(self.gridLayout)
 
         self.w_mat_0 = WMatSelect(self.scrollAreaWidgetContents)
@@ -174,9 +173,7 @@ class Ui_PHoleM60(object):
 
         self.verticalLayout_3.addWidget(self.w_mat_2)
 
-        self.verticalSpacer_2 = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_3.addItem(self.verticalSpacer_2)
 
@@ -195,6 +192,7 @@ class Ui_PHoleM60(object):
 
         self.verticalLayout.addWidget(self.out_magnet_surface)
 
+
         self.verticalLayout_3.addWidget(self.g_output)
 
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
@@ -210,24 +208,17 @@ class Ui_PHoleM60(object):
         self.retranslateUi(PHoleM60)
 
         QMetaObject.connectSlotsByName(PHoleM60)
-
     # setupUi
 
     def retranslateUi(self, PHoleM60):
         PHoleM60.setWindowTitle(QCoreApplication.translate("PHoleM60", u"Form", None))
         self.img_slot.setText("")
-        self.txt_constraint.setHtml(
-            QCoreApplication.translate(
-                "PHoleM60",
-                u'<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">\n'
-                '<html><head><meta name="qrichtext" content="1" /><style type="text/css">\n'
-                "p, li { white-space: pre-wrap; }\n"
-                "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-                '<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt; font-weight:600; text-decoration: underline;">Constraints :</span></p>\n'
-                '<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">W1 + H0 &lt;= W2</span></p></body></html>',
-                None,
-            )
-        )
+        self.txt_constraint.setHtml(QCoreApplication.translate("PHoleM60", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt; font-weight:600; text-decoration: underline;\">Constraints :</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">W1 + H0 &lt;= W2</span></p></body></html>", None))
         self.in_W1.setText(QCoreApplication.translate("PHoleM60", u"W1", None))
         self.unit_H0.setText(QCoreApplication.translate("PHoleM60", u"m", None))
         self.in_W2.setText(QCoreApplication.translate("PHoleM60", u"W2", None))
@@ -241,11 +232,7 @@ class Ui_PHoleM60(object):
         self.in_H1.setText(QCoreApplication.translate("PHoleM60", u"H1", None))
         self.in_H0.setText(QCoreApplication.translate("PHoleM60", u"H0", None))
         self.g_output.setTitle(QCoreApplication.translate("PHoleM60", u"Output", None))
-        self.out_slot_surface.setText(
-            QCoreApplication.translate("PHoleM60", u"Slot suface (2 part) : ?", None)
-        )
-        self.out_magnet_surface.setText(
-            QCoreApplication.translate("PHoleM60", u"Single Magnet surface : ?", None)
-        )
-
+        self.out_slot_surface.setText(QCoreApplication.translate("PHoleM60", u"Slot suface (2 part) : ?", None))
+        self.out_magnet_surface.setText(QCoreApplication.translate("PHoleM60", u"Single Magnet surface : ?", None))
     # retranslateUi
+

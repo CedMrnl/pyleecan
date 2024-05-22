@@ -15,7 +15,6 @@ from ......GUI.Dialog.DMatLib.WMatSelect.WMatSelect import WMatSelect
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_PHoleMUD(object):
     def setupUi(self, PHoleMUD):
         if not PHoleMUD.objectName():
@@ -65,11 +64,10 @@ class Ui_PHoleMUD(object):
 
         self.g_mat_layout.addWidget(self.w_mat_0)
 
+
         self.verticalLayout_2.addWidget(self.g_mat)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 179, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 179, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_2.addItem(self.verticalSpacer)
 
@@ -98,32 +96,27 @@ class Ui_PHoleMUD(object):
 
         self.verticalLayout.addWidget(self.out_Rmax)
 
+
         self.verticalLayout_2.addWidget(self.g_output)
 
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
 
         self.horizontalLayout.addWidget(self.scrollArea)
 
+
         self.retranslateUi(PHoleMUD)
 
         QMetaObject.connectSlotsByName(PHoleMUD)
-
     # setupUi
 
     def retranslateUi(self, PHoleMUD):
         PHoleMUD.setWindowTitle(QCoreApplication.translate("PHoleMUD", u"Form", None))
-        self.b_dxf.setText(
-            QCoreApplication.translate("PHoleMUD", u"Define Hole from DXF", None)
-        )
+        self.b_dxf.setText(QCoreApplication.translate("PHoleMUD", u"Define Hole from DXF", None))
         self.g_mat.setTitle(QCoreApplication.translate("PHoleMUD", u"Materials", None))
         self.g_output.setTitle(QCoreApplication.translate("PHoleMUD", u"Output", None))
-        self.out_slot_surface.setText(
-            QCoreApplication.translate("PHoleMUD", u"Hole full surface : ?", None)
-        )
-        self.out_magnet_surface.setText(
-            QCoreApplication.translate("PHoleMUD", u"Hole magnet surface : ?", None)
-        )
+        self.out_slot_surface.setText(QCoreApplication.translate("PHoleMUD", u"Hole full surface : ?", None))
+        self.out_magnet_surface.setText(QCoreApplication.translate("PHoleMUD", u"Hole magnet surface : ?", None))
         self.out_Rmin.setText(QCoreApplication.translate("PHoleMUD", u"Rmin : ?", None))
         self.out_Rmax.setText(QCoreApplication.translate("PHoleMUD", u"Rmax : ?", None))
-
     # retranslateUi
+

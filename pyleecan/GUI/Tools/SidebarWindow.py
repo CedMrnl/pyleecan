@@ -1,5 +1,5 @@
 import sys
-from PySide2 import QtWidgets, QtGui, QtCore
+from qtpy import QtWidgets, QtGui, QtCore
 
 """
 def _setColor(widget):
@@ -25,7 +25,7 @@ class SidebarWindow(QtWidgets.QMainWindow):
 
         self.nav_btn_grp = QtWidgets.QButtonGroup()
         self.nav_btn_grp.setExclusive(True)
-        self.nav_btn_grp.buttonClicked[int].connect(self.switch_stack)
+        self.nav_btn_grp.buttonClicked.connect(self.switch_stack)
         self.btn_grp_fct = []
 
         self.nav_layout = QtWidgets.QVBoxLayout(self.nav_panel)
@@ -62,7 +62,7 @@ class SidebarWindow(QtWidgets.QMainWindow):
 
     def centerOnScreen(self):
         """centerOnScreen() - Centers the window on the screen."""
-        resolution = QtWidgets.QDesktopWidget().screenGeometry()
+        resolution = self.screen().geometry()
         frame = self.frameSize()
         self.move(
             (resolution.width() / 2) - (frame.width() / 2),

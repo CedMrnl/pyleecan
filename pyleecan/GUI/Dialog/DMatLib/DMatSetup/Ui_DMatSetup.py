@@ -14,7 +14,6 @@ from .....GUI.Tools.WTableData.DTableData import DTableData
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_DMatSetup(object):
     def setupUi(self, DMatSetup):
         if not DMatSetup.objectName():
@@ -22,9 +21,7 @@ class Ui_DMatSetup(object):
         DMatSetup.resize(600, 677)
         DMatSetup.setMinimumSize(QSize(600, 0))
         icon = QIcon()
-        icon.addFile(
-            u":/images/images/icon/pyleecan_64.png", QSize(), QIcon.Normal, QIcon.Off
-        )
+        icon.addFile(u":/images/images/icon/pyleecan_64.png", QSize(), QIcon.Normal, QIcon.Off)
         DMatSetup.setWindowIcon(icon)
         self.verticalLayout = QVBoxLayout(DMatSetup)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -40,23 +37,18 @@ class Ui_DMatSetup(object):
 
         self.horizontalLayout.addWidget(self.le_name)
 
-        self.horizontalSpacer = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
 
-        self.horizontalSpacer_4 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_4 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer_4)
 
-        self.horizontalSpacer_3 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer_3)
+
 
         self.verticalLayout.addLayout(self.horizontalLayout)
 
@@ -122,11 +114,10 @@ class Ui_DMatSetup(object):
 
         self.gridLayout_2.addWidget(self.unit_alpha_elec, 2, 2, 1, 1)
 
+
         self.verticalLayout_5.addLayout(self.gridLayout_2)
 
-        self.verticalSpacer_2 = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_5.addItem(self.verticalSpacer_2)
 
@@ -146,11 +137,10 @@ class Ui_DMatSetup(object):
 
         self.horizontalLayout_8.addWidget(self.c_type_material)
 
-        self.horizontalSpacer_2 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_8.addItem(self.horizontalSpacer_2)
+
 
         self.mag_layout.addLayout(self.horizontalLayout_8)
 
@@ -190,21 +180,15 @@ class Ui_DMatSetup(object):
 
         self.gridLayout.addWidget(self.in_mur_lin, 0, 0, 1, 1)
 
-        self.horizontalSpacer_6 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_6 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.gridLayout.addItem(self.horizontalSpacer_6, 0, 3, 1, 1)
 
-        self.horizontalSpacer_7 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_7 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.gridLayout.addItem(self.horizontalSpacer_7, 1, 3, 1, 1)
 
-        self.horizontalSpacer_8 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_8 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.gridLayout.addItem(self.horizontalSpacer_8, 2, 3, 1, 1)
 
@@ -230,13 +214,12 @@ class Ui_DMatSetup(object):
 
         self.gridLayout.addWidget(self.unit_Brm20, 1, 2, 1, 1)
 
+
         self.verticalLayout_9.addLayout(self.gridLayout)
 
         self.horizontalLayout_11 = QHBoxLayout()
         self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
-        self.horizontalSpacer_11 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_11 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_11.addItem(self.horizontalSpacer_11)
 
@@ -245,11 +228,10 @@ class Ui_DMatSetup(object):
 
         self.horizontalLayout_11.addWidget(self.b_plot_BrmHc)
 
+
         self.verticalLayout_9.addLayout(self.horizontalLayout_11)
 
-        self.verticalSpacer_7 = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer_7 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_9.addItem(self.verticalSpacer_7)
 
@@ -268,6 +250,7 @@ class Ui_DMatSetup(object):
         self.tab_values.setObjectName(u"tab_values")
 
         self.verticalLayout_8.addWidget(self.tab_values)
+
 
         self.verticalLayout_3.addWidget(self.g_BH_import)
 
@@ -288,11 +271,10 @@ class Ui_DMatSetup(object):
 
         self.gridLayout_5.addWidget(self.unit_Wlam, 0, 2, 1, 1)
 
-        self.horizontalSpacer_10 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_10 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.gridLayout_5.addItem(self.horizontalSpacer_10, 0, 3, 1, 1)
+
 
         self.verticalLayout_3.addLayout(self.gridLayout_5)
 
@@ -300,9 +282,7 @@ class Ui_DMatSetup(object):
 
         self.mag_layout.addWidget(self.nav_mag)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.mag_layout.addItem(self.verticalSpacer)
 
@@ -319,9 +299,7 @@ class Ui_DMatSetup(object):
         self.g_losses_import.setChecked(False)
         self.gridLayout_6 = QGridLayout(self.g_losses_import)
         self.gridLayout_6.setObjectName(u"gridLayout_6")
-        self.verticalSpacer_8 = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer_8 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.gridLayout_6.addItem(self.verticalSpacer_8, 2, 1, 1, 1)
 
@@ -330,9 +308,7 @@ class Ui_DMatSetup(object):
 
         self.gridLayout_6.addWidget(self.b_plot_losses, 1, 1, 1, 1)
 
-        self.horizontalSpacer_12 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_12 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.gridLayout_6.addItem(self.horizontalSpacer_12, 1, 0, 1, 1)
 
@@ -340,6 +316,7 @@ class Ui_DMatSetup(object):
         self.tab_values_losses.setObjectName(u"tab_values_losses")
 
         self.gridLayout_6.addWidget(self.tab_values_losses, 0, 0, 1, 2)
+
 
         self.verticalLayout_13.addWidget(self.g_losses_import)
 
@@ -363,11 +340,10 @@ class Ui_DMatSetup(object):
 
         self.horizontalLayout_10.addWidget(self.cb_material_type)
 
-        self.horizontalSpacer_9 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_9 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_10.addItem(self.horizontalSpacer_9)
+
 
         self.verticalLayout_12.addLayout(self.horizontalLayout_10)
 
@@ -389,6 +365,7 @@ class Ui_DMatSetup(object):
         self.unit_rho_meca.setFont(font)
 
         self.horizontalLayout_41.addWidget(self.unit_rho_meca)
+
 
         self.verticalLayout_12.addLayout(self.horizontalLayout_41)
 
@@ -435,6 +412,7 @@ class Ui_DMatSetup(object):
 
         self.horizontalLayout_2.addWidget(self.lf_Ez)
 
+
         self.verticalLayout_4.addWidget(self.g_young)
 
         self.g_poisson = QGroupBox(self.page_niso_mec)
@@ -473,6 +451,7 @@ class Ui_DMatSetup(object):
         self.lf_nu_yz.setObjectName(u"lf_nu_yz")
 
         self.horizontalLayout_3.addWidget(self.lf_nu_yz)
+
 
         self.verticalLayout_4.addWidget(self.g_poisson)
 
@@ -513,11 +492,10 @@ class Ui_DMatSetup(object):
 
         self.horizontalLayout_4.addWidget(self.lf_Gyz)
 
+
         self.verticalLayout_4.addWidget(self.g_shear)
 
-        self.verticalSpacer_5 = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer_5 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_4.addItem(self.verticalSpacer_5)
 
@@ -576,11 +554,10 @@ class Ui_DMatSetup(object):
 
         self.gridLayout_4.addWidget(self.unit_nu, 1, 2, 1, 1)
 
+
         self.verticalLayout_7.addLayout(self.gridLayout_4)
 
-        self.verticalSpacer_6 = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer_6 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_7.addItem(self.verticalSpacer_6)
 
@@ -664,6 +641,7 @@ class Ui_DMatSetup(object):
 
         self.verticalLayout_11.addWidget(self.nav_ther)
 
+
         self.verticalLayout_2.addWidget(self.g_lambda)
 
         self.gridLayout_3 = QGridLayout()
@@ -701,11 +679,10 @@ class Ui_DMatSetup(object):
 
         self.gridLayout_3.addWidget(self.unit_alpha, 1, 2, 1, 1)
 
+
         self.verticalLayout_2.addLayout(self.gridLayout_3)
 
-        self.verticalSpacer_3 = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_2.addItem(self.verticalSpacer_3)
 
@@ -732,11 +709,10 @@ class Ui_DMatSetup(object):
 
         self.horizontalLayout_6.addWidget(self.unit_cost_unit)
 
+
         self.verticalLayout_6.addLayout(self.horizontalLayout_6)
 
-        self.verticalSpacer_4 = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer_4 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_6.addItem(self.verticalSpacer_4)
 
@@ -746,9 +722,7 @@ class Ui_DMatSetup(object):
 
         self.horizontalLayout_9 = QHBoxLayout()
         self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
-        self.horizontalSpacer_5 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_5 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_9.addItem(self.horizontalSpacer_5)
 
@@ -767,7 +741,9 @@ class Ui_DMatSetup(object):
 
         self.horizontalLayout_9.addWidget(self.b_cancel)
 
+
         self.verticalLayout.addLayout(self.horizontalLayout_9)
+
 
         self.retranslateUi(DMatSetup)
 
@@ -776,119 +752,54 @@ class Ui_DMatSetup(object):
         self.nav_meca.setCurrentIndex(0)
         self.nav_ther.setCurrentIndex(0)
 
-        QMetaObject.connectSlotsByName(DMatSetup)
 
+        QMetaObject.connectSlotsByName(DMatSetup)
     # setupUi
 
     def retranslateUi(self, DMatSetup):
-        DMatSetup.setWindowTitle(
-            QCoreApplication.translate("DMatSetup", u"Edit Material", None)
-        )
-        self.in_name.setText(
-            QCoreApplication.translate("DMatSetup", u"Material name", None)
-        )
+        DMatSetup.setWindowTitle(QCoreApplication.translate("DMatSetup", u"Edit Material", None))
+        self.in_name.setText(QCoreApplication.translate("DMatSetup", u"Material name", None))
         self.le_name.setText("")
         self.in_rho_elec.setText(QCoreApplication.translate("DMatSetup", u"rho", None))
-        self.unit_rho_elec.setText(
-            QCoreApplication.translate("DMatSetup", u"[ohm.m]", None)
-        )
+        self.unit_rho_elec.setText(QCoreApplication.translate("DMatSetup", u"[ohm.m]", None))
         self.in_epsr.setText(QCoreApplication.translate("DMatSetup", u"epsr", None))
         self.unit_epsr.setText(QCoreApplication.translate("DMatSetup", u"[-]", None))
-        self.in_alpha_elec.setText(
-            QCoreApplication.translate("DMatSetup", u"alpha", None)
-        )
-        self.unit_alpha_elec.setText(
-            QCoreApplication.translate("DMatSetup", u"[1/K]", None)
-        )
-        self.nav_phy.setTabText(
-            self.nav_phy.indexOf(self.tab_elec),
-            QCoreApplication.translate("DMatSetup", u"Electrical", None),
-        )
-        self.c_type_material.setItemText(
-            0, QCoreApplication.translate("DMatSetup", u"Linear material", None)
-        )
-        self.c_type_material.setItemText(
-            1, QCoreApplication.translate("DMatSetup", u"Magnet material", None)
-        )
-        self.c_type_material.setItemText(
-            2, QCoreApplication.translate("DMatSetup", u"Lamination material", None)
-        )
+        self.in_alpha_elec.setText(QCoreApplication.translate("DMatSetup", u"alpha", None))
+        self.unit_alpha_elec.setText(QCoreApplication.translate("DMatSetup", u"[1/K]", None))
+        self.nav_phy.setTabText(self.nav_phy.indexOf(self.tab_elec), QCoreApplication.translate("DMatSetup", u"Electrical", None))
+        self.c_type_material.setItemText(0, QCoreApplication.translate("DMatSetup", u"Linear material", None))
+        self.c_type_material.setItemText(1, QCoreApplication.translate("DMatSetup", u"Magnet material", None))
+        self.c_type_material.setItemText(2, QCoreApplication.translate("DMatSetup", u"Lamination material", None))
 
-        self.unit_alpha_Br.setText(
-            QCoreApplication.translate("DMatSetup", u"[%/\u00b0C]", None)
-        )
+        self.unit_alpha_Br.setText(QCoreApplication.translate("DMatSetup", u"[%/\u00b0C]", None))
         self.unit_mur_lin.setText(QCoreApplication.translate("DMatSetup", u"[ ]", None))
-        self.in_alpha_Br.setText(
-            QCoreApplication.translate(
-                "DMatSetup", u"Temperature coefficient for remanent flux density", None
-            )
-        )
-        self.in_mur_lin.setText(
-            QCoreApplication.translate(
-                "DMatSetup", u"Relative magnetic permeability", None
-            )
-        )
-        self.in_Brm20.setText(
-            QCoreApplication.translate(
-                "DMatSetup", u"Remanence flux density at 20\u00b0C", None
-            )
-        )
+        self.in_alpha_Br.setText(QCoreApplication.translate("DMatSetup", u"Temperature coefficient for remanent flux density", None))
+        self.in_mur_lin.setText(QCoreApplication.translate("DMatSetup", u"Relative magnetic permeability", None))
+        self.in_Brm20.setText(QCoreApplication.translate("DMatSetup", u"Remanence flux density at 20\u00b0C", None))
         self.unit_Brm20.setText(QCoreApplication.translate("DMatSetup", u"[T]", None))
-        self.b_plot_BrmHc.setText(
-            QCoreApplication.translate("DMatSetup", u"Plot Brm/Hc", None)
-        )
-        self.g_BH_import.setTitle(
-            QCoreApplication.translate("DMatSetup", u"B(H) curve definition", None)
-        )
+        self.b_plot_BrmHc.setText(QCoreApplication.translate("DMatSetup", u"Plot Brm/Hc", None))
+        self.g_BH_import.setTitle(QCoreApplication.translate("DMatSetup", u"B(H) curve definition", None))
         self.in_Wlam.setText(QCoreApplication.translate("DMatSetup", u"Wlam", None))
         self.unit_Wlam.setText(QCoreApplication.translate("DMatSetup", u"[mm]", None))
-        self.nav_phy.setTabText(
-            self.nav_phy.indexOf(self.tab_mag),
-            QCoreApplication.translate("DMatSetup", u"Magnetics", None),
-        )
-        self.g_losses_import.setTitle(
-            QCoreApplication.translate("DMatSetup", u"Losses", None)
-        )
-        self.b_plot_losses.setText(
-            QCoreApplication.translate("DMatSetup", u"Plot Loss(B)", None)
-        )
-        self.nav_phy.setTabText(
-            self.nav_phy.indexOf(self.tab_losses),
-            QCoreApplication.translate("DMatSetup", u"Losses", None),
-        )
-        self.in_material_type.setText(
-            QCoreApplication.translate("DMatSetup", u"Material Type :", None)
-        )
-        self.cb_material_type.setItemText(
-            0, QCoreApplication.translate("DMatSetup", u"Orthotropic", None)
-        )
-        self.cb_material_type.setItemText(
-            1, QCoreApplication.translate("DMatSetup", u"Isotropic", None)
-        )
+        self.nav_phy.setTabText(self.nav_phy.indexOf(self.tab_mag), QCoreApplication.translate("DMatSetup", u"Magnetics", None))
+        self.g_losses_import.setTitle(QCoreApplication.translate("DMatSetup", u"Losses", None))
+        self.b_plot_losses.setText(QCoreApplication.translate("DMatSetup", u"Plot Loss(B)", None))
+        self.nav_phy.setTabText(self.nav_phy.indexOf(self.tab_losses), QCoreApplication.translate("DMatSetup", u"Losses", None))
+        self.in_material_type.setText(QCoreApplication.translate("DMatSetup", u"Material Type :", None))
+        self.cb_material_type.setItemText(0, QCoreApplication.translate("DMatSetup", u"Orthotropic", None))
+        self.cb_material_type.setItemText(1, QCoreApplication.translate("DMatSetup", u"Isotropic", None))
 
         self.in_rho_meca.setText(QCoreApplication.translate("DMatSetup", u"rho", None))
-        self.unit_rho_meca.setText(
-            QCoreApplication.translate("DMatSetup", u"[kg/m^3]", None)
-        )
-        self.g_young.setTitle(
-            QCoreApplication.translate(
-                "DMatSetup", u"Equivalent Yong Modulus [GPa]", None
-            )
-        )
+        self.unit_rho_meca.setText(QCoreApplication.translate("DMatSetup", u"[kg/m^3]", None))
+        self.g_young.setTitle(QCoreApplication.translate("DMatSetup", u"Equivalent Yong Modulus [GPa]", None))
         self.in_Ex.setText(QCoreApplication.translate("DMatSetup", u"Ex", None))
         self.in_Ey.setText(QCoreApplication.translate("DMatSetup", u"Ey", None))
         self.in_Ez.setText(QCoreApplication.translate("DMatSetup", u"Ez", None))
-        self.g_poisson.setTitle(
-            QCoreApplication.translate(
-                "DMatSetup", u"Equivalent Poisson ratio [ ]", None
-            )
-        )
+        self.g_poisson.setTitle(QCoreApplication.translate("DMatSetup", u"Equivalent Poisson ratio [ ]", None))
         self.in_nu_xy.setText(QCoreApplication.translate("DMatSetup", u"nu_xy", None))
         self.in_nu_xz.setText(QCoreApplication.translate("DMatSetup", u"nu_xz", None))
         self.in_nu_yz.setText(QCoreApplication.translate("DMatSetup", u"nu_yz", None))
-        self.g_shear.setTitle(
-            QCoreApplication.translate("DMatSetup", u"Shear modulus [GPa]", None)
-        )
+        self.g_shear.setTitle(QCoreApplication.translate("DMatSetup", u"Shear modulus [GPa]", None))
         self.in_Gxy.setText(QCoreApplication.translate("DMatSetup", u"Gxy", None))
         self.in_Gxz.setText(QCoreApplication.translate("DMatSetup", u"Gxz", None))
         self.in_Gyz.setText(QCoreApplication.translate("DMatSetup", u"Gyz", None))
@@ -898,13 +809,8 @@ class Ui_DMatSetup(object):
         self.in_G.setText(QCoreApplication.translate("DMatSetup", u"G", None))
         self.unit_G.setText(QCoreApplication.translate("DMatSetup", u"[GPa]", None))
         self.unit_nu.setText(QCoreApplication.translate("DMatSetup", u"[ ]", None))
-        self.nav_phy.setTabText(
-            self.nav_phy.indexOf(self.tab_mec),
-            QCoreApplication.translate("DMatSetup", u"Mechanics", None),
-        )
-        self.g_lambda.setTitle(
-            QCoreApplication.translate("DMatSetup", u"Lambda [W/K]", None)
-        )
+        self.nav_phy.setTabText(self.nav_phy.indexOf(self.tab_mec), QCoreApplication.translate("DMatSetup", u"Mechanics", None))
+        self.g_lambda.setTitle(QCoreApplication.translate("DMatSetup", u"Lambda [W/K]", None))
         self.in_Lx.setText(QCoreApplication.translate("DMatSetup", u"X", None))
         self.in_Ly.setText(QCoreApplication.translate("DMatSetup", u"Y", None))
         self.in_Lz.setText(QCoreApplication.translate("DMatSetup", u"Z", None))
@@ -912,26 +818,14 @@ class Ui_DMatSetup(object):
         self.unit_L.setText(QCoreApplication.translate("DMatSetup", u"[W / K]", None))
         self.in_alpha.setText(QCoreApplication.translate("DMatSetup", u"alpha", None))
         self.in_Cp.setText(QCoreApplication.translate("DMatSetup", u"Cp", None))
-        self.unit_Cp.setText(
-            QCoreApplication.translate("DMatSetup", u"[W / kg / K]", None)
-        )
+        self.unit_Cp.setText(QCoreApplication.translate("DMatSetup", u"[W / kg / K]", None))
         self.unit_alpha.setText(QCoreApplication.translate("DMatSetup", u"[ ]", None))
-        self.nav_phy.setTabText(
-            self.nav_phy.indexOf(self.tab_ther),
-            QCoreApplication.translate("DMatSetup", u"Heat Transfer", None),
-        )
-        self.in_cost_unit.setText(
-            QCoreApplication.translate("DMatSetup", u"cost_unit", None)
-        )
-        self.unit_cost_unit.setText(
-            QCoreApplication.translate("DMatSetup", u"1 / kg", None)
-        )
-        self.nav_phy.setTabText(
-            self.nav_phy.indexOf(self.tab_eco),
-            QCoreApplication.translate("DMatSetup", u"Economical", None),
-        )
+        self.nav_phy.setTabText(self.nav_phy.indexOf(self.tab_ther), QCoreApplication.translate("DMatSetup", u"Heat Transfer", None))
+        self.in_cost_unit.setText(QCoreApplication.translate("DMatSetup", u"cost_unit", None))
+        self.unit_cost_unit.setText(QCoreApplication.translate("DMatSetup", u"1 / kg", None))
+        self.nav_phy.setTabText(self.nav_phy.indexOf(self.tab_eco), QCoreApplication.translate("DMatSetup", u"Economical", None))
         self.b_delete.setText(QCoreApplication.translate("DMatSetup", u"Delete", None))
         self.b_save.setText(QCoreApplication.translate("DMatSetup", u"Save", None))
         self.b_cancel.setText(QCoreApplication.translate("DMatSetup", u"Cancel", None))
-
     # retranslateUi
+

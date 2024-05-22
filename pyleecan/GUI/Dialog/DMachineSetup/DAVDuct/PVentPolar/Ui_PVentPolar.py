@@ -15,7 +15,6 @@ from ......GUI.Tools.SpinBox import SpinBox
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_PVentPolar(object):
     def setupUi(self, PVentPolar):
         if not PVentPolar.objectName():
@@ -34,11 +33,7 @@ class Ui_PVentPolar(object):
         self.img_vent.setSizePolicy(sizePolicy)
         self.img_vent.setMinimumSize(QSize(410, 410))
         self.img_vent.setMaximumSize(QSize(16777215, 16777215))
-        self.img_vent.setPixmap(
-            QPixmap(
-                u":/images/images/MachineSetup/LamParam/VentilationPolar_empty_int_rotor.png"
-            )
-        )
+        self.img_vent.setPixmap(QPixmap(u":/images/images/MachineSetup/LamParam/VentilationPolar_empty_int_rotor.png"))
         self.img_vent.setScaledContents(False)
         self.img_vent.setAlignment(Qt.AlignCenter)
 
@@ -113,11 +108,10 @@ class Ui_PVentPolar(object):
 
         self.gridLayout.addWidget(self.c_W1_unit, 3, 2, 1, 1)
 
+
         self.verticalLayout.addLayout(self.gridLayout)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 257, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 257, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout.addItem(self.verticalSpacer)
 
@@ -135,13 +129,10 @@ class Ui_PVentPolar(object):
         self.retranslateUi(PVentPolar)
 
         QMetaObject.connectSlotsByName(PVentPolar)
-
     # setupUi
 
     def retranslateUi(self, PVentPolar):
-        PVentPolar.setWindowTitle(
-            QCoreApplication.translate("PVentPolar", u"Form", None)
-        )
+        PVentPolar.setWindowTitle(QCoreApplication.translate("PVentPolar", u"Form", None))
         self.img_vent.setText("")
         self.in_D0.setText(QCoreApplication.translate("PVentPolar", u"D0 :", None))
         self.unit_H0.setText(QCoreApplication.translate("PVentPolar", u"m", None))
@@ -149,11 +140,8 @@ class Ui_PVentPolar(object):
         self.in_H0.setText(QCoreApplication.translate("PVentPolar", u"H0 :", None))
         self.in_W1.setText(QCoreApplication.translate("PVentPolar", u"W1 :", None))
         self.in_Zh.setText(QCoreApplication.translate("PVentPolar", u"Zh :", None))
-        self.c_W1_unit.setItemText(
-            0, QCoreApplication.translate("PVentPolar", u"[rad]", None)
-        )
-        self.c_W1_unit.setItemText(
-            1, QCoreApplication.translate("PVentPolar", u"[\u00b0]", None)
-        )
+        self.c_W1_unit.setItemText(0, QCoreApplication.translate("PVentPolar", u"[rad]", None))
+        self.c_W1_unit.setItemText(1, QCoreApplication.translate("PVentPolar", u"[\u00b0]", None))
 
     # retranslateUi
+

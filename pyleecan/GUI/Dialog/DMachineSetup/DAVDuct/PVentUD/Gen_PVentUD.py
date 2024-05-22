@@ -7,7 +7,8 @@ from pyleecan.GUI.Dialog.DMachineSetup.DAVDuct.PVentUD.Ui_PVentUD import Ui_PVen
 
 class Gen_PVentUD(Ui_PVentUD):
     def setupUi(self, PVentUD):
-        """Abstract class to update the widget according to the csv doc"""
+        """Abstract class to update the widget according to the csv doc
+        """
         Ui_PVentUD.setupUi(self, PVentUD)
         # Setup of in_Zh
         txt = self.tr(u"""Number of Hole around the circumference""")

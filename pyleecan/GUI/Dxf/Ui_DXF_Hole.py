@@ -14,16 +14,13 @@ from ...GUI.Tools.WPathSelector.WPathSelector import WPathSelector
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_DXF_Hole(object):
     def setupUi(self, DXF_Hole):
         if not DXF_Hole.objectName():
             DXF_Hole.setObjectName(u"DXF_Hole")
         DXF_Hole.resize(864, 653)
         icon = QIcon()
-        icon.addFile(
-            u":/images/images/icon/pyleecan_64.png", QSize(), QIcon.Normal, QIcon.Off
-        )
+        icon.addFile(u":/images/images/icon/pyleecan_64.png", QSize(), QIcon.Normal, QIcon.Off)
         DXF_Hole.setWindowIcon(icon)
         self.horizontalLayout_5 = QHBoxLayout(DXF_Hole)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
@@ -47,11 +44,10 @@ class Ui_DXF_Hole(object):
 
         self.horizontalLayout.addWidget(self.b_tuto)
 
-        self.horizontalSpacer_2 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer_2)
+
 
         self.layout_plot.addLayout(self.horizontalLayout)
 
@@ -60,6 +56,7 @@ class Ui_DXF_Hole(object):
         self.textBrowser.setMaximumSize(QSize(16777215, 200))
 
         self.layout_plot.addWidget(self.textBrowser)
+
 
         self.horizontalLayout_5.addLayout(self.layout_plot)
 
@@ -78,9 +75,7 @@ class Ui_DXF_Hole(object):
         sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(
-            self.w_path_selector.sizePolicy().hasHeightForWidth()
-        )
+        sizePolicy.setHeightForWidth(self.w_path_selector.sizePolicy().hasHeightForWidth())
         self.w_path_selector.setSizePolicy(sizePolicy)
 
         self.verticalLayout.addWidget(self.w_path_selector)
@@ -108,7 +103,9 @@ class Ui_DXF_Hole(object):
 
         self.horizontalLayout_3.addWidget(self.lf_tol)
 
+
         self.verticalLayout.addLayout(self.horizontalLayout_3)
+
 
         self.verticalLayout_2.addWidget(self.g_import)
 
@@ -161,9 +158,7 @@ class Ui_DXF_Hole(object):
 
         self.lf_axe_angle = FloatEdit(self.w_side)
         self.lf_axe_angle.setObjectName(u"lf_axe_angle")
-        sizePolicy1.setHeightForWidth(
-            self.lf_axe_angle.sizePolicy().hasHeightForWidth()
-        )
+        sizePolicy1.setHeightForWidth(self.lf_axe_angle.sizePolicy().hasHeightForWidth())
         self.lf_axe_angle.setSizePolicy(sizePolicy1)
 
         self.gridLayout.addWidget(self.lf_axe_angle, 2, 1, 1, 1)
@@ -172,6 +167,7 @@ class Ui_DXF_Hole(object):
         self.unit_axe_angle.setObjectName(u"unit_axe_angle")
 
         self.gridLayout.addWidget(self.unit_axe_angle, 2, 2, 1, 1)
+
 
         self.verticalLayout_2.addLayout(self.gridLayout)
 
@@ -205,10 +201,11 @@ class Ui_DXF_Hole(object):
 
         self.gridLayout_3.addWidget(self.lf_center_y, 1, 1, 1, 1)
 
+
         self.verticalLayout_2.addWidget(self.g_center)
 
         self.w_surface_list = QTableWidget(self.w_side)
-        if self.w_surface_list.columnCount() < 5:
+        if (self.w_surface_list.columnCount() < 5):
             self.w_surface_list.setColumnCount(5)
         __qtablewidgetitem = QTableWidgetItem()
         self.w_surface_list.setHorizontalHeaderItem(0, __qtablewidgetitem)
@@ -224,9 +221,7 @@ class Ui_DXF_Hole(object):
         sizePolicy4 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Expanding)
         sizePolicy4.setHorizontalStretch(0)
         sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(
-            self.w_surface_list.sizePolicy().hasHeightForWidth()
-        )
+        sizePolicy4.setHeightForWidth(self.w_surface_list.sizePolicy().hasHeightForWidth())
         self.w_surface_list.setSizePolicy(sizePolicy4)
         self.w_surface_list.setMaximumSize(QSize(16777215, 16777215))
 
@@ -246,14 +241,13 @@ class Ui_DXF_Hole(object):
 
         self.horizontalLayout_4.addWidget(self.lf_scaling)
 
+
         self.verticalLayout_2.addLayout(self.horizontalLayout_4)
 
         self.horizontalLayout_2 = QHBoxLayout()
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.horizontalLayout_2.setSizeConstraint(QLayout.SetMinimumSize)
-        self.horizontalSpacer = QSpacerItem(
-            40, 20, QSizePolicy.Fixed, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Fixed, QSizePolicy.Minimum)
 
         self.horizontalLayout_2.addItem(self.horizontalSpacer)
 
@@ -267,117 +261,71 @@ class Ui_DXF_Hole(object):
 
         self.horizontalLayout_2.addWidget(self.b_save)
 
+
         self.verticalLayout_2.addLayout(self.horizontalLayout_2)
 
+
         self.horizontalLayout_5.addWidget(self.w_side)
+
 
         self.retranslateUi(DXF_Hole)
 
         QMetaObject.connectSlotsByName(DXF_Hole)
-
     # setupUi
 
     def retranslateUi(self, DXF_Hole):
-        DXF_Hole.setWindowTitle(
-            QCoreApplication.translate("DXF_Hole", u"Define Hole from DXF", None)
-        )
-        self.b_reset.setText(
-            QCoreApplication.translate("DXF_Hole", u"Reset View", None)
-        )
-        self.b_cancel.setText(
-            QCoreApplication.translate("DXF_Hole", u"Cancel Selection", None)
-        )
-        self.b_tuto.setText(
-            QCoreApplication.translate("DXF_Hole", u"Open Tutorial", None)
-        )
-        self.textBrowser.setHtml(
-            QCoreApplication.translate(
-                "DXF_Hole",
-                u'<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">\n'
-                '<html><head><meta name="qrichtext" content="1" /><style type="text/css">\n'
-                "p, li { white-space: pre-wrap; }\n"
-                "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">1) Import your DXF file in [m] or set a scaling factor</span></p>\n'
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">FEMM convertion enables to merge close points according to tolerance in [local unit] and converts lines to arcs and segments (splines need to be converted)</span></p>\n'
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0p'
-                'x; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">2) Click on lines and arcs to define a closed area</span></p>\n'
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">3) Select all the surfaces of a single hole (air + magnet)</span></p>\n'
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">4) Assign the surface type (air or magnet)</span></p>\n'
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">5) Define the magnetization direction of each magnet with:</span></p>\n'
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-siz'
-                'e:10pt;">- Mag ref: line index whose normal is used as reference</span></p>\n'
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">- Mag offset: will be added to angle of the line normal [deg]</span></p>\n'
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">6) Plot to check and save</span></p>\n'
-                '<p align="justify" style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;"><br /></p>\n'
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">Hint: When clicking twice on a line, its color changes to define this line as magnetization reference for the magne'
-                "t.</span></p>\n"
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">Hint: &quot;Show&quot; highlights the surface and display the index of each line/arc. </span></p></body></html>',
-                None,
-            )
-        )
-        self.g_import.setTitle(
-            QCoreApplication.translate("DXF_Hole", u"DXF file import", None)
-        )
-        self.is_convert.setText(
-            QCoreApplication.translate("DXF_Hole", u"Convert through FEMM", None)
-        )
-        self.in_tol.setText(
-            QCoreApplication.translate("DXF_Hole", u"Merge tolerance [l.u.]", None)
-        )
+        DXF_Hole.setWindowTitle(QCoreApplication.translate("DXF_Hole", u"Define Hole from DXF", None))
+        self.b_reset.setText(QCoreApplication.translate("DXF_Hole", u"Reset View", None))
+        self.b_cancel.setText(QCoreApplication.translate("DXF_Hole", u"Cancel Selection", None))
+        self.b_tuto.setText(QCoreApplication.translate("DXF_Hole", u"Open Tutorial", None))
+        self.textBrowser.setHtml(QCoreApplication.translate("DXF_Hole", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">1) Import your DXF file in [m] or set a scaling factor</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">FEMM convertion enables to merge close points according to tolerance in [local unit] and converts lines to arcs and segments (splines need to be converted)</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0p"
+                        "x; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">2) Click on lines and arcs to define a closed area</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">3) Select all the surfaces of a single hole (air + magnet)</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">4) Assign the surface type (air or magnet)</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">5) Define the magnetization direction of each magnet with:</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-siz"
+                        "e:10pt;\">- Mag ref: line index whose normal is used as reference</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">- Mag offset: will be added to angle of the line normal [deg]</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">6) Plot to check and save</span></p>\n"
+"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">Hint: When clicking twice on a line, its color changes to define this line as magnetization reference for the magne"
+                        "t.</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">Hint: &quot;Show&quot; highlights the surface and display the index of each line/arc. </span></p></body></html>", None))
+        self.g_import.setTitle(QCoreApplication.translate("DXF_Hole", u"DXF file import", None))
+        self.is_convert.setText(QCoreApplication.translate("DXF_Hole", u"Convert through FEMM", None))
+        self.in_tol.setText(QCoreApplication.translate("DXF_Hole", u"Merge tolerance [l.u.]", None))
         self.lf_tol.setText(QCoreApplication.translate("DXF_Hole", u"1e-5", None))
-        self.in_zh.setText(
-            QCoreApplication.translate("DXF_Hole", u"Number of holes", None)
-        )
-        self.in_mag_len.setText(
-            QCoreApplication.translate("DXF_Hole", u"Magnet length", None)
-        )
+        self.in_zh.setText(QCoreApplication.translate("DXF_Hole", u"Number of holes", None))
+        self.in_mag_len.setText(QCoreApplication.translate("DXF_Hole", u"Magnet length", None))
         self.lf_mag_len.setText(QCoreApplication.translate("DXF_Hole", u"1", None))
         self.unit_mag_len.setText(QCoreApplication.translate("DXF_Hole", u"[m]", None))
-        self.in_axe_angle.setText(
-            QCoreApplication.translate("DXF_Hole", u"Hole main axe angle", None)
-        )
+        self.in_axe_angle.setText(QCoreApplication.translate("DXF_Hole", u"Hole main axe angle", None))
         self.lf_axe_angle.setText(QCoreApplication.translate("DXF_Hole", u"0", None))
-        self.unit_axe_angle.setText(
-            QCoreApplication.translate("DXF_Hole", u"[rad]", None)
-        )
-        self.g_center.setTitle(
-            QCoreApplication.translate("DXF_Hole", u"Machine Center", None)
-        )
-        self.in_coord_center_X.setText(
-            QCoreApplication.translate("DXF_Hole", u"X coordinate [l.u.]", None)
-        )
+        self.unit_axe_angle.setText(QCoreApplication.translate("DXF_Hole", u"[rad]", None))
+        self.g_center.setTitle(QCoreApplication.translate("DXF_Hole", u"Machine Center", None))
+        self.in_coord_center_X.setText(QCoreApplication.translate("DXF_Hole", u"X coordinate [l.u.]", None))
         self.lf_center_x.setText(QCoreApplication.translate("DXF_Hole", u"0", None))
-        self.in_coord_center_Y.setText(
-            QCoreApplication.translate("DXF_Hole", u"Y coordinate [l.u.]", None)
-        )
+        self.in_coord_center_Y.setText(QCoreApplication.translate("DXF_Hole", u"Y coordinate [l.u.]", None))
         self.lf_center_y.setText(QCoreApplication.translate("DXF_Hole", u"0", None))
         ___qtablewidgetitem = self.w_surface_list.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(
-            QCoreApplication.translate("DXF_Hole", u"Delete", None)
-        )
+        ___qtablewidgetitem.setText(QCoreApplication.translate("DXF_Hole", u"Delete", None));
         ___qtablewidgetitem1 = self.w_surface_list.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(
-            QCoreApplication.translate("DXF_Hole", u"Show", None)
-        )
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("DXF_Hole", u"Show", None));
         ___qtablewidgetitem2 = self.w_surface_list.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(
-            QCoreApplication.translate("DXF_Hole", u"Type", None)
-        )
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("DXF_Hole", u"Type", None));
         ___qtablewidgetitem3 = self.w_surface_list.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(
-            QCoreApplication.translate("DXF_Hole", u"Mag Ref", None)
-        )
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("DXF_Hole", u"Mag Ref", None));
         ___qtablewidgetitem4 = self.w_surface_list.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(
-            QCoreApplication.translate("DXF_Hole", u"Mag Offset [deg]", None)
-        )
-        self.in_scaling.setText(
-            QCoreApplication.translate(
-                "DXF_Hole", u"Scaling factor [l.u.] to [m]", None
-            )
-        )
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("DXF_Hole", u"Mag Offset [deg]", None));
+        self.in_scaling.setText(QCoreApplication.translate("DXF_Hole", u"Scaling factor [l.u.] to [m]", None))
         self.lf_scaling.setText(QCoreApplication.translate("DXF_Hole", u"1", None))
         self.b_plot.setText(QCoreApplication.translate("DXF_Hole", u"Plot", None))
         self.b_save.setText(QCoreApplication.translate("DXF_Hole", u"Save", None))
-
     # retranslateUi
+

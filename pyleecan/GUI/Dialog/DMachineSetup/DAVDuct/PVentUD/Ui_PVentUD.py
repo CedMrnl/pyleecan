@@ -16,7 +16,6 @@ from ......GUI.Tools.MPLCanvas import MPLCanvas
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_PVentUD(object):
     def setupUi(self, PVentUD):
         if not PVentUD.objectName():
@@ -69,11 +68,10 @@ class Ui_PVentUD(object):
 
         self.gridLayout.addWidget(self.si_Zh, 0, 1, 1, 1)
 
+
         self.verticalLayout.addLayout(self.gridLayout)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout.addItem(self.verticalSpacer)
 
@@ -86,17 +84,15 @@ class Ui_PVentUD(object):
 
         self.horizontalLayout.addWidget(self.scrollArea)
 
+
         self.retranslateUi(PVentUD)
 
         QMetaObject.connectSlotsByName(PVentUD)
-
     # setupUi
 
     def retranslateUi(self, PVentUD):
         PVentUD.setWindowTitle(QCoreApplication.translate("PVentUD", u"Form", None))
-        self.b_dxf.setText(
-            QCoreApplication.translate("PVentUD", u"Define Duct from DXF", None)
-        )
+        self.b_dxf.setText(QCoreApplication.translate("PVentUD", u"Define Duct from DXF", None))
         self.in_Zh.setText(QCoreApplication.translate("PVentUD", u"Zh :", None))
-
     # retranslateUi
+

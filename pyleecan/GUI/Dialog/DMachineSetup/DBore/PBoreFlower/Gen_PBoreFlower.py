@@ -2,14 +2,13 @@
 """File generated according to PBoreFlower/gen_list.json
 WARNING! All changes made in this file will be lost!
 """
-from pyleecan.GUI.Dialog.DMachineSetup.DBore.PBoreFlower.Ui_PBoreFlower import (
-    Ui_PBoreFlower,
-)
+from pyleecan.GUI.Dialog.DMachineSetup.DBore.PBoreFlower.Ui_PBoreFlower import Ui_PBoreFlower
 
 
 class Gen_PBoreFlower(Ui_PBoreFlower):
     def setupUi(self, PBoreFlower):
-        """Abstract class to update the widget according to the csv doc"""
+        """Abstract class to update the widget according to the csv doc
+        """
         Ui_PBoreFlower.setupUi(self, PBoreFlower)
         # Setup of in_N
         txt = self.tr(u"""Number of flower arc""")

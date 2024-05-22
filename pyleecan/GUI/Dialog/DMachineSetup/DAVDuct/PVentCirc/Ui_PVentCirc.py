@@ -15,7 +15,6 @@ from ......GUI.Tools.SpinBox import SpinBox
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_PVentCirc(object):
     def setupUi(self, PVentCirc):
         if not PVentCirc.objectName():
@@ -34,11 +33,7 @@ class Ui_PVentCirc(object):
         self.img_vent.setSizePolicy(sizePolicy)
         self.img_vent.setMinimumSize(QSize(410, 300))
         self.img_vent.setMaximumSize(QSize(16777215, 16777215))
-        self.img_vent.setPixmap(
-            QPixmap(
-                u":/images/images/MachineSetup/LamParam/VentilationCirc_empty_int_rotor.png"
-            )
-        )
+        self.img_vent.setPixmap(QPixmap(u":/images/images/MachineSetup/LamParam/VentilationCirc_empty_int_rotor.png"))
         self.img_vent.setScaledContents(False)
         self.img_vent.setAlignment(Qt.AlignCenter)
 
@@ -101,11 +96,10 @@ class Ui_PVentCirc(object):
 
         self.gridLayout.addWidget(self.in_Zh, 0, 0, 1, 1)
 
+
         self.verticalLayout.addLayout(self.gridLayout)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 286, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 286, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout.addItem(self.verticalSpacer)
 
@@ -123,7 +117,6 @@ class Ui_PVentCirc(object):
         self.retranslateUi(PVentCirc)
 
         QMetaObject.connectSlotsByName(PVentCirc)
-
     # setupUi
 
     def retranslateUi(self, PVentCirc):
@@ -134,5 +127,5 @@ class Ui_PVentCirc(object):
         self.unit_D0.setText(QCoreApplication.translate("PVentCirc", u"m", None))
         self.unit_H0.setText(QCoreApplication.translate("PVentCirc", u"m", None))
         self.in_Zh.setText(QCoreApplication.translate("PVentCirc", u"Zh :", None))
-
     # retranslateUi
+

@@ -2,6 +2,7 @@
 import sys
 from os.path import dirname, abspath, normpath, join, realpath, isdir
 from os import listdir, remove, mkdir, system
+import qtpy
 
 begin = len(normpath(abspath(join(dirname(__file__), "../.."))))
 end = len(normpath(abspath(join(dirname(__file__), ".."))))
@@ -26,7 +27,7 @@ if __name__ == "__main__":
         soft_name = "SciDataTool"
         is_log = False
 
-    ui_folder_path = join(MAIN_DIR, "GUI", "Dialog", "DMachineSetup", "SSimu")
+    ui_folder_path = join(MAIN_DIR, "GUI")#, "Dialog", "DMachineSetup", "SSimu")
     gen_dict = read_all(DOC_DIR, soft_name=soft_name)
     print("#############################\nGenerating gui....")
     generate_gui(ui_folder_path, gen_dict=gen_dict, IS_SDT=IS_SDT)

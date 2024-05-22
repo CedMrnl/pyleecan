@@ -14,7 +14,6 @@ from ......GUI.Dialog.DMatLib.WMatSelect.WMatSelect import WMatSelect
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_PHoleM57(object):
     def setupUi(self, PHoleM57):
         if not PHoleM57.objectName():
@@ -33,9 +32,7 @@ class Ui_PHoleM57(object):
         self.img_slot.setSizePolicy(sizePolicy)
         self.img_slot.setMinimumSize(QSize(0, 0))
         self.img_slot.setMaximumSize(QSize(16777215, 16777215))
-        self.img_slot.setPixmap(
-            QPixmap(u":/images/images/MachineSetup/SMHoleMag/HoleM57_mag_int_rotor.png")
-        )
+        self.img_slot.setPixmap(QPixmap(u":/images/images/MachineSetup/SMHoleMag/HoleM57_mag_int_rotor.png"))
         self.img_slot.setScaledContents(False)
         self.img_slot.setAlignment(Qt.AlignCenter)
 
@@ -158,6 +155,7 @@ class Ui_PHoleM57(object):
 
         self.gridLayout.addWidget(self.unit_H2, 1, 2, 1, 1)
 
+
         self.verticalLayout_3.addLayout(self.gridLayout)
 
         self.w_mat_0 = WMatSelect(self.scrollAreaWidgetContents)
@@ -178,9 +176,7 @@ class Ui_PHoleM57(object):
 
         self.verticalLayout_3.addWidget(self.w_mat_2)
 
-        self.verticalSpacer_2 = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_3.addItem(self.verticalSpacer_2)
 
@@ -199,6 +195,7 @@ class Ui_PHoleM57(object):
 
         self.verticalLayout.addWidget(self.out_magnet_surface)
 
+
         self.verticalLayout_3.addWidget(self.g_output)
 
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
@@ -215,7 +212,6 @@ class Ui_PHoleM57(object):
         self.retranslateUi(PHoleM57)
 
         QMetaObject.connectSlotsByName(PHoleM57)
-
     # setupUi
 
     def retranslateUi(self, PHoleM57):
@@ -237,11 +233,7 @@ class Ui_PHoleM57(object):
         self.unit_W3.setText(QCoreApplication.translate("PHoleM57", u"m", None))
         self.unit_H2.setText(QCoreApplication.translate("PHoleM57", u"m", None))
         self.g_output.setTitle(QCoreApplication.translate("PHoleM57", u"Output", None))
-        self.out_slot_surface.setText(
-            QCoreApplication.translate("PHoleM57", u"Slot suface (2 part) : ?", None)
-        )
-        self.out_magnet_surface.setText(
-            QCoreApplication.translate("PHoleM57", u"Single Magnet surface : ?", None)
-        )
-
+        self.out_slot_surface.setText(QCoreApplication.translate("PHoleM57", u"Slot suface (2 part) : ?", None))
+        self.out_magnet_surface.setText(QCoreApplication.translate("PHoleM57", u"Single Magnet surface : ?", None))
     # retranslateUi
+

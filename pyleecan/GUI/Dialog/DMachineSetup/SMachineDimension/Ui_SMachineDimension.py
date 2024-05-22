@@ -14,7 +14,6 @@ from .....GUI.Dialog.DMatLib.WMatSelect.WMatSelectV import WMatSelectV
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_SMachineDimension(object):
     def setupUi(self, SMachineDimension):
         if not SMachineDimension.objectName():
@@ -29,11 +28,7 @@ class Ui_SMachineDimension(object):
         self.img_machine.setObjectName(u"img_machine")
         self.img_machine.setMinimumSize(QSize(0, 0))
         self.img_machine.setMaximumSize(QSize(16777215, 16777215))
-        self.img_machine.setPixmap(
-            QPixmap(
-                u":/images/images/MachineSetup/MachineDimension/Dimension_Shaft_Rotor_Stator.png"
-            )
-        )
+        self.img_machine.setPixmap(QPixmap(u":/images/images/MachineSetup/MachineDimension/Dimension_Shaft_Rotor_Stator.png"))
         self.img_machine.setScaledContents(False)
         self.img_machine.setAlignment(Qt.AlignCenter)
 
@@ -96,6 +91,7 @@ class Ui_SMachineDimension(object):
 
         self.gridLayout_2.addWidget(self.unit_SRint, 1, 2, 1, 1)
 
+
         self.verticalLayout_4.addWidget(self.g_stator)
 
         self.g_rotor = QGroupBox(self.scrollAreaWidgetContents)
@@ -140,6 +136,7 @@ class Ui_SMachineDimension(object):
 
         self.gridLayout_3.addWidget(self.unit_RRint, 1, 2, 1, 1)
 
+
         self.verticalLayout_4.addWidget(self.g_rotor)
 
         self.out_airgap = QLabel(self.scrollAreaWidgetContents)
@@ -180,12 +177,14 @@ class Ui_SMachineDimension(object):
 
         self.horizontalLayout_3.addWidget(self.unit_Lshaft)
 
+
         self.verticalLayout.addLayout(self.horizontalLayout_3)
 
         self.out_Drsh = QLabel(self.g_shaft)
         self.out_Drsh.setObjectName(u"out_Drsh")
 
         self.verticalLayout.addWidget(self.out_Drsh)
+
 
         self.verticalLayout_4.addWidget(self.g_shaft)
 
@@ -234,13 +233,13 @@ class Ui_SMachineDimension(object):
 
         self.gridLayout.addWidget(self.unit_Wfra, 0, 2, 1, 1)
 
+
         self.verticalLayout_2.addLayout(self.gridLayout)
+
 
         self.verticalLayout_4.addWidget(self.g_frame)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_4.addItem(self.verticalSpacer)
 
@@ -248,13 +247,12 @@ class Ui_SMachineDimension(object):
 
         self.horizontalLayout_2.addWidget(self.scrollArea)
 
+
         self.verticalLayout_3.addLayout(self.horizontalLayout_2)
 
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.horizontalSpacer = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
 
@@ -267,6 +265,7 @@ class Ui_SMachineDimension(object):
         self.b_next.setObjectName(u"b_next")
 
         self.horizontalLayout.addWidget(self.b_next)
+
 
         self.verticalLayout_3.addLayout(self.horizontalLayout)
 
@@ -285,221 +284,104 @@ class Ui_SMachineDimension(object):
         self.retranslateUi(SMachineDimension)
 
         QMetaObject.connectSlotsByName(SMachineDimension)
-
     # setupUi
 
     def retranslateUi(self, SMachineDimension):
-        SMachineDimension.setWindowTitle(
-            QCoreApplication.translate("SMachineDimension", u"Form", None)
-        )
+        SMachineDimension.setWindowTitle(QCoreApplication.translate("SMachineDimension", u"Form", None))
         self.img_machine.setText("")
-        self.g_stator.setTitle(
-            QCoreApplication.translate("SMachineDimension", u"Stator", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.in_SRext.setToolTip(
-            QCoreApplication.translate(
-                "SMachineDimension", u"Stator external radius", None
-            )
-        )
-        # endif // QT_CONFIG(tooltip)
-        self.in_SRext.setText(
-            QCoreApplication.translate("SMachineDimension", u"Rext", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.lf_SRext.setToolTip(
-            QCoreApplication.translate(
-                "SMachineDimension", u"Stator external radius", None
-            )
-        )
-        # endif // QT_CONFIG(tooltip)
-        self.unit_SRext.setText(
-            QCoreApplication.translate("SMachineDimension", u"m", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.in_SRint.setToolTip(
-            QCoreApplication.translate(
-                "SMachineDimension", u"Stator internal radius", None
-            )
-        )
-        # endif // QT_CONFIG(tooltip)
-        self.in_SRint.setText(
-            QCoreApplication.translate("SMachineDimension", u"Rint", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.lf_SRint.setToolTip(
-            QCoreApplication.translate(
-                "SMachineDimension", u"Stator internal radius", None
-            )
-        )
-        # endif // QT_CONFIG(tooltip)
-        self.unit_SRint.setText(
-            QCoreApplication.translate("SMachineDimension", u"m", None)
-        )
-        self.g_rotor.setTitle(
-            QCoreApplication.translate("SMachineDimension", u"Rotor", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.in_RRext.setToolTip(
-            QCoreApplication.translate(
-                "SMachineDimension", u"Rotor external radius", None
-            )
-        )
-        # endif // QT_CONFIG(tooltip)
-        self.in_RRext.setText(
-            QCoreApplication.translate("SMachineDimension", u"Rext", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.lf_RRext.setToolTip(
-            QCoreApplication.translate(
-                "SMachineDimension", u"Rotor external radius", None
-            )
-        )
-        # endif // QT_CONFIG(tooltip)
-        self.unit_RRext.setText(
-            QCoreApplication.translate("SMachineDimension", u"m", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.in_RRint.setToolTip(
-            QCoreApplication.translate(
-                "SMachineDimension", u"Rotor internal radius", None
-            )
-        )
-        # endif // QT_CONFIG(tooltip)
-        self.in_RRint.setText(
-            QCoreApplication.translate("SMachineDimension", u"Rint", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.lf_RRint.setToolTip(
-            QCoreApplication.translate(
-                "SMachineDimension", u"Rotor internal radius", None
-            )
-        )
-        # endif // QT_CONFIG(tooltip)
-        self.unit_RRint.setText(
-            QCoreApplication.translate("SMachineDimension", u"m", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.out_airgap.setToolTip(
-            QCoreApplication.translate(
-                "SMachineDimension",
-                u"Magnetic airgap width (distance between stator bore and rotor bore radii)",
-                None,
-            )
-        )
-        # endif // QT_CONFIG(tooltip)
-        self.out_airgap.setText(
-            QCoreApplication.translate("SMachineDimension", u"airgap = ", None)
-        )
-        self.g_shaft.setTitle(
-            QCoreApplication.translate("SMachineDimension", u"Shaft", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.in_Lshaft.setToolTip(
-            QCoreApplication.translate("SMachineDimension", u"Shaft length", None)
-        )
-        # endif // QT_CONFIG(tooltip)
-        self.in_Lshaft.setText(
-            QCoreApplication.translate("SMachineDimension", u"Lshaft", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.lf_Lshaft.setToolTip(
-            QCoreApplication.translate("SMachineDimension", u"Shaft length", None)
-        )
-        # endif // QT_CONFIG(tooltip)
-        self.unit_Lshaft.setText(
-            QCoreApplication.translate("SMachineDimension", u"m", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.out_Drsh.setToolTip(
-            QCoreApplication.translate("SMachineDimension", u"Shaft Diameter", None)
-        )
-        # endif // QT_CONFIG(tooltip)
-        self.out_Drsh.setText(
-            QCoreApplication.translate(
-                "SMachineDimension", u"Drsh = 2*Rotor.Rint", None
-            )
-        )
-        self.g_frame.setTitle(
-            QCoreApplication.translate("SMachineDimension", u"Frame", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.lf_Lfra.setToolTip(
-            QCoreApplication.translate("SMachineDimension", u"Frame length", None)
-        )
-        # endif // QT_CONFIG(tooltip)
-        # if QT_CONFIG(whatsthis)
-        self.lf_Lfra.setWhatsThis(
-            QCoreApplication.translate("SMachineDimension", u"Frame length", None)
-        )
-        # endif // QT_CONFIG(whatsthis)
-        # if QT_CONFIG(tooltip)
-        self.in_Lfra.setToolTip(
-            QCoreApplication.translate("SMachineDimension", u"Frame length", None)
-        )
-        # endif // QT_CONFIG(tooltip)
-        # if QT_CONFIG(whatsthis)
-        self.in_Lfra.setWhatsThis(
-            QCoreApplication.translate("SMachineDimension", u"Frame length", None)
-        )
-        # endif // QT_CONFIG(whatsthis)
-        self.in_Lfra.setText(
-            QCoreApplication.translate("SMachineDimension", u"Lfra", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.lf_Wfra.setToolTip(
-            QCoreApplication.translate("SMachineDimension", u"Frame width", None)
-        )
-        # endif // QT_CONFIG(tooltip)
-        # if QT_CONFIG(whatsthis)
-        self.lf_Wfra.setWhatsThis(
-            QCoreApplication.translate("SMachineDimension", u"Frame width", None)
-        )
-        # endif // QT_CONFIG(whatsthis)
-        # if QT_CONFIG(tooltip)
-        self.in_Wfra.setToolTip(
-            QCoreApplication.translate("SMachineDimension", u"Frame width", None)
-        )
-        # endif // QT_CONFIG(tooltip)
-        # if QT_CONFIG(whatsthis)
-        self.in_Wfra.setWhatsThis(
-            QCoreApplication.translate("SMachineDimension", u"Frame width", None)
-        )
-        # endif // QT_CONFIG(whatsthis)
-        self.in_Wfra.setText(
-            QCoreApplication.translate("SMachineDimension", u"Wfra", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.unit_Lfra.setToolTip(
-            QCoreApplication.translate("SMachineDimension", u"Frame length", None)
-        )
-        # endif // QT_CONFIG(tooltip)
-        # if QT_CONFIG(whatsthis)
-        self.unit_Lfra.setWhatsThis(
-            QCoreApplication.translate("SMachineDimension", u"Frame length", None)
-        )
-        # endif // QT_CONFIG(whatsthis)
-        self.unit_Lfra.setText(
-            QCoreApplication.translate("SMachineDimension", u"m", None)
-        )
-        # if QT_CONFIG(tooltip)
-        self.unit_Wfra.setToolTip(
-            QCoreApplication.translate("SMachineDimension", u"Frame width", None)
-        )
-        # endif // QT_CONFIG(tooltip)
-        # if QT_CONFIG(whatsthis)
-        self.unit_Wfra.setWhatsThis(
-            QCoreApplication.translate("SMachineDimension", u"Frame width", None)
-        )
-        # endif // QT_CONFIG(whatsthis)
-        self.unit_Wfra.setText(
-            QCoreApplication.translate("SMachineDimension", u"m", None)
-        )
-        self.b_previous.setText(
-            QCoreApplication.translate("SMachineDimension", u"Previous", None)
-        )
-        self.b_next.setText(
-            QCoreApplication.translate("SMachineDimension", u"Next", None)
-        )
-
+        self.g_stator.setTitle(QCoreApplication.translate("SMachineDimension", u"Stator", None))
+#if QT_CONFIG(tooltip)
+        self.in_SRext.setToolTip(QCoreApplication.translate("SMachineDimension", u"Stator external radius", None))
+#endif // QT_CONFIG(tooltip)
+        self.in_SRext.setText(QCoreApplication.translate("SMachineDimension", u"Rext", None))
+#if QT_CONFIG(tooltip)
+        self.lf_SRext.setToolTip(QCoreApplication.translate("SMachineDimension", u"Stator external radius", None))
+#endif // QT_CONFIG(tooltip)
+        self.unit_SRext.setText(QCoreApplication.translate("SMachineDimension", u"m", None))
+#if QT_CONFIG(tooltip)
+        self.in_SRint.setToolTip(QCoreApplication.translate("SMachineDimension", u"Stator internal radius", None))
+#endif // QT_CONFIG(tooltip)
+        self.in_SRint.setText(QCoreApplication.translate("SMachineDimension", u"Rint", None))
+#if QT_CONFIG(tooltip)
+        self.lf_SRint.setToolTip(QCoreApplication.translate("SMachineDimension", u"Stator internal radius", None))
+#endif // QT_CONFIG(tooltip)
+        self.unit_SRint.setText(QCoreApplication.translate("SMachineDimension", u"m", None))
+        self.g_rotor.setTitle(QCoreApplication.translate("SMachineDimension", u"Rotor", None))
+#if QT_CONFIG(tooltip)
+        self.in_RRext.setToolTip(QCoreApplication.translate("SMachineDimension", u"Rotor external radius", None))
+#endif // QT_CONFIG(tooltip)
+        self.in_RRext.setText(QCoreApplication.translate("SMachineDimension", u"Rext", None))
+#if QT_CONFIG(tooltip)
+        self.lf_RRext.setToolTip(QCoreApplication.translate("SMachineDimension", u"Rotor external radius", None))
+#endif // QT_CONFIG(tooltip)
+        self.unit_RRext.setText(QCoreApplication.translate("SMachineDimension", u"m", None))
+#if QT_CONFIG(tooltip)
+        self.in_RRint.setToolTip(QCoreApplication.translate("SMachineDimension", u"Rotor internal radius", None))
+#endif // QT_CONFIG(tooltip)
+        self.in_RRint.setText(QCoreApplication.translate("SMachineDimension", u"Rint", None))
+#if QT_CONFIG(tooltip)
+        self.lf_RRint.setToolTip(QCoreApplication.translate("SMachineDimension", u"Rotor internal radius", None))
+#endif // QT_CONFIG(tooltip)
+        self.unit_RRint.setText(QCoreApplication.translate("SMachineDimension", u"m", None))
+#if QT_CONFIG(tooltip)
+        self.out_airgap.setToolTip(QCoreApplication.translate("SMachineDimension", u"Magnetic airgap width (distance between stator bore and rotor bore radii)", None))
+#endif // QT_CONFIG(tooltip)
+        self.out_airgap.setText(QCoreApplication.translate("SMachineDimension", u"airgap = ", None))
+        self.g_shaft.setTitle(QCoreApplication.translate("SMachineDimension", u"Shaft", None))
+#if QT_CONFIG(tooltip)
+        self.in_Lshaft.setToolTip(QCoreApplication.translate("SMachineDimension", u"Shaft length", None))
+#endif // QT_CONFIG(tooltip)
+        self.in_Lshaft.setText(QCoreApplication.translate("SMachineDimension", u"Lshaft", None))
+#if QT_CONFIG(tooltip)
+        self.lf_Lshaft.setToolTip(QCoreApplication.translate("SMachineDimension", u"Shaft length", None))
+#endif // QT_CONFIG(tooltip)
+        self.unit_Lshaft.setText(QCoreApplication.translate("SMachineDimension", u"m", None))
+#if QT_CONFIG(tooltip)
+        self.out_Drsh.setToolTip(QCoreApplication.translate("SMachineDimension", u"Shaft Diameter", None))
+#endif // QT_CONFIG(tooltip)
+        self.out_Drsh.setText(QCoreApplication.translate("SMachineDimension", u"Drsh = 2*Rotor.Rint", None))
+        self.g_frame.setTitle(QCoreApplication.translate("SMachineDimension", u"Frame", None))
+#if QT_CONFIG(tooltip)
+        self.lf_Lfra.setToolTip(QCoreApplication.translate("SMachineDimension", u"Frame length", None))
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.lf_Lfra.setWhatsThis(QCoreApplication.translate("SMachineDimension", u"Frame length", None))
+#endif // QT_CONFIG(whatsthis)
+#if QT_CONFIG(tooltip)
+        self.in_Lfra.setToolTip(QCoreApplication.translate("SMachineDimension", u"Frame length", None))
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.in_Lfra.setWhatsThis(QCoreApplication.translate("SMachineDimension", u"Frame length", None))
+#endif // QT_CONFIG(whatsthis)
+        self.in_Lfra.setText(QCoreApplication.translate("SMachineDimension", u"Lfra", None))
+#if QT_CONFIG(tooltip)
+        self.lf_Wfra.setToolTip(QCoreApplication.translate("SMachineDimension", u"Frame width", None))
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.lf_Wfra.setWhatsThis(QCoreApplication.translate("SMachineDimension", u"Frame width", None))
+#endif // QT_CONFIG(whatsthis)
+#if QT_CONFIG(tooltip)
+        self.in_Wfra.setToolTip(QCoreApplication.translate("SMachineDimension", u"Frame width", None))
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.in_Wfra.setWhatsThis(QCoreApplication.translate("SMachineDimension", u"Frame width", None))
+#endif // QT_CONFIG(whatsthis)
+        self.in_Wfra.setText(QCoreApplication.translate("SMachineDimension", u"Wfra", None))
+#if QT_CONFIG(tooltip)
+        self.unit_Lfra.setToolTip(QCoreApplication.translate("SMachineDimension", u"Frame length", None))
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.unit_Lfra.setWhatsThis(QCoreApplication.translate("SMachineDimension", u"Frame length", None))
+#endif // QT_CONFIG(whatsthis)
+        self.unit_Lfra.setText(QCoreApplication.translate("SMachineDimension", u"m", None))
+#if QT_CONFIG(tooltip)
+        self.unit_Wfra.setToolTip(QCoreApplication.translate("SMachineDimension", u"Frame width", None))
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(whatsthis)
+        self.unit_Wfra.setWhatsThis(QCoreApplication.translate("SMachineDimension", u"Frame width", None))
+#endif // QT_CONFIG(whatsthis)
+        self.unit_Wfra.setText(QCoreApplication.translate("SMachineDimension", u"m", None))
+        self.b_previous.setText(QCoreApplication.translate("SMachineDimension", u"Previous", None))
+        self.b_next.setText(QCoreApplication.translate("SMachineDimension", u"Next", None))
     # retranslateUi
+

@@ -14,7 +14,6 @@ from ......GUI.Dialog.DMachineSetup.DBore.WBoreOut.WBoreOut import WBoreOut
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_PBoreFlower(object):
     def setupUi(self, PBoreFlower):
         if not PBoreFlower.objectName():
@@ -35,13 +34,12 @@ class Ui_PBoreFlower(object):
         self.img_bore.setSizePolicy(sizePolicy)
         self.img_bore.setMinimumSize(QSize(400, 0))
         self.img_bore.setMaximumSize(QSize(16777215, 16777215))
-        self.img_bore.setPixmap(
-            QPixmap(u":/images/images/MachineSetup/LamParam/BoreFlower.png")
-        )
+        self.img_bore.setPixmap(QPixmap(u":/images/images/MachineSetup/LamParam/BoreFlower.png"))
         self.img_bore.setScaledContents(False)
         self.img_bore.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_2.addWidget(self.img_bore)
+
 
         self.horizontalLayout.addLayout(self.verticalLayout_2)
 
@@ -82,11 +80,10 @@ class Ui_PBoreFlower(object):
 
         self.gridLayout.addWidget(self.unit_Rarc, 1, 2, 1, 1)
 
+
         self.verticalLayout.addLayout(self.gridLayout)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout.addItem(self.verticalSpacer)
 
@@ -99,19 +96,17 @@ class Ui_PBoreFlower(object):
 
         self.horizontalLayout.addWidget(self.scrollArea)
 
+
         self.retranslateUi(PBoreFlower)
 
         QMetaObject.connectSlotsByName(PBoreFlower)
-
     # setupUi
 
     def retranslateUi(self, PBoreFlower):
-        PBoreFlower.setWindowTitle(
-            QCoreApplication.translate("PBoreFlower", u"Form", None)
-        )
+        PBoreFlower.setWindowTitle(QCoreApplication.translate("PBoreFlower", u"Form", None))
         self.img_bore.setText("")
         self.in_N.setText(QCoreApplication.translate("PBoreFlower", u"N", None))
         self.in_Rarc.setText(QCoreApplication.translate("PBoreFlower", u"Rarc", None))
         self.unit_Rarc.setText(QCoreApplication.translate("PBoreFlower", u"m", None))
-
     # retranslateUi
+

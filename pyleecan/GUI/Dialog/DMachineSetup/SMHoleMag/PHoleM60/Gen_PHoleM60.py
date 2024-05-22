@@ -7,7 +7,8 @@ from pyleecan.GUI.Dialog.DMachineSetup.SMHoleMag.PHoleM60.Ui_PHoleM60 import Ui_
 
 class Gen_PHoleM60(Ui_PHoleM60):
     def setupUi(self, PHoleM60):
-        """Abstract class to update the widget according to the csv doc"""
+        """Abstract class to update the widget according to the csv doc
+        """
         Ui_PHoleM60.setupUi(self, PHoleM60)
         # Setup of in_W0
         txt = self.tr(u"""Hole angular width""")

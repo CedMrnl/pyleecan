@@ -11,7 +11,6 @@ from PySide2.QtWidgets import *
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_WMachineTable(object):
     def setupUi(self, WMachineTable):
         if not WMachineTable.objectName():
@@ -28,7 +27,7 @@ class Ui_WMachineTable(object):
         self.verticalLayout.addWidget(self.in_name)
 
         self.tab_param = QTableWidget(WMachineTable)
-        if self.tab_param.columnCount() < 2:
+        if (self.tab_param.columnCount() < 2):
             self.tab_param.setColumnCount(2)
         __qtablewidgetitem = QTableWidgetItem()
         self.tab_param.setHorizontalHeaderItem(0, __qtablewidgetitem)
@@ -74,43 +73,23 @@ class Ui_WMachineTable(object):
 
         self.verticalLayout.addWidget(self.b_GMSH_3D)
 
+
         self.retranslateUi(WMachineTable)
 
         QMetaObject.connectSlotsByName(WMachineTable)
-
     # setupUi
 
     def retranslateUi(self, WMachineTable):
-        WMachineTable.setWindowTitle(
-            QCoreApplication.translate("WMachineTable", u"Form", None)
-        )
-        self.in_name.setText(
-            QCoreApplication.translate(
-                "WMachineTable", u"Main Machine Parameters", None
-            )
-        )
+        WMachineTable.setWindowTitle(QCoreApplication.translate("WMachineTable", u"Form", None))
+        self.in_name.setText(QCoreApplication.translate("WMachineTable", u"Main Machine Parameters", None))
         ___qtablewidgetitem = self.tab_param.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(
-            QCoreApplication.translate("WMachineTable", u"Name", None)
-        )
+        ___qtablewidgetitem.setText(QCoreApplication.translate("WMachineTable", u"Name", None));
         ___qtablewidgetitem1 = self.tab_param.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(
-            QCoreApplication.translate("WMachineTable", u"Value", None)
-        )
-        self.b_plot_machine.setText(
-            QCoreApplication.translate("WMachineTable", u"Plot Machine", None)
-        )
-        self.b_mmf.setText(
-            QCoreApplication.translate("WMachineTable", u"Plot Stator Unit MMF", None)
-        )
-        self.b_FEMM.setText(
-            QCoreApplication.translate("WMachineTable", u"Draw in FEMM", None)
-        )
-        self.b_GMSH.setText(
-            QCoreApplication.translate("WMachineTable", u"Draw in GMSH", None)
-        )
-        self.b_GMSH_3D.setText(
-            QCoreApplication.translate("WMachineTable", u"3D stator in GMSH", None)
-        )
-
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("WMachineTable", u"Value", None));
+        self.b_plot_machine.setText(QCoreApplication.translate("WMachineTable", u"Plot Machine", None))
+        self.b_mmf.setText(QCoreApplication.translate("WMachineTable", u"Plot Stator Unit MMF", None))
+        self.b_FEMM.setText(QCoreApplication.translate("WMachineTable", u"Draw in FEMM", None))
+        self.b_GMSH.setText(QCoreApplication.translate("WMachineTable", u"Draw in GMSH", None))
+        self.b_GMSH_3D.setText(QCoreApplication.translate("WMachineTable", u"3D stator in GMSH", None))
     # retranslateUi
+

@@ -7,20 +7,17 @@ from pyleecan.GUI.Dialog.DMachineSetup.SLamShape.Ui_SLamShape import Ui_SLamShap
 
 class Gen_SLamShape(Ui_SLamShape):
     def setupUi(self, SLamShape):
-        """Abstract class to update the widget according to the csv doc"""
+        """Abstract class to update the widget according to the csv doc
+        """
         Ui_SLamShape.setupUi(self, SLamShape)
         # Setup of in_L1
-        txt = self.tr(
-            u"""Lamination stack active length without radial ventilation airducts but including insulation layers between lamination sheets"""
-        )
+        txt = self.tr(u"""Lamination stack active length without radial ventilation airducts but including insulation layers between lamination sheets""")
         self.in_L1.setWhatsThis(txt)
         self.in_L1.setToolTip(txt)
 
         # Setup of lf_L1
         self.lf_L1.validator().setBottom(0)
-        txt = self.tr(
-            u"""Lamination stack active length without radial ventilation airducts but including insulation layers between lamination sheets"""
-        )
+        txt = self.tr(u"""Lamination stack active length without radial ventilation airducts but including insulation layers between lamination sheets""")
         self.lf_L1.setWhatsThis(txt)
         self.lf_L1.setToolTip(txt)
 

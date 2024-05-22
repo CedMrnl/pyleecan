@@ -13,7 +13,6 @@ from ......GUI.Tools.FloatEdit import FloatEdit
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_PWSlot63(object):
     def setupUi(self, PWSlot63):
         if not PWSlot63.objectName():
@@ -33,9 +32,7 @@ class Ui_PWSlot63(object):
         sizePolicy.setHeightForWidth(self.img_slot.sizePolicy().hasHeightForWidth())
         self.img_slot.setSizePolicy(sizePolicy)
         self.img_slot.setMaximumSize(QSize(16777215, 16777215))
-        self.img_slot.setPixmap(
-            QPixmap(u":/images/images/MachineSetup/WSlot/SlotW63_wind_int_rotor.png")
-        )
+        self.img_slot.setPixmap(QPixmap(u":/images/images/MachineSetup/WSlot/SlotW63_wind_int_rotor.png"))
         self.img_slot.setScaledContents(False)
         self.img_slot.setAlignment(Qt.AlignCenter)
 
@@ -46,17 +43,14 @@ class Ui_PWSlot63(object):
         sizePolicy1 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(
-            self.txt_constraint.sizePolicy().hasHeightForWidth()
-        )
+        sizePolicy1.setHeightForWidth(self.txt_constraint.sizePolicy().hasHeightForWidth())
         self.txt_constraint.setSizePolicy(sizePolicy1)
         self.txt_constraint.setMaximumSize(QSize(16777215, 60))
         self.txt_constraint.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.txt_constraint.setTextInteractionFlags(
-            Qt.TextSelectableByKeyboard | Qt.TextSelectableByMouse
-        )
+        self.txt_constraint.setTextInteractionFlags(Qt.TextSelectableByKeyboard|Qt.TextSelectableByMouse)
 
         self.verticalLayout_2.addWidget(self.txt_constraint)
+
 
         self.horizontalLayout.addLayout(self.verticalLayout_2)
 
@@ -164,11 +158,10 @@ class Ui_PWSlot63(object):
 
         self.gridLayout.addWidget(self.c_H1_unit, 4, 2, 1, 1)
 
+
         self.verticalLayout.addLayout(self.gridLayout)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout.addItem(self.verticalSpacer)
 
@@ -212,6 +205,7 @@ class Ui_PWSlot63(object):
 
         self.verticalLayout_3.addWidget(self.out_tooth_width)
 
+
         self.verticalLayout.addWidget(self.g_output)
 
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
@@ -229,24 +223,17 @@ class Ui_PWSlot63(object):
         self.retranslateUi(PWSlot63)
 
         QMetaObject.connectSlotsByName(PWSlot63)
-
     # setupUi
 
     def retranslateUi(self, PWSlot63):
         PWSlot63.setWindowTitle(QCoreApplication.translate("PWSlot63", u"Form", None))
         self.img_slot.setText("")
-        self.txt_constraint.setHtml(
-            QCoreApplication.translate(
-                "PWSlot63",
-                u'<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">\n'
-                '<html><head><meta name="qrichtext" content="1" /><style type="text/css">\n'
-                "p, li { white-space: pre-wrap; }\n"
-                "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:8.15094pt; font-weight:400; font-style:normal;\">\n"
-                '<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt; font-weight:600; text-decoration: underline;">Constraints :</span></p>\n'
-                '<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">W1 &gt; W0</span></p></body></html>',
-                None,
-            )
-        )
+        self.txt_constraint.setHtml(QCoreApplication.translate("PWSlot63", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:8.15094pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt; font-weight:600; text-decoration: underline;\">Constraints :</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">W1 &gt; W0</span></p></body></html>", None))
         self.unit_W2.setText(QCoreApplication.translate("PWSlot63", u"m", None))
         self.unit_W1.setText(QCoreApplication.translate("PWSlot63", u"m", None))
         self.in_W2.setText(QCoreApplication.translate("PWSlot63", u"W2 :", None))
@@ -258,34 +245,16 @@ class Ui_PWSlot63(object):
         self.in_W0.setText(QCoreApplication.translate("PWSlot63", u"W0 :", None))
         self.unit_H2.setText(QCoreApplication.translate("PWSlot63", u"m", None))
         self.in_H1.setText(QCoreApplication.translate("PWSlot63", u"H1 :", None))
-        self.c_H1_unit.setItemText(
-            0, QCoreApplication.translate("PWSlot63", u"[rad]", None)
-        )
-        self.c_H1_unit.setItemText(
-            1, QCoreApplication.translate("PWSlot63", u"[\u00b0]", None)
-        )
+        self.c_H1_unit.setItemText(0, QCoreApplication.translate("PWSlot63", u"[rad]", None))
+        self.c_H1_unit.setItemText(1, QCoreApplication.translate("PWSlot63", u"[\u00b0]", None))
 
         self.g_output.setTitle(QCoreApplication.translate("PWSlot63", u"Output", None))
-        self.out_Wlam.setText(
-            QCoreApplication.translate("PWSlot63", u"Lamination width : ?", None)
-        )
-        self.out_slot_height.setText(
-            QCoreApplication.translate("PWSlot63", u"Slot height : ?", None)
-        )
-        self.out_yoke_height.setText(
-            QCoreApplication.translate("PWSlot63", u"Yoke height : ?", None)
-        )
-        self.out_wind_surface.setText(
-            QCoreApplication.translate("PWSlot63", u"Winding surface : ?", None)
-        )
-        self.out_tot_surface.setText(
-            QCoreApplication.translate("PWSlot63", u"Total surface : ?", None)
-        )
-        self.out_op_angle.setText(
-            QCoreApplication.translate("PWSlot63", u"Opening angle : ?", None)
-        )
-        self.out_tooth_width.setText(
-            QCoreApplication.translate("PWSlot63", u"Tooth average width : ?", None)
-        )
-
+        self.out_Wlam.setText(QCoreApplication.translate("PWSlot63", u"Lamination width : ?", None))
+        self.out_slot_height.setText(QCoreApplication.translate("PWSlot63", u"Slot height : ?", None))
+        self.out_yoke_height.setText(QCoreApplication.translate("PWSlot63", u"Yoke height : ?", None))
+        self.out_wind_surface.setText(QCoreApplication.translate("PWSlot63", u"Winding surface : ?", None))
+        self.out_tot_surface.setText(QCoreApplication.translate("PWSlot63", u"Total surface : ?", None))
+        self.out_op_angle.setText(QCoreApplication.translate("PWSlot63", u"Opening angle : ?", None))
+        self.out_tooth_width.setText(QCoreApplication.translate("PWSlot63", u"Tooth average width : ?", None))
     # retranslateUi
+

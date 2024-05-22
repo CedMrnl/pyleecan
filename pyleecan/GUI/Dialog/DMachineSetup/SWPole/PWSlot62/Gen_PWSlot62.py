@@ -7,7 +7,8 @@ from pyleecan.GUI.Dialog.DMachineSetup.SWPole.PWSlot62.Ui_PWSlot62 import Ui_PWS
 
 class Gen_PWSlot62(Ui_PWSlot62):
     def setupUi(self, PWSlot62):
-        """Abstract class to update the widget according to the csv doc"""
+        """Abstract class to update the widget according to the csv doc
+        """
         Ui_PWSlot62.setupUi(self, PWSlot62)
         # Setup of in_W0
         txt = self.tr(u"""Pole bottom width""")

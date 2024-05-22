@@ -11,7 +11,6 @@ from PySide2.QtWidgets import *
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_WImportExcel(object):
     def setupUi(self, WImportExcel):
         if not WImportExcel.objectName():
@@ -24,9 +23,7 @@ class Ui_WImportExcel(object):
         WImportExcel.setSizePolicy(sizePolicy)
         WImportExcel.setMinimumSize(QSize(0, 0))
         icon = QIcon()
-        icon.addFile(
-            u":/images/images/icon/pyleecan_64.png", QSize(), QIcon.Normal, QIcon.Off
-        )
+        icon.addFile(u":/images/images/icon/pyleecan_64.png", QSize(), QIcon.Normal, QIcon.Off)
         WImportExcel.setWindowIcon(icon)
         self.verticalLayout_3 = QVBoxLayout(WImportExcel)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
@@ -44,6 +41,7 @@ class Ui_WImportExcel(object):
         self.c_sheet.setMinimumSize(QSize(120, 0))
 
         self.horizontalLayout_2.addWidget(self.c_sheet)
+
 
         self.verticalLayout_3.addLayout(self.horizontalLayout_2)
 
@@ -67,6 +65,7 @@ class Ui_WImportExcel(object):
 
         self.horizontalLayout_4.addWidget(self.le_range)
 
+
         self.verticalLayout_3.addLayout(self.horizontalLayout_4)
 
         self.horizontalLayout = QHBoxLayout()
@@ -83,13 +82,12 @@ class Ui_WImportExcel(object):
 
         self.horizontalLayout.addWidget(self.c_order)
 
+
         self.verticalLayout_3.addLayout(self.horizontalLayout)
 
         self.horizontalLayout_3 = QHBoxLayout()
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.horizontalSpacer = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_3.addItem(self.horizontalSpacer)
 
@@ -103,40 +101,25 @@ class Ui_WImportExcel(object):
 
         self.horizontalLayout_3.addWidget(self.b_cancel)
 
+
         self.verticalLayout_3.addLayout(self.horizontalLayout_3)
+
 
         self.retranslateUi(WImportExcel)
 
         QMetaObject.connectSlotsByName(WImportExcel)
-
     # setupUi
 
     def retranslateUi(self, WImportExcel):
-        WImportExcel.setWindowTitle(
-            QCoreApplication.translate("WImportExcel", u"Import from Excel", None)
-        )
-        self.in_sheet.setText(
-            QCoreApplication.translate("WImportExcel", u"Sheet: ", None)
-        )
-        self.in_range.setText(
-            QCoreApplication.translate("WImportExcel", u"Data range: ", None)
-        )
-        self.le_range.setPlaceholderText(
-            QCoreApplication.translate("WImportExcel", u"A6:B100", None)
-        )
-        self.in_order.setText(
-            QCoreApplication.translate("WImportExcel", u"Data order :", None)
-        )
-        self.c_order.setItemText(
-            0, QCoreApplication.translate("WImportExcel", u"B(H)", None)
-        )
-        self.c_order.setItemText(
-            1, QCoreApplication.translate("WImportExcel", u"H(B)", None)
-        )
+        WImportExcel.setWindowTitle(QCoreApplication.translate("WImportExcel", u"Import from Excel", None))
+        self.in_sheet.setText(QCoreApplication.translate("WImportExcel", u"Sheet: ", None))
+        self.in_range.setText(QCoreApplication.translate("WImportExcel", u"Data range: ", None))
+        self.le_range.setPlaceholderText(QCoreApplication.translate("WImportExcel", u"A6:B100", None))
+        self.in_order.setText(QCoreApplication.translate("WImportExcel", u"Data order :", None))
+        self.c_order.setItemText(0, QCoreApplication.translate("WImportExcel", u"B(H)", None))
+        self.c_order.setItemText(1, QCoreApplication.translate("WImportExcel", u"H(B)", None))
 
         self.b_ok.setText(QCoreApplication.translate("WImportExcel", u"Ok", None))
-        self.b_cancel.setText(
-            QCoreApplication.translate("WImportExcel", u"Cancel", None)
-        )
-
+        self.b_cancel.setText(QCoreApplication.translate("WImportExcel", u"Cancel", None))
     # retranslateUi
+

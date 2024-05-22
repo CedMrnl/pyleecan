@@ -51,11 +51,10 @@ class Ui_WVent(object):
 
         self.horizontalLayout.addWidget(self.c_Alpha0_unit)
 
-        self.horizontalSpacer = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
+
 
         self.main_layout.addLayout(self.horizontalLayout)
 
@@ -65,23 +64,18 @@ class Ui_WVent(object):
 
         self.main_layout.addWidget(self.w_vent)
 
+
         self.retranslateUi(WVent)
 
         QMetaObject.connectSlotsByName(WVent)
-
     # setupUi
 
     def retranslateUi(self, WVent):
         WVent.setWindowTitle(QCoreApplication.translate("WVent", u"Form", None))
-        self.in_vent_type.setText(
-            QCoreApplication.translate("WVent", u"Cooling Duct Shape:", None)
-        )
+        self.in_vent_type.setText(QCoreApplication.translate("WVent", u"Cooling Duct Shape:", None))
         self.in_Alpha0.setText(QCoreApplication.translate("WVent", u"Alpha0 :", None))
-        self.c_Alpha0_unit.setItemText(
-            0, QCoreApplication.translate("WVent", u"[rad]", None)
-        )
-        self.c_Alpha0_unit.setItemText(
-            1, QCoreApplication.translate("WVent", u"[\u00b0]", None)
-        )
+        self.c_Alpha0_unit.setItemText(0, QCoreApplication.translate("WVent", u"[rad]", None))
+        self.c_Alpha0_unit.setItemText(1, QCoreApplication.translate("WVent", u"[\u00b0]", None))
 
     # retranslateUi
+

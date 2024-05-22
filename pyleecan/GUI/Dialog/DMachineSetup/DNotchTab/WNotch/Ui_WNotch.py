@@ -67,9 +67,7 @@ class Ui_WNotch(object):
 
         self.horizontalLayout.addWidget(self.c_alpha_unit)
 
-        self.horizontalSpacer = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
 
@@ -77,6 +75,7 @@ class Ui_WNotch(object):
         self.b_plot.setObjectName(u"b_plot")
 
         self.horizontalLayout.addWidget(self.b_plot)
+
 
         self.main_layout.addLayout(self.horizontalLayout)
 
@@ -91,49 +90,27 @@ class Ui_WNotch(object):
 
         self.main_layout.addWidget(self.w_notch)
 
+
         self.retranslateUi(WNotch)
 
         QMetaObject.connectSlotsByName(WNotch)
-
     # setupUi
 
     def retranslateUi(self, WNotch):
-        WNotch.setWindowTitle(
-            QCoreApplication.translate("WNotch", u"Notch setup", None)
-        )
-        self.c_notch_type.setItemText(
-            0, QCoreApplication.translate("WNotch", u"Slot Type 50", None)
-        )
-        self.c_notch_type.setItemText(
-            1, QCoreApplication.translate("WNotch", u"Slot Type 51", None)
-        )
-        self.c_notch_type.setItemText(
-            2, QCoreApplication.translate("WNotch", u"Slot Type 52", None)
-        )
-        self.c_notch_type.setItemText(
-            3, QCoreApplication.translate("WNotch", u"Slot Type 53", None)
-        )
-        self.c_notch_type.setItemText(
-            4, QCoreApplication.translate("WNotch", u"Slot Type 54", None)
-        )
-        self.c_notch_type.setItemText(
-            5, QCoreApplication.translate("WNotch", u"Slot Type 55", None)
-        )
-        self.c_notch_type.setItemText(
-            6, QCoreApplication.translate("WNotch", u"Slot Type 56", None)
-        )
+        WNotch.setWindowTitle(QCoreApplication.translate("WNotch", u"Notch setup", None))
+        self.c_notch_type.setItemText(0, QCoreApplication.translate("WNotch", u"Slot Type 50", None))
+        self.c_notch_type.setItemText(1, QCoreApplication.translate("WNotch", u"Slot Type 51", None))
+        self.c_notch_type.setItemText(2, QCoreApplication.translate("WNotch", u"Slot Type 52", None))
+        self.c_notch_type.setItemText(3, QCoreApplication.translate("WNotch", u"Slot Type 53", None))
+        self.c_notch_type.setItemText(4, QCoreApplication.translate("WNotch", u"Slot Type 54", None))
+        self.c_notch_type.setItemText(5, QCoreApplication.translate("WNotch", u"Slot Type 55", None))
+        self.c_notch_type.setItemText(6, QCoreApplication.translate("WNotch", u"Slot Type 56", None))
 
         self.in_Zn.setText(QCoreApplication.translate("WNotch", u"Zn:", None))
         self.in_alpha.setText(QCoreApplication.translate("WNotch", u"Alpha:", None))
-        self.c_alpha_unit.setItemText(
-            0, QCoreApplication.translate("WNotch", u"[rad]", None)
-        )
-        self.c_alpha_unit.setItemText(
-            1, QCoreApplication.translate("WNotch", u"[deg]", None)
-        )
+        self.c_alpha_unit.setItemText(0, QCoreApplication.translate("WNotch", u"[rad]", None))
+        self.c_alpha_unit.setItemText(1, QCoreApplication.translate("WNotch", u"[deg]", None))
 
-        self.b_plot.setText(
-            QCoreApplication.translate("WNotch", u"Preview Notch", None)
-        )
-
+        self.b_plot.setText(QCoreApplication.translate("WNotch", u"Preview Notch", None))
     # retranslateUi
+

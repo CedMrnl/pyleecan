@@ -2,14 +2,13 @@
 """File generated according to PCondType12/gen_list.json
 WARNING! All changes made in this file will be lost!
 """
-from pyleecan.GUI.Dialog.DMachineSetup.SWindCond.PCondType12.Ui_PCondType12 import (
-    Ui_PCondType12,
-)
+from pyleecan.GUI.Dialog.DMachineSetup.SWindCond.PCondType12.Ui_PCondType12 import Ui_PCondType12
 
 
 class Gen_PCondType12(Ui_PCondType12):
     def setupUi(self, PCondType12):
-        """Abstract class to update the widget according to the csv doc"""
+        """Abstract class to update the widget according to the csv doc
+        """
         Ui_PCondType12.setupUi(self, PCondType12)
         # Setup of in_Nwpc1
         txt = self.tr(u"""number of strands in parallel per conductor""")
@@ -35,17 +34,13 @@ class Gen_PCondType12(Ui_PCondType12):
         self.lf_Wwire.setToolTip(txt)
 
         # Setup of in_Wins_wire
-        txt = self.tr(
-            u"""(advanced) cf schematics, winding strand insulation thickness"""
-        )
+        txt = self.tr(u"""(advanced) cf schematics, winding strand insulation thickness""")
         self.in_Wins_wire.setWhatsThis(txt)
         self.in_Wins_wire.setToolTip(txt)
 
         # Setup of lf_Wins_wire
         self.lf_Wins_wire.validator().setBottom(0)
-        txt = self.tr(
-            u"""(advanced) cf schematics, winding strand insulation thickness"""
-        )
+        txt = self.tr(u"""(advanced) cf schematics, winding strand insulation thickness""")
         self.lf_Wins_wire.setWhatsThis(txt)
         self.lf_Wins_wire.setToolTip(txt)
 

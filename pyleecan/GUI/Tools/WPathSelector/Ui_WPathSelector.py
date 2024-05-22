@@ -11,7 +11,6 @@ from PySide2.QtWidgets import *
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_WPathSelector(object):
     def setupUi(self, WPathSelector):
         if not WPathSelector.objectName():
@@ -53,19 +52,15 @@ class Ui_WPathSelector(object):
 
         self.horizontalLayout.addWidget(self.b_path)
 
+
         self.retranslateUi(WPathSelector)
 
         QMetaObject.connectSlotsByName(WPathSelector)
-
     # setupUi
 
     def retranslateUi(self, WPathSelector):
-        WPathSelector.setWindowTitle(
-            QCoreApplication.translate("WPathSelector", u"Form", None)
-        )
+        WPathSelector.setWindowTitle(QCoreApplication.translate("WPathSelector", u"Form", None))
         self.in_path.setText(QCoreApplication.translate("WPathSelector", u"path", None))
-        self.b_path.setText(
-            QCoreApplication.translate("WPathSelector", u"Select Path", None)
-        )
-
+        self.b_path.setText(QCoreApplication.translate("WPathSelector", u"Select Path", None))
     # retranslateUi
+

@@ -7,7 +7,8 @@ from pyleecan.GUI.Dialog.DMachineSetup.SWinding.Ui_SWinding import Ui_SWinding
 
 class Gen_SWinding(Ui_SWinding):
     def setupUi(self, SWinding):
-        """Abstract class to update the widget according to the csv doc"""
+        """Abstract class to update the widget according to the csv doc
+        """
         Ui_SWinding.setupUi(self, SWinding)
         # Setup of in_qs
         txt = self.tr(u"""number of phases """)
@@ -22,41 +23,31 @@ class Gen_SWinding(Ui_SWinding):
         self.si_qs.setToolTip(txt)
 
         # Setup of is_reverse
-        txt = self.tr(
-            u"""1 to reverse the default winding algorithm along the airgap (c, b, a instead of a, b, c along the trigonometric direction)"""
-        )
+        txt = self.tr(u"""1 to reverse the default winding algorithm along the airgap (c, b, a instead of a, b, c along the trigonometric direction)""")
         self.is_reverse.setWhatsThis(txt)
         self.is_reverse.setToolTip(txt)
 
         # Setup of in_Nslot
-        txt = self.tr(
-            u"""Number of slots to shift the coils obtained with pyleecan winding algorithm (a, b, c becomes b, c, a with Nslot_shift_wind=1)"""
-        )
+        txt = self.tr(u"""Number of slots to shift the coils obtained with pyleecan winding algorithm (a, b, c becomes b, c, a with Nslot_shift_wind=1)""")
         self.in_Nslot.setWhatsThis(txt)
         self.in_Nslot.setToolTip(txt)
 
         # Setup of si_Nslot
         self.si_Nslot.setMinimum(-999999)
         self.si_Nslot.setMaximum(999999)
-        txt = self.tr(
-            u"""Number of slots to shift the coils obtained with pyleecan winding algorithm (a, b, c becomes b, c, a with Nslot_shift_wind=1)"""
-        )
+        txt = self.tr(u"""Number of slots to shift the coils obtained with pyleecan winding algorithm (a, b, c becomes b, c, a with Nslot_shift_wind=1)""")
         self.si_Nslot.setWhatsThis(txt)
         self.si_Nslot.setToolTip(txt)
 
         # Setup of in_coil_pitch
-        txt = self.tr(
-            u"""Distance (in slot) between a conductor of a certain phase and the corresponding return conductor"""
-        )
+        txt = self.tr(u"""Distance (in slot) between a conductor of a certain phase and the corresponding return conductor""")
         self.in_coil_pitch.setWhatsThis(txt)
         self.in_coil_pitch.setToolTip(txt)
 
         # Setup of si_coil_pitch
         self.si_coil_pitch.setMinimum(-999999)
         self.si_coil_pitch.setMaximum(999999)
-        txt = self.tr(
-            u"""Distance (in slot) between a conductor of a certain phase and the corresponding return conductor"""
-        )
+        txt = self.tr(u"""Distance (in slot) between a conductor of a certain phase and the corresponding return conductor""")
         self.si_coil_pitch.setWhatsThis(txt)
         self.si_coil_pitch.setToolTip(txt)
 

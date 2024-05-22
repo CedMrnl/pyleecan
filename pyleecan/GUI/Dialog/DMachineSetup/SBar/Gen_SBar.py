@@ -7,7 +7,8 @@ from pyleecan.GUI.Dialog.DMachineSetup.SBar.Ui_SBar import Ui_SBar
 
 class Gen_SBar(Ui_SBar):
     def setupUi(self, SBar):
-        """Abstract class to update the widget according to the csv doc"""
+        """Abstract class to update the widget according to the csv doc
+        """
         Ui_SBar.setupUi(self, SBar)
         # Setup of in_Hscr
         txt = self.tr(u"""short circuit ring section radial height [m]""")
@@ -42,17 +43,13 @@ class Gen_SBar(Ui_SBar):
         self.unit_Lscr.setToolTip(txt)
 
         # Setup of in_Lewout
-        txt = self.tr(
-            u"""straight length of the conductors outside the lamination before the curved part of winding overhang [m] - can be negative to tune the average turn length (only used in voltage driven simulations)"""
-        )
+        txt = self.tr(u"""straight length of the conductors outside the lamination before the curved part of winding overhang [m] - can be negative to tune the average turn length (only used in voltage driven simulations)""")
         self.in_Lewout.setWhatsThis(txt)
         self.in_Lewout.setToolTip(txt)
 
         # Setup of lf_Lewout
         self.lf_Lewout.validator().setBottom(0)
-        txt = self.tr(
-            u"""straight length of the conductors outside the lamination before the curved part of winding overhang [m] - can be negative to tune the average turn length (only used in voltage driven simulations)"""
-        )
+        txt = self.tr(u"""straight length of the conductors outside the lamination before the curved part of winding overhang [m] - can be negative to tune the average turn length (only used in voltage driven simulations)""")
         self.lf_Lewout.setWhatsThis(txt)
         self.lf_Lewout.setToolTip(txt)
 

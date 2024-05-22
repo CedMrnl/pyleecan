@@ -70,6 +70,7 @@ class Ui_PCondType21(object):
 
         self.gridLayout.addWidget(self.in_Wbar, 1, 0, 1, 1)
 
+
         self.verticalLayout.addLayout(self.gridLayout)
 
         self.w_mat = WMatSelectV(PCondType21)
@@ -88,16 +89,13 @@ class Ui_PCondType21(object):
         self.retranslateUi(PCondType21)
 
         QMetaObject.connectSlotsByName(PCondType21)
-
     # setupUi
 
     def retranslateUi(self, PCondType21):
-        PCondType21.setWindowTitle(
-            QCoreApplication.translate("PCondType21", u"Form", None)
-        )
+        PCondType21.setWindowTitle(QCoreApplication.translate("PCondType21", u"Form", None))
         self.in_Hbar.setText(QCoreApplication.translate("PCondType21", u"Hbar :", None))
         self.unit_Hbar.setText(QCoreApplication.translate("PCondType21", u"m", None))
         self.unit_Wbar.setText(QCoreApplication.translate("PCondType21", u"m", None))
         self.in_Wbar.setText(QCoreApplication.translate("PCondType21", u"Wbar :", None))
-
     # retranslateUi
+

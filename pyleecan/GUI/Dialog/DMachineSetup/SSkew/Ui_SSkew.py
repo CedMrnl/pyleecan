@@ -14,7 +14,6 @@ from .....GUI.Tools.MPLCanvas import MPLCanvas
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_SSkew(object):
     def setupUi(self, SSkew):
         if not SSkew.objectName():
@@ -34,6 +33,7 @@ class Ui_SSkew(object):
         self.w_viewer.setObjectName(u"w_viewer")
 
         self.verticalLayout_2.addWidget(self.w_viewer)
+
 
         self.horizontalLayout.addWidget(self.g_plot)
 
@@ -123,6 +123,7 @@ class Ui_SSkew(object):
 
         self.gridLayout.addWidget(self.label_deg, 3, 2, 1, 1)
 
+
         self.verticalLayout.addLayout(self.gridLayout)
 
         self.in_slot_pitch = QLabel(self.g_activate)
@@ -136,19 +137,19 @@ class Ui_SSkew(object):
 
         self.verticalLayout.addWidget(self.tab_angle)
 
+
         self.verticalLayout_3.addWidget(self.g_activate)
 
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
 
         self.horizontalLayout.addWidget(self.scrollArea)
 
+
         self.verticalLayout_4.addLayout(self.horizontalLayout)
 
         self.horizontalLayout_6 = QHBoxLayout()
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
-        self.horizontalSpacer_7 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_7 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_6.addItem(self.horizontalSpacer_7)
 
@@ -162,57 +163,37 @@ class Ui_SSkew(object):
 
         self.horizontalLayout_6.addWidget(self.b_next)
 
+
         self.verticalLayout_4.addLayout(self.horizontalLayout_6)
+
 
         self.retranslateUi(SSkew)
 
         self.cb_type.setCurrentIndex(3)
 
-        QMetaObject.connectSlotsByName(SSkew)
 
+        QMetaObject.connectSlotsByName(SSkew)
     # setupUi
 
     def retranslateUi(self, SSkew):
         SSkew.setWindowTitle(QCoreApplication.translate("SSkew", u"Form", None))
         self.g_plot.setTitle(QCoreApplication.translate("SSkew", u"Preview", None))
-        self.g_activate.setTitle(
-            QCoreApplication.translate("SSkew", u"Activate Rotor Skew", None)
-        )
+        self.g_activate.setTitle(QCoreApplication.translate("SSkew", u"Activate Rotor Skew", None))
         self.in_type.setText(QCoreApplication.translate("SSkew", u"Type of Skew", None))
-        self.cb_type.setItemText(
-            0, QCoreApplication.translate("SSkew", u"Linear", None)
-        )
-        self.cb_type.setItemText(
-            1, QCoreApplication.translate("SSkew", u"V-shape", None)
-        )
-        self.cb_type.setItemText(
-            2, QCoreApplication.translate("SSkew", u"Zigzag", None)
-        )
-        self.cb_type.setItemText(
-            3, QCoreApplication.translate("SSkew", u"User-defined", None)
-        )
+        self.cb_type.setItemText(0, QCoreApplication.translate("SSkew", u"Linear", None))
+        self.cb_type.setItemText(1, QCoreApplication.translate("SSkew", u"V-shape", None))
+        self.cb_type.setItemText(2, QCoreApplication.translate("SSkew", u"Zigzag", None))
+        self.cb_type.setItemText(3, QCoreApplication.translate("SSkew", u"User-defined", None))
 
-        self.in_step.setText(
-            QCoreApplication.translate("SSkew", u"Step/Continuous", None)
-        )
+        self.in_step.setText(QCoreApplication.translate("SSkew", u"Step/Continuous", None))
         self.cb_step.setItemText(0, QCoreApplication.translate("SSkew", u"Step", None))
-        self.cb_step.setItemText(
-            1, QCoreApplication.translate("SSkew", u"Continuous", None)
-        )
+        self.cb_step.setItemText(1, QCoreApplication.translate("SSkew", u"Continuous", None))
 
-        self.label_segments.setText(
-            QCoreApplication.translate("SSkew", u"Number of steps", None)
-        )
-        self.label_rate.setText(
-            QCoreApplication.translate("SSkew", u"Skew Angle ", None)
-        )
+        self.label_segments.setText(QCoreApplication.translate("SSkew", u"Number of steps", None))
+        self.label_rate.setText(QCoreApplication.translate("SSkew", u"Skew Angle ", None))
         self.label_deg.setText(QCoreApplication.translate("SSkew", u"[deg]", None))
-        self.in_slot_pitch.setText(
-            QCoreApplication.translate(
-                "SSkew", u"Stator slot pitch = 20 [deg] / Skew rate = %", None
-            )
-        )
+        self.in_slot_pitch.setText(QCoreApplication.translate("SSkew", u"Stator slot pitch = 20 [deg] / Skew rate = %", None))
         self.b_previous.setText(QCoreApplication.translate("SSkew", u"Previous", None))
         self.b_next.setText(QCoreApplication.translate("SSkew", u"Next", None))
-
     # retranslateUi
+

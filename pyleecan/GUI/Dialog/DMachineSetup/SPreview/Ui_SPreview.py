@@ -9,13 +9,10 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
-from .....GUI.Dialog.DMachineSetup.SPreview.WMachineTable.WMachineTable import (
-    WMachineTable,
-)
+from .....GUI.Dialog.DMachineSetup.SPreview.WMachineTable.WMachineTable import WMachineTable
 from .....GUI.Tools.MPLCanvas import MPLCanvas
 
 from pyleecan.GUI.Resources import pyleecan_rc
-
 
 class Ui_SPreview(object):
     def setupUi(self, SPreview):
@@ -44,13 +41,12 @@ class Ui_SPreview(object):
 
         self.horizontalLayout_2.addWidget(self.tab_machine)
 
+
         self.verticalLayout.addLayout(self.horizontalLayout_2)
 
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.horizontalSpacer = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
 
@@ -64,19 +60,18 @@ class Ui_SPreview(object):
 
         self.horizontalLayout.addWidget(self.b_next)
 
+
         self.verticalLayout.addLayout(self.horizontalLayout)
+
 
         self.retranslateUi(SPreview)
 
         QMetaObject.connectSlotsByName(SPreview)
-
     # setupUi
 
     def retranslateUi(self, SPreview):
         SPreview.setWindowTitle(QCoreApplication.translate("SPreview", u"Form", None))
-        self.b_previous.setText(
-            QCoreApplication.translate("SPreview", u"Previous", None)
-        )
+        self.b_previous.setText(QCoreApplication.translate("SPreview", u"Previous", None))
         self.b_next.setText(QCoreApplication.translate("SPreview", u"Next", None))
-
     # retranslateUi
+

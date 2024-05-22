@@ -13,7 +13,6 @@ from pyleecan.GUI.Tools.HelpButton import HelpButton
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_SMSlot(object):
     def setupUi(self, SMSlot):
         if not SMSlot.objectName():
@@ -48,11 +47,10 @@ class Ui_SMSlot(object):
 
         self.horizontalLayout_2.addWidget(self.out_Slot_pitch)
 
-        self.horizontalSpacer_3 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_2.addItem(self.horizontalSpacer_3)
+
 
         self.main_layout.addLayout(self.horizontalLayout_2)
 
@@ -68,17 +66,13 @@ class Ui_SMSlot(object):
 
         self.main_layout.addWidget(self.tab_slot)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 1, QSizePolicy.Minimum, QSizePolicy.Minimum
-        )
+        self.verticalSpacer = QSpacerItem(20, 1, QSizePolicy.Minimum, QSizePolicy.Minimum)
 
         self.main_layout.addItem(self.verticalSpacer)
 
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.horizontalSpacer = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
 
@@ -97,37 +91,29 @@ class Ui_SMSlot(object):
 
         self.horizontalLayout.addWidget(self.b_next)
 
+
         self.main_layout.addLayout(self.horizontalLayout)
+
 
         self.retranslateUi(SMSlot)
 
         self.tab_slot.setCurrentIndex(-1)
 
-        QMetaObject.connectSlotsByName(SMSlot)
 
+        QMetaObject.connectSlotsByName(SMSlot)
     # setupUi
 
     def retranslateUi(self, SMSlot):
         SMSlot.setWindowTitle(QCoreApplication.translate("SMSlot", u"Form", None))
         self.b_help.setText("")
-        self.in_NS_type.setText(
-            QCoreApplication.translate("SMSlot", u"Pole distribution", None)
-        )
-        self.c_NS_type.setItemText(
-            0, QCoreApplication.translate("SMSlot", u"Even (default)", None)
-        )
-        self.c_NS_type.setItemText(
-            1, QCoreApplication.translate("SMSlot", u"North different than South", None)
-        )
+        self.in_NS_type.setText(QCoreApplication.translate("SMSlot", u"Pole distribution", None))
+        self.c_NS_type.setItemText(0, QCoreApplication.translate("SMSlot", u"Even (default)", None))
+        self.c_NS_type.setItemText(1, QCoreApplication.translate("SMSlot", u"North different than South", None))
 
-        self.c_NS_type.setCurrentText(
-            QCoreApplication.translate("SMSlot", u"Even (default)", None)
-        )
-        self.out_Slot_pitch.setText(
-            QCoreApplication.translate("SMSlot", u"p = ? Slot pitch = 1.35 rad", None)
-        )
+        self.c_NS_type.setCurrentText(QCoreApplication.translate("SMSlot", u"Even (default)", None))
+        self.out_Slot_pitch.setText(QCoreApplication.translate("SMSlot", u"p = ? Slot pitch = 1.35 rad", None))
         self.b_plot.setText(QCoreApplication.translate("SMSlot", u"Preview", None))
         self.b_previous.setText(QCoreApplication.translate("SMSlot", u"Previous", None))
         self.b_next.setText(QCoreApplication.translate("SMSlot", u"Next", None))
-
     # retranslateUi
+

@@ -11,7 +11,6 @@ from PySide2.QtWidgets import *
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_SWindCond(object):
     def setupUi(self, SWindCond):
         if not SWindCond.objectName():
@@ -37,11 +36,10 @@ class Ui_SWindCond(object):
 
         self.horizontalLayout.addWidget(self.c_cond_type)
 
-        self.horizontalSpacer_3 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer_3)
+
 
         self.main_layout.addLayout(self.horizontalLayout)
 
@@ -52,9 +50,7 @@ class Ui_SWindCond(object):
 
         self.horizontalLayout_2 = QHBoxLayout()
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.horizontalSpacer = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_2.addItem(self.horizontalSpacer)
 
@@ -68,31 +64,25 @@ class Ui_SWindCond(object):
 
         self.horizontalLayout_2.addWidget(self.b_next)
 
+
         self.main_layout.addLayout(self.horizontalLayout_2)
 
+
         self.verticalLayout.addLayout(self.main_layout)
+
 
         self.retranslateUi(SWindCond)
 
         QMetaObject.connectSlotsByName(SWindCond)
-
     # setupUi
 
     def retranslateUi(self, SWindCond):
         SWindCond.setWindowTitle(QCoreApplication.translate("SWindCond", u"Form", None))
-        self.in_cond_type.setText(
-            QCoreApplication.translate("SWindCond", u"Coil style", None)
-        )
-        self.c_cond_type.setItemText(
-            0, QCoreApplication.translate("SWindCond", u"Form wound", None)
-        )
-        self.c_cond_type.setItemText(
-            1, QCoreApplication.translate("SWindCond", u"Stranded", None)
-        )
+        self.in_cond_type.setText(QCoreApplication.translate("SWindCond", u"Coil style", None))
+        self.c_cond_type.setItemText(0, QCoreApplication.translate("SWindCond", u"Form wound", None))
+        self.c_cond_type.setItemText(1, QCoreApplication.translate("SWindCond", u"Stranded", None))
 
-        self.b_previous.setText(
-            QCoreApplication.translate("SWindCond", u"Previous", None)
-        )
+        self.b_previous.setText(QCoreApplication.translate("SWindCond", u"Previous", None))
         self.b_next.setText(QCoreApplication.translate("SWindCond", u"Next", None))
-
     # retranslateUi
+

@@ -7,7 +7,8 @@ from pyleecan.GUI.Dialog.DMachineSetup.SMHoleMag.PHoleM61.Ui_PHoleM61 import Ui_
 
 class Gen_PHoleM61(Ui_PHoleM61):
     def setupUi(self, PHoleM61):
-        """Abstract class to update the widget according to the csv doc"""
+        """Abstract class to update the widget according to the csv doc
+        """
         Ui_PHoleM61.setupUi(self, PHoleM61)
         # Setup of in_W0
         txt = self.tr(u"""Distance beetween two Hole""")

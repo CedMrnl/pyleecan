@@ -14,16 +14,13 @@ from ...GUI.Tools.WPathSelector.WPathSelector import WPathSelector
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_DXF_Surf(object):
     def setupUi(self, DXF_Surf):
         if not DXF_Surf.objectName():
             DXF_Surf.setObjectName(u"DXF_Surf")
         DXF_Surf.resize(864, 653)
         icon = QIcon()
-        icon.addFile(
-            u":/images/images/icon/pyleecan_64.png", QSize(), QIcon.Normal, QIcon.Off
-        )
+        icon.addFile(u":/images/images/icon/pyleecan_64.png", QSize(), QIcon.Normal, QIcon.Off)
         DXF_Surf.setWindowIcon(icon)
         self.horizontalLayout_5 = QHBoxLayout(DXF_Surf)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
@@ -47,11 +44,10 @@ class Ui_DXF_Surf(object):
 
         self.horizontalLayout.addWidget(self.b_tuto)
 
-        self.horizontalSpacer_2 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer_2)
+
 
         self.layout_plot.addLayout(self.horizontalLayout)
 
@@ -60,6 +56,7 @@ class Ui_DXF_Surf(object):
         self.textBrowser.setMaximumSize(QSize(16777215, 140))
 
         self.layout_plot.addWidget(self.textBrowser)
+
 
         self.horizontalLayout_5.addLayout(self.layout_plot)
 
@@ -78,9 +75,7 @@ class Ui_DXF_Surf(object):
         sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(
-            self.w_path_selector.sizePolicy().hasHeightForWidth()
-        )
+        sizePolicy.setHeightForWidth(self.w_path_selector.sizePolicy().hasHeightForWidth())
         self.w_path_selector.setSizePolicy(sizePolicy)
 
         self.verticalLayout.addWidget(self.w_path_selector)
@@ -108,7 +103,9 @@ class Ui_DXF_Surf(object):
 
         self.horizontalLayout_3.addWidget(self.lf_tol)
 
+
         self.verticalLayout.addLayout(self.horizontalLayout_3)
+
 
         self.verticalLayout_2.addWidget(self.g_import)
 
@@ -142,6 +139,7 @@ class Ui_DXF_Surf(object):
         self.si_per_a.setObjectName(u"si_per_a")
 
         self.gridLayout.addWidget(self.si_per_a, 1, 2, 1, 1)
+
 
         self.verticalLayout_2.addLayout(self.gridLayout)
 
@@ -178,11 +176,10 @@ class Ui_DXF_Surf(object):
 
         self.gridLayout_3.addWidget(self.lf_center_y, 1, 1, 1, 1)
 
+
         self.verticalLayout_2.addWidget(self.g_center)
 
-        self.verticalSpacer = QSpacerItem(
-            20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding
-        )
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_2.addItem(self.verticalSpacer)
 
@@ -200,14 +197,13 @@ class Ui_DXF_Surf(object):
 
         self.horizontalLayout_4.addWidget(self.lf_scaling)
 
+
         self.verticalLayout_2.addLayout(self.horizontalLayout_4)
 
         self.horizontalLayout_2 = QHBoxLayout()
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.horizontalLayout_2.setSizeConstraint(QLayout.SetMinimumSize)
-        self.horizontalSpacer = QSpacerItem(
-            40, 20, QSizePolicy.Fixed, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Fixed, QSizePolicy.Minimum)
 
         self.horizontalLayout_2.addItem(self.horizontalSpacer)
 
@@ -221,78 +217,46 @@ class Ui_DXF_Surf(object):
 
         self.horizontalLayout_2.addWidget(self.b_save)
 
+
         self.verticalLayout_2.addLayout(self.horizontalLayout_2)
 
+
         self.horizontalLayout_5.addWidget(self.w_side)
+
 
         self.retranslateUi(DXF_Surf)
 
         QMetaObject.connectSlotsByName(DXF_Surf)
-
     # setupUi
 
     def retranslateUi(self, DXF_Surf):
-        DXF_Surf.setWindowTitle(
-            QCoreApplication.translate("DXF_Surf", u"Define Hole from DXF", None)
-        )
-        self.b_reset.setText(
-            QCoreApplication.translate("DXF_Surf", u"Reset View", None)
-        )
-        self.b_cancel.setText(
-            QCoreApplication.translate("DXF_Surf", u"Cancel Selection", None)
-        )
-        self.b_tuto.setText(
-            QCoreApplication.translate("DXF_Surf", u"Open Tutorial", None)
-        )
-        self.textBrowser.setHtml(
-            QCoreApplication.translate(
-                "DXF_Surf",
-                u'<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">\n'
-                '<html><head><meta name="qrichtext" content="1" /><style type="text/css">\n'
-                "p, li { white-space: pre-wrap; }\n"
-                "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">1) Import your DXF file in [m] or set a scaling factor</span></p>\n'
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">FEMM convertion enables to merge close points according to tolerance in [local unit] and converts lines to arcs and segments (splines need to be converted)</span></p>\n'
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0p'
-                'x; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">2) Click on lines and arcs to define a closed area</span></p>\n'
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'DejaVu Sans\'; font-size:10pt;">3) Plot to check and save</span></p></body></html>',
-                None,
-            )
-        )
-        self.g_import.setTitle(
-            QCoreApplication.translate("DXF_Surf", u"DXF file import", None)
-        )
-        self.is_convert.setText(
-            QCoreApplication.translate("DXF_Surf", u"Convert through FEMM", None)
-        )
-        self.in_tol.setText(
-            QCoreApplication.translate("DXF_Surf", u"Merge tolerance [l.u.]", None)
-        )
+        DXF_Surf.setWindowTitle(QCoreApplication.translate("DXF_Surf", u"Define Hole from DXF", None))
+        self.b_reset.setText(QCoreApplication.translate("DXF_Surf", u"Reset View", None))
+        self.b_cancel.setText(QCoreApplication.translate("DXF_Surf", u"Cancel Selection", None))
+        self.b_tuto.setText(QCoreApplication.translate("DXF_Surf", u"Open Tutorial", None))
+        self.textBrowser.setHtml(QCoreApplication.translate("DXF_Surf", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">1) Import your DXF file in [m] or set a scaling factor</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">FEMM convertion enables to merge close points according to tolerance in [local unit] and converts lines to arcs and segments (splines need to be converted)</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0p"
+                        "x; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">2) Click on lines and arcs to define a closed area</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:10pt;\">3) Plot to check and save</span></p></body></html>", None))
+        self.g_import.setTitle(QCoreApplication.translate("DXF_Surf", u"DXF file import", None))
+        self.is_convert.setText(QCoreApplication.translate("DXF_Surf", u"Convert through FEMM", None))
+        self.in_tol.setText(QCoreApplication.translate("DXF_Surf", u"Merge tolerance [l.u.]", None))
         self.lf_tol.setText(QCoreApplication.translate("DXF_Surf", u"1e-5", None))
-        self.in_Zh.setText(
-            QCoreApplication.translate("DXF_Surf", u"Number of ducts", None)
-        )
-        self.in_per_a.setText(
-            QCoreApplication.translate("DXF_Surf", u"Periodicity", None)
-        )
-        self.g_center.setTitle(
-            QCoreApplication.translate("DXF_Surf", u"Machine Center", None)
-        )
-        self.in_coord_center_X.setText(
-            QCoreApplication.translate("DXF_Surf", u"X coordinate [l.u.]", None)
-        )
+        self.in_Zh.setText(QCoreApplication.translate("DXF_Surf", u"Number of ducts", None))
+        self.in_per_a.setText(QCoreApplication.translate("DXF_Surf", u"Periodicity", None))
+        self.g_center.setTitle(QCoreApplication.translate("DXF_Surf", u"Machine Center", None))
+        self.in_coord_center_X.setText(QCoreApplication.translate("DXF_Surf", u"X coordinate [l.u.]", None))
         self.lf_center_x.setText(QCoreApplication.translate("DXF_Surf", u"0", None))
-        self.in_coord_center_Y.setText(
-            QCoreApplication.translate("DXF_Surf", u"Y coordinate [l.u.]", None)
-        )
+        self.in_coord_center_Y.setText(QCoreApplication.translate("DXF_Surf", u"Y coordinate [l.u.]", None))
         self.lf_center_y.setText(QCoreApplication.translate("DXF_Surf", u"0", None))
-        self.in_scaling.setText(
-            QCoreApplication.translate(
-                "DXF_Surf", u"Scaling factor [l.u.] to [m]", None
-            )
-        )
+        self.in_scaling.setText(QCoreApplication.translate("DXF_Surf", u"Scaling factor [l.u.] to [m]", None))
         self.lf_scaling.setText(QCoreApplication.translate("DXF_Surf", u"1", None))
         self.b_plot.setText(QCoreApplication.translate("DXF_Surf", u"Plot", None))
         self.b_save.setText(QCoreApplication.translate("DXF_Surf", u"Save", None))
-
     # retranslateUi
+

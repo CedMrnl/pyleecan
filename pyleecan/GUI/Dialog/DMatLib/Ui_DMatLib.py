@@ -13,16 +13,13 @@ from ....GUI.Dialog.DMatLib.DMatSetup.DMatSetup import DMatSetup
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_DMatLib(object):
     def setupUi(self, DMatLib):
         if not DMatLib.objectName():
             DMatLib.setObjectName(u"DMatLib")
         DMatLib.resize(797, 647)
         icon = QIcon()
-        icon.addFile(
-            u":/images/images/icon/pyleecan_64.png", QSize(), QIcon.Normal, QIcon.Off
-        )
+        icon.addFile(u":/images/images/icon/pyleecan_64.png", QSize(), QIcon.Normal, QIcon.Off)
         DMatLib.setWindowIcon(icon)
         self.horizontalLayout = QHBoxLayout(DMatLib)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
@@ -41,6 +38,7 @@ class Ui_DMatLib(object):
         self.img_search.setScaledContents(True)
 
         self.horizontalLayout_9.addWidget(self.img_search)
+
 
         self.verticalLayout.addLayout(self.horizontalLayout_9)
 
@@ -67,9 +65,7 @@ class Ui_DMatLib(object):
         self.horizontalLayout_8 = QHBoxLayout()
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
         self.horizontalLayout_8.setSizeConstraint(QLayout.SetDefaultConstraint)
-        self.horizontalSpacer = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_8.addItem(self.horizontalSpacer)
 
@@ -88,7 +84,9 @@ class Ui_DMatLib(object):
 
         self.horizontalLayout_8.addWidget(self.b_copy)
 
+
         self.verticalLayout.addLayout(self.horizontalLayout_8)
+
 
         self.horizontalLayout.addLayout(self.verticalLayout)
 
@@ -97,30 +95,20 @@ class Ui_DMatLib(object):
 
         self.horizontalLayout.addWidget(self.w_setup)
 
+
         self.retranslateUi(DMatLib)
 
         QMetaObject.connectSlotsByName(DMatLib)
-
     # setupUi
 
     def retranslateUi(self, DMatLib):
-        DMatLib.setWindowTitle(
-            QCoreApplication.translate("DMatLib", u"Material Library", None)
-        )
-        self.le_search.setPlaceholderText(
-            QCoreApplication.translate("DMatLib", u"Filter...", None)
-        )
+        DMatLib.setWindowTitle(QCoreApplication.translate("DMatLib", u"Material Library", None))
+        self.le_search.setPlaceholderText(QCoreApplication.translate("DMatLib", u"Filter...", None))
         self.img_search.setText("")
-        self.in_reference_mat_lib.setText(
-            QCoreApplication.translate("DMatLib", u"Materials in Library", None)
-        )
-        self.in_machine_mat.setText(
-            QCoreApplication.translate("DMatLib", u"Machine materials", None)
-        )
-        self.b_switch.setText(
-            QCoreApplication.translate("DMatLib", u"Edit in Machine", None)
-        )
+        self.in_reference_mat_lib.setText(QCoreApplication.translate("DMatLib", u"Materials in Library", None))
+        self.in_machine_mat.setText(QCoreApplication.translate("DMatLib", u"Machine materials", None))
+        self.b_switch.setText(QCoreApplication.translate("DMatLib", u"Edit in Machine", None))
         self.b_new.setText(QCoreApplication.translate("DMatLib", u"New", None))
         self.b_copy.setText(QCoreApplication.translate("DMatLib", u"Copy", None))
-
     # retranslateUi
+

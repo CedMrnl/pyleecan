@@ -7,7 +7,8 @@ from pyleecan.GUI.Dialog.DMachineSetup.SMSlot.PMSlot17.Ui_PMSlot17 import Ui_PMS
 
 class Gen_PMSlot17(Ui_PMSlot17):
     def setupUi(self, PMSlot17):
-        """Abstract class to update the widget according to the csv doc"""
+        """Abstract class to update the widget according to the csv doc
+        """
         Ui_PMSlot17.setupUi(self, PMSlot17)
         # Setup of in_Lmag
         txt = self.tr(u"""Magnet axial length""")

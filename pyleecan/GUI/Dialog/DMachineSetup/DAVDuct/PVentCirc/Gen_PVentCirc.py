@@ -2,14 +2,13 @@
 """File generated according to PVentCirc/gen_list.json
 WARNING! All changes made in this file will be lost!
 """
-from pyleecan.GUI.Dialog.DMachineSetup.DAVDuct.PVentCirc.Ui_PVentCirc import (
-    Ui_PVentCirc,
-)
+from pyleecan.GUI.Dialog.DMachineSetup.DAVDuct.PVentCirc.Ui_PVentCirc import Ui_PVentCirc
 
 
 class Gen_PVentCirc(Ui_PVentCirc):
     def setupUi(self, PVentCirc):
-        """Abstract class to update the widget according to the csv doc"""
+        """Abstract class to update the widget according to the csv doc
+        """
         Ui_PVentCirc.setupUi(self, PVentCirc)
         # Setup of in_Zh
         txt = self.tr(u"""Number of Hole around the circumference""")

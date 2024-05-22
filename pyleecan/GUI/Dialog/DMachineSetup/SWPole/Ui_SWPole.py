@@ -13,7 +13,6 @@ from pyleecan.GUI.Tools.HelpButton import HelpButton
 
 from pyleecan.GUI.Resources import pyleecan_rc
 
-
 class Ui_SWPole(object):
     def setupUi(self, SWPole):
         if not SWPole.objectName():
@@ -50,11 +49,10 @@ class Ui_SWPole(object):
 
         self.horizontalLayout_2.addWidget(self.out_Slot_pitch)
 
-        self.horizontalSpacer_3 = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_2.addItem(self.horizontalSpacer_3)
+
 
         self.main_layout.addLayout(self.horizontalLayout_2)
 
@@ -70,9 +68,7 @@ class Ui_SWPole(object):
 
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.horizontalSpacer = QSpacerItem(
-            40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum
-        )
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
 
@@ -91,39 +87,28 @@ class Ui_SWPole(object):
 
         self.horizontalLayout.addWidget(self.b_next)
 
+
         self.main_layout.addLayout(self.horizontalLayout)
+
 
         self.retranslateUi(SWPole)
 
         QMetaObject.connectSlotsByName(SWPole)
-
     # setupUi
 
     def retranslateUi(self, SWPole):
         SWPole.setWindowTitle(QCoreApplication.translate("SWPole", u"Form", None))
         self.b_help.setText("")
-        self.c_slot_type.setItemText(
-            0, QCoreApplication.translate("SWPole", u"Pole Type 60", None)
-        )
-        self.c_slot_type.setItemText(
-            1, QCoreApplication.translate("SWPole", u"Pole Type 61", None)
-        )
-        self.c_slot_type.setItemText(
-            2, QCoreApplication.translate("SWPole", u"Pole Type 62", None)
-        )
-        self.c_slot_type.setItemText(
-            3, QCoreApplication.translate("SWPole", u"Pole Type 63", None)
-        )
-        self.c_slot_type.setItemText(
-            4, QCoreApplication.translate("SWPole", u"pole Type 29", None)
-        )
+        self.c_slot_type.setItemText(0, QCoreApplication.translate("SWPole", u"Pole Type 60", None))
+        self.c_slot_type.setItemText(1, QCoreApplication.translate("SWPole", u"Pole Type 61", None))
+        self.c_slot_type.setItemText(2, QCoreApplication.translate("SWPole", u"Pole Type 62", None))
+        self.c_slot_type.setItemText(3, QCoreApplication.translate("SWPole", u"Pole Type 63", None))
+        self.c_slot_type.setItemText(4, QCoreApplication.translate("SWPole", u"pole Type 29", None))
 
         self.in_Zs.setText(QCoreApplication.translate("SWPole", u"Zs = 2*p = ", None))
-        self.out_Slot_pitch.setText(
-            QCoreApplication.translate("SWPole", u"Slot pitch = 2*Pi / Zs = ", None)
-        )
+        self.out_Slot_pitch.setText(QCoreApplication.translate("SWPole", u"Slot pitch = 2*Pi / Zs = ", None))
         self.b_plot.setText(QCoreApplication.translate("SWPole", u"Preview", None))
         self.b_previous.setText(QCoreApplication.translate("SWPole", u"Previous", None))
         self.b_next.setText(QCoreApplication.translate("SWPole", u"Next", None))
-
     # retranslateUi
+

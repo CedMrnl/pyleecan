@@ -7,7 +7,8 @@ from pyleecan.GUI.Dialog.DMachineSetup.SWSlot.PWSlot14.Ui_PWSlot14 import Ui_PWS
 
 class Gen_PWSlot14(Ui_PWSlot14):
     def setupUi(self, PWSlot14):
-        """Abstract class to update the widget according to the csv doc"""
+        """Abstract class to update the widget according to the csv doc
+        """
         Ui_PWSlot14.setupUi(self, PWSlot14)
         # Setup of in_W0
         txt = self.tr(u"""Slot isthmus width.""")
@@ -43,13 +44,13 @@ class Gen_PWSlot14(Ui_PWSlot14):
         self.lf_H0.setToolTip(txt)
 
         # Setup of in_H1
-        txt = self.tr(u"""height or angle  (See Schematics)""")
+        txt = self.tr(u"""height or angle (See Schematics)""")
         self.in_H1.setWhatsThis(txt)
         self.in_H1.setToolTip(txt)
 
         # Setup of lf_H1
         self.lf_H1.validator().setBottom(0)
-        txt = self.tr(u"""height or angle  (See Schematics)""")
+        txt = self.tr(u"""height or angle (See Schematics)""")
         self.lf_H1.setWhatsThis(txt)
         self.lf_H1.setToolTip(txt)
 
