@@ -39,4 +39,4 @@ jobs:
       - name: Install FEMM
         run: choco install femm
       - name: Run tests
-        run: python -m pytest Tests/Classes
+        run: python -m pytest Tests
