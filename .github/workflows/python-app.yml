@@ -37,4 +37,4 @@ jobs:
           ruff --output-format=github .
         continue-on-error: true
       - name: Run tests
-          run: python -m pytest Tests/Classes
+        run: python -m pytest Tests/Classes
