@@ -36,5 +36,7 @@ jobs:
           python -m pip install ruff
           ruff --output-format=github .
         continue-on-error: true
+      - name: Install FEMM
+        run: choco install femm
       - name: Run tests
         run: python -m pytest Tests/Classes
